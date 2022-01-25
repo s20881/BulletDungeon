@@ -8,33 +8,51 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    private Camera cam;
 
     public Vector2 facing;
+    Vector2 movementDirectionVector;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        cam = Camera.main;
+
         facing = new Vector2(0, -1);
+        movementDirectionVector = new Vector2();
     }
     private void Update()
+    {
+        HandleInput();
+    }
+    private void FixedUpdate()
     {
         HandleMovement();
     }
 
-    private void HandleMovement()
+    private void HandleInput()
     {
         float inputH = Input.GetAxis("Horizontal");
         float inputV = Input.GetAxis("Vertical");
-        Vector2 directionVector = new Vector2(inputH, inputV).normalized;
-        Vector2 displacementVector = directionVector * movementSpeed * Time.deltaTime;
+        float mouseX = Input.mousePosition.x;
+        float mouseY = Input.mousePosition.y;
+
+        movementDirectionVector = new Vector2(inputH, inputV).normalized;
+
+        Vector2 mouseInGamePos = cam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
+        facing = new Vector2(mouseInGamePos.x - transform.position.x, mouseInGamePos.y - transform.position.y).normalized;
+    }
+    private void HandleMovement()
+    {
+        Vector2 displacementVector = movementDirectionVector * movementSpeed * Time.deltaTime;
         Vector2 newPos = (Vector2)transform.position + displacementVector;
         rb.MovePosition(newPos);
 
-        if (directionVector.x != 0 || directionVector.y != 0)
+        if (movementDirectionVector.x != 0 || movementDirectionVector.y != 0)
         {
             animator.SetBool("isRunning", true);
-            facing = directionVector;
+            facing = movementDirectionVector;
         }
         else
         {

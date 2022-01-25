@@ -15,7 +15,7 @@ public class Rocket : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Explosion");
-        if(collision.transform.CompareTag("Obsticales"))
+        if(collision.transform.CompareTag("Obstacle") || collision.transform.CompareTag("Enemy"))
             Destroy(gameObject);
     }
     private void OnBecameInvisible()

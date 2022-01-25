@@ -8,31 +8,29 @@ public class PlayerCombat : MonoBehaviour
     public float damageMultiplier = 1f;
     public float bulletSpeedMultiplier = 1f;
     public Weapon weapon;
-
-    private IEnumerator shootingCoroutine;
+    private bool onCooldown;
 
     private void Start()
     {
-        shootingCoroutine = Shooting();
+        onCooldown = false;
     }
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1") && !onCooldown)
         {
-            StartCoroutine(shootingCoroutine);
-        }
-        if(Input.GetButtonUp("Fire1"))
-        {
-            StopCoroutine(shootingCoroutine);
+            Shoot();
+            StartCoroutine(Cooldown());
         }
     }
 
-    public IEnumerator Shooting()
+    private void Shoot()
     {
-        while (true)
-        {
-            weapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier);
-            yield return new WaitForSeconds(1 / (weapon.fireRate * fireRateMultiplier));
-        }
+        weapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier);
+    }
+    public IEnumerator Cooldown()
+    {
+        onCooldown = true;
+        yield return new WaitForSeconds(1 / (weapon.fireRate * fireRateMultiplier));
+        onCooldown = false;
     }
 }
