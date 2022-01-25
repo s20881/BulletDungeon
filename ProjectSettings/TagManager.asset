@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Obstacle
+  - Room
+  - Cover
+  - Rooms
   layers:
   - Default
   - TransparentFX

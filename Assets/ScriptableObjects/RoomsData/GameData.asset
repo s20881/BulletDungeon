@@ -34,5 +34,6 @@ MonoBehaviour:
   - {fileID: 7480289336872000184, guid: 57150120e045d5446b4aad62742099ce, type: 3}
   - {fileID: 6602888105068981666, guid: 3d4cedc2c2cbe56409ee061bd6e7683b, type: 3}
   enemies:
-  - {fileID: 4305622618684006768, guid: f531f04851a76054e9bb3d0889681b73, type: 3}
-  spawnMeter: 10
+  - {fileID: 1809933333151383292, guid: 48a7132d96e20d7439188c371638bdba, type: 3}
+  spawnMeter: 13
+  enemMeter: 16
