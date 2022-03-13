@@ -5,7 +5,7 @@ using UnityEngine;
 public class MapController : MonoBehaviour
 {
     private static List<Vector2> rooms;
-    [SerializeField] GameData gameData;
+    public GameData gameData;
     private void Awake()
     {
         gameData.spawnMeter = 0;

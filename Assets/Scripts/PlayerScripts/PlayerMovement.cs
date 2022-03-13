@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void HandleMovement()
     {
-        Vector2 displacementVector = movementDirectionVector * movementSpeed * Time.deltaTime;
+        Vector2 displacementVector = movementDirectionVector * movementSpeed * Time.fixedDeltaTime;
         Vector2 newPos = (Vector2)transform.position + displacementVector;
         rb.MovePosition(newPos);
 
