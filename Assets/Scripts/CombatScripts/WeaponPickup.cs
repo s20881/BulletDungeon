@@ -8,7 +8,6 @@ public class WeaponPickup : MonoBehaviour
     public float maxDistance = 1f;
 
     private SpriteRenderer spriteRenderer;
-
     private GameObject player;
 
     private void Start()
@@ -18,7 +17,7 @@ public class WeaponPickup : MonoBehaviour
     }
     private void Update()
     {
-        if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("Jump"))
+        if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("WeaponSwitch"))
         {
             PickUp();
         }
@@ -26,8 +25,8 @@ public class WeaponPickup : MonoBehaviour
 
     public void PickUp()
     {
-        Weapon previousPlayerWeapon = player.GetComponent<PlayerCombat>().weapon;
-        player.GetComponent<PlayerCombat>().weapon = weapon;
+        Weapon previousPlayerWeapon = player.GetComponent<PlayerCombat>().equippedWeapon;
+        player.GetComponent<PlayerCombat>().equippedWeapon = weapon;
         if(weapon.weaponName == "Pistol")
         {
             player.GetComponent<Animator>().SetTrigger("PistolEquipped");
@@ -41,7 +40,7 @@ public class WeaponPickup : MonoBehaviour
             player.GetComponent<Animator>().SetTrigger("RLEquipped");
         }
         weapon = previousPlayerWeapon;
-        spriteRenderer.sprite = weapon.sprite;
+        spriteRenderer.sprite = weapon.hudSprite;
     }
     public float DistanceToPlayer()
     {

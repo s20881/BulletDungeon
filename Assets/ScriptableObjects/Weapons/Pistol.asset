@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   fireRate: 2
-  damage: 10
+  baseDamage: 0
   bulletSpeed: 15
-  sprite: {fileID: -3476979527478288156, guid: e413bd3e643733249ac2dd478ac71659, type: 3}
+  hudSprite: {fileID: -3476979527478288156, guid: e413bd3e643733249ac2dd478ac71659,
+    type: 3}
   projectilePrefab: {fileID: 2017514698187455462, guid: 0198c272d4e18094cacd16c6bf98abc9,
     type: 3}
