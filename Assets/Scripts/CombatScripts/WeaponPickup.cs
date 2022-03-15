@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponPickup : MonoBehaviour
 {
     public Weapon weapon;
+    private int mag;
     public float maxDistance = 1f;
 
     private SpriteRenderer spriteRenderer;
@@ -13,6 +14,7 @@ public class WeaponPickup : MonoBehaviour
 
     private void Start()
     {
+        mag = weapon.magSize;
         player = GameObject.FindGameObjectWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

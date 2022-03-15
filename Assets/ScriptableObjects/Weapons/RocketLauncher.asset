@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RocketLauncher
   m_EditorClassIdentifier: 
   weaponName: Rocket Launcher
+  magSize: 1
   fireRate: 1
   damage: 75
   bulletSpeed: 10

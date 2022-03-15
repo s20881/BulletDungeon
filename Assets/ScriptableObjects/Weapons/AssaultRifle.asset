@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
   weaponName: Assault Rifle
+  magSize: 30
   fireRate: 8
   damage: 5
   bulletSpeed: 20
