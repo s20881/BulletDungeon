@@ -48,16 +48,12 @@ public class PlayerCombat : MonoBehaviour
     public float fireRateMultiplier = 1f;
     public float damageMultiplier = 1f;
     public float bulletSpeedMultiplier = 1f;
-    public Weapon weapon;
+    public Weapon equippedWeapon;
     private bool onCooldown;
 
     private void Start()
     {
-<<<<<<< Updated upstream
-=======
         mag = equippedWeapon.magSize;
-        playerMovement = gameObject.GetComponent<PlayerMovement>();
->>>>>>> Stashed changes
         onCooldown = false;
     }
     private void Update()
@@ -81,12 +77,12 @@ public class PlayerCombat : MonoBehaviour
 
     private void Shoot()
     {
-        weapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier);
+        equippedWeapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier);
     }
     public IEnumerator Cooldown()
     {
         onCooldown = true;
-        yield return new WaitForSeconds(1 / (weapon.fireRate * fireRateMultiplier));
+        yield return new WaitForSeconds(1 / (equippedWeapon.fireRate * fireRateMultiplier));
         onCooldown = false;
     }
     private bool MagEmpty()
