@@ -29,6 +29,9 @@ public class WeaponPickup : MonoBehaviour
     public void PickUp()
     {
         Weapon previousPlayerWeapon = player.GetComponent<PlayerCombat>().equippedWeapon;
+        int playerMag = player.GetComponent<PlayerCombat>().mag;
+        player.GetComponent<PlayerCombat>().mag = mag;
+        mag = playerMag;
         player.GetComponent<PlayerCombat>().equippedWeapon = weapon;
         if(weapon.weaponName == "Pistol")
         {
@@ -44,6 +47,7 @@ public class WeaponPickup : MonoBehaviour
         }
         weapon = previousPlayerWeapon;
         spriteRenderer.sprite = weapon.sprite;
+        EventManager.Instance.RaiseOnPlayerSwitchWeapon();
     }
     public float DistanceToPlayer()
     {

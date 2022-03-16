@@ -19,6 +19,9 @@ public class EventManager : MonoBehaviour
     public delegate void PlayerReload();
     public static event PlayerReload OnPlayerReload;
 
+    public delegate void PlayerSwitchWeapon();
+    public static event PlayerSwitchWeapon OnPlayerSwitchWeapon;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -46,5 +49,10 @@ public class EventManager : MonoBehaviour
     {
         if (OnPlayerReload != null)
             OnPlayerReload();
+    }
+    public void RaiseOnPlayerSwitchWeapon()
+    {
+        if (OnPlayerSwitchWeapon != null)
+            OnPlayerSwitchWeapon();
     }
 }

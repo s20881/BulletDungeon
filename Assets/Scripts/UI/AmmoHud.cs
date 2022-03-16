@@ -18,11 +18,13 @@ public class AmmoHud : MonoBehaviour
     {
         EventManager.OnPlayerShoot += Refresh;
         EventManager.OnPlayerReload += Refresh;
+        EventManager.OnPlayerSwitchWeapon += Refresh;
     }
     private void OnDisable()
     {
         EventManager.OnPlayerShoot -= Refresh;
         EventManager.OnPlayerReload -= Refresh;
+        EventManager.OnPlayerSwitchWeapon -= Refresh;
     }
     private void Refresh()
     {
