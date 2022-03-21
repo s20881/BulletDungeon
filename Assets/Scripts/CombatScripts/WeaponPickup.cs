@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponPickup : MonoBehaviour
 {
     public Weapon weapon;
+    private int mag;
     public float maxDistance = 1f;
 
     private SpriteRenderer spriteRenderer;
@@ -12,12 +13,13 @@ public class WeaponPickup : MonoBehaviour
 
     private void Start()
     {
+        mag = weapon.magSize;
         player = GameObject.FindGameObjectWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
-        if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("WeaponSwitch"))
+        if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("Switch Weapon"))
         {
             PickUp();
         }
@@ -26,6 +28,9 @@ public class WeaponPickup : MonoBehaviour
     public void PickUp()
     {
         Weapon previousPlayerWeapon = player.GetComponent<PlayerCombat>().equippedWeapon;
+        int playerMag = player.GetComponent<PlayerCombat>().mag;
+        player.GetComponent<PlayerCombat>().mag = mag;
+        mag = playerMag;
         player.GetComponent<PlayerCombat>().equippedWeapon = weapon;
         if(weapon.weaponName == "Pistol")
         {
@@ -40,7 +45,8 @@ public class WeaponPickup : MonoBehaviour
             player.GetComponent<Animator>().SetTrigger("RLEquipped");
         }
         weapon = previousPlayerWeapon;
-        spriteRenderer.sprite = weapon.hudSprite;
+        spriteRenderer.sprite = weapon.sprite;
+        EventManager.Instance.RaiseOnPlayerSwitchWeapon();
     }
     public float DistanceToPlayer()
     {

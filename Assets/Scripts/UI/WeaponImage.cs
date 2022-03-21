@@ -14,6 +14,6 @@ public class WeaponImage : MonoBehaviour
     }
     private void Update()
     {
-        image.sprite = player.equippedWeapon.hudSprite;
+        image.sprite = player.equippedWeapon.sprite;
     }
 }

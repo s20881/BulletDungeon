@@ -13,6 +13,15 @@ public class EventManager : MonoBehaviour
     public delegate void EnemyKilled();
     public static event EnemyKilled OnEnemyKilled;
 
+    public delegate void PlayerShoot();
+    public static event PlayerShoot OnPlayerShoot;
+
+    public delegate void PlayerReload();
+    public static event PlayerReload OnPlayerReload;
+
+    public delegate void PlayerSwitchWeapon();
+    public static event PlayerSwitchWeapon OnPlayerSwitchWeapon;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -30,5 +39,20 @@ public class EventManager : MonoBehaviour
     {
         if (OnEnemyKilled != null)
             OnEnemyKilled();
+    }
+    public void RaiseOnPlayerShoot()
+    {
+        if (OnPlayerShoot != null)
+            OnPlayerShoot();
+    }
+    public void RaiseOnPlayerReload()
+    {
+        if (OnPlayerReload != null)
+            OnPlayerReload();
+    }
+    public void RaiseOnPlayerSwitchWeapon()
+    {
+        if (OnPlayerSwitchWeapon != null)
+            OnPlayerSwitchWeapon();
     }
 }
