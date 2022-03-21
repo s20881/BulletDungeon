@@ -8,37 +8,23 @@ public class Weapon : ScriptableObject
     public string weaponName;
     public int magSize;
     public float fireRate;
-    public int damage;
+    public int baseDamage;
     public float bulletSpeed;
-    public Sprite sprite;
+    public Sprite hudSprite;
     [SerializeField] private GameObject projectilePrefab;
     
-    public void Shoot(Transform shooter, float damageMultiplier, float bulletSpeedMultiplier)
+    public void Shoot(Transform shooter, float damageMultiplier, float bulletSpeedMultiplier, Vector2 direction)
     {
         GameObject projectile = Instantiate(projectilePrefab, shooter);
         if(weaponName == "Rocket Launcher")
         {
-            projectile.GetComponent<Rocket>().damage = damage * damageMultiplier;
+            projectile.GetComponent<Rocket>().damage = baseDamage * damageMultiplier;
         }
         else
         {
-            projectile.GetComponent<Bullet>().damage = damage * damageMultiplier;
+            projectile.GetComponent<Bullet>().damage = baseDamage * damageMultiplier;
         }
-        projectile.GetComponent<Rigidbody2D>().velocity = shooter.gameObject.GetComponent<PlayerMovement>().facing * bulletSpeed * bulletSpeedMultiplier;
-        projectile.transform.rotation = Quaternion.FromToRotation(new Vector3(1, 0, 0), shooter.GetComponent<PlayerMovement>().facing);
-    }
-    public void EnemyShoot(Transform shooter, float damageMultiplier, float bulletSpeedMultiplier, Vector2 target)
-    {
-        GameObject projectile = Instantiate(projectilePrefab, shooter);
-        if (weaponName == "Rocket Launcher")
-        {
-            projectile.GetComponent<Rocket>().damage = damage * damageMultiplier;
-        }
-        else
-        {
-            projectile.GetComponent<Bullet>().damage = damage * damageMultiplier;
-        }
-        projectile.GetComponent<Rigidbody2D>().velocity = (target - (Vector2)shooter.position).normalized * bulletSpeed * bulletSpeedMultiplier;
-        projectile.transform.rotation = Quaternion.FromToRotation(new Vector3(1, 0, 0), (target - (Vector2)shooter.position).normalized);
+        projectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed * bulletSpeedMultiplier;
+        projectile.transform.rotation = Quaternion.FromToRotation(new Vector3(1, 0, 0), direction);
     }
 }

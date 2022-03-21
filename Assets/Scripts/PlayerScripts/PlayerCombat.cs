@@ -51,6 +51,8 @@ public class PlayerCombat : MonoBehaviour
     public Weapon equippedWeapon;
     private bool onCooldown;
 
+    private PlayerMovement playerMovement;
+
     private void Start()
     {
         mag = equippedWeapon.magSize;

@@ -9,7 +9,6 @@ public class WeaponPickup : MonoBehaviour
     public float maxDistance = 1f;
 
     private SpriteRenderer spriteRenderer;
-
     private GameObject player;
 
     private void Start()

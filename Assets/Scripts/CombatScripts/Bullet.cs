@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            GameObject.FindObjectOfType<MapController>().gameData.enemMeter--;
         }
         else if (transform.parent.CompareTag("Enemy") && collision.CompareTag("Player"))
         {

@@ -15,8 +15,9 @@ MonoBehaviour:
   weaponName: Rocket Launcher
   magSize: 1
   fireRate: 1
-  damage: 75
+  baseDamage: 0
   bulletSpeed: 10
-  sprite: {fileID: -7349882584872989000, guid: e413bd3e643733249ac2dd478ac71659, type: 3}
+  hudSprite: {fileID: -7349882584872989000, guid: e413bd3e643733249ac2dd478ac71659,
+    type: 3}
   projectilePrefab: {fileID: 2017514698187455462, guid: 682b861d971982d49b4b45fce7e96543,
     type: 3}
