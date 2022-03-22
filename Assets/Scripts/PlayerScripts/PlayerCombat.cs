@@ -55,6 +55,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
+        playerMovement = GetComponent<PlayerMovement>();
         mag = equippedWeapon.magSize;
         onCooldown = false;
     }
@@ -79,7 +80,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Shoot()
     {
-        equippedWeapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier);
+        equippedWeapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier, playerMovement.facing);
     }
     public IEnumerator Cooldown()
     {
