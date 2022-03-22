@@ -17,7 +17,11 @@ MonoBehaviour:
   fireRate: 8
   baseDamage: 0
   bulletSpeed: 20
+<<<<<<< Updated upstream
   hudSprite: {fileID: 7362661061344524757, guid: e413bd3e643733249ac2dd478ac71659,
     type: 3}
+=======
+  sprite: {fileID: -5973717018470272431, guid: be9d4be195bd5e6408fc7d44a304cc50, type: 3}
+>>>>>>> Stashed changes
   projectilePrefab: {fileID: 2017514698187455462, guid: 0198c272d4e18094cacd16c6bf98abc9,
     type: 3}
