@@ -249,6 +249,12 @@ PrefabInstance:
       propertyPath: movementSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1293750659043540814, guid: 21d56c89608a5ba4cab012fd0862a6be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3591552613031203118, guid: 0aac231e62248a641910bc8221eff71c,
+        type: 3}
     - target: {fileID: 1293750659043540815, guid: 21d56c89608a5ba4cab012fd0862a6be,
         type: 3}
       propertyPath: m_RootOrder
@@ -329,6 +335,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PistolPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 1145482863057814088, guid: da710c6f57e87cc4b872f340e65a8cb8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4855083040135353222, guid: be9d4be195bd5e6408fc7d44a304cc50,
+        type: 3}
     - target: {fileID: 1145482863057814089, guid: da710c6f57e87cc4b872f340e65a8cb8,
         type: 3}
       propertyPath: m_RootOrder
@@ -569,8 +581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -109.928406, y: 25}
-  m_SizeDelta: {x: 181.1432, y: 50}
+  m_AnchoredPosition: {x: -254.728, y: 64.968}
+  m_SizeDelta: {x: 470.742, y: 129.936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262778990
 MonoBehaviour:
@@ -631,8 +643,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -798,10 +810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
