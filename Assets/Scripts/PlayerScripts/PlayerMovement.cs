@@ -42,10 +42,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 mouseInGamePos = cam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
         facing = new Vector2(mouseInGamePos.x - transform.position.x, mouseInGamePos.y - transform.position.y).normalized;
-        if(facing.x >= 0)
-            animator.SetBool("facingRight", true);
+        if (facing.x >= 0)
+            transform.localScale = new Vector3(1, 1, 1);
         else
-            animator.SetBool("facingRight", false);
+            transform.localScale = new Vector3(-1, 1, 1);
     }
     private void HandleMovement()
     {
