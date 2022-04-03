@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float damage;
+    public GameObject shooter;
 
     private BoxCollider2D bc;
 
@@ -14,13 +15,13 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (transform.parent.CompareTag("Player") && collision.CompareTag("Enemy"))
+        if (shooter.CompareTag("Player") && collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
             GameObject.FindObjectOfType<MapController>().gameData.enemMeter--;
         }
-        else if (transform.parent.CompareTag("Enemy") && collision.CompareTag("Player"))
+        else if (shooter.CompareTag("Enemy") && collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerStatus>().PlayerHit(damage);
             Destroy(gameObject);

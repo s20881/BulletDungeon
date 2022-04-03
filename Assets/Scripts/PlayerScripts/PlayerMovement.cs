@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private Camera cam;
 
     public Vector2 facing;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         cam = Camera.main;
 
         facing = new Vector2(0, -1);
@@ -42,10 +44,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 mouseInGamePos = cam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
         facing = new Vector2(mouseInGamePos.x - transform.position.x, mouseInGamePos.y - transform.position.y).normalized;
-        if(facing.x >= 0)
-            animator.SetBool("facingRight", true);
+        if (facing.x >= 0)
+            spriteRenderer.flipX = false;
         else
-            animator.SetBool("facingRight", false);
+            spriteRenderer.flipX = true;
     }
     private void HandleMovement()
     {
