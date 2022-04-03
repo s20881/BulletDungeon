@@ -10,6 +10,9 @@ public class Weapon : ScriptableObject
     public float fireRate;
     public int baseDamage;
     public float bulletSpeed;
+    public float recoilForce;
+    public float recoilSpeed;
+    public Vector2 muzzlePos;
     public Sprite sprite;
     [SerializeField] private GameObject projectilePrefab;
     
