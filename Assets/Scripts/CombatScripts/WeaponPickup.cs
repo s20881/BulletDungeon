@@ -19,7 +19,7 @@ public class WeaponPickup : MonoBehaviour
     }
     private void Update()
     {
-        if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("Switch Weapon"))
+        if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("Switch Weapon") && !player.GetComponent<PlayerCombat>().reloading)
         {
             PickUp();
         }
@@ -32,18 +32,6 @@ public class WeaponPickup : MonoBehaviour
         player.GetComponent<PlayerCombat>().mag = mag;
         mag = playerMag;
         player.GetComponent<PlayerCombat>().equippedWeapon = weapon;
-        if(weapon.weaponName == "Pistol")
-        {
-            player.GetComponent<Animator>().SetTrigger("PistolEquipped");
-        }
-        else if(weapon.weaponName == "Assault Rifle")
-        {
-            player.GetComponent<Animator>().SetTrigger("AREquipped");
-        }
-        else if(weapon.weaponName == "Rocket Launcher")
-        {
-            player.GetComponent<Animator>().SetTrigger("RLEquipped");
-        }
         weapon = previousPlayerWeapon;
         spriteRenderer.sprite = weapon.sprite;
         EventManager.Instance.RaiseOnPlayerSwitchWeapon();
