@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Assault Rifle
   magSize: 30
+  reloadTime: 1.5
   fireRate: 8
-  baseDamage: 0
+  baseDamage: 7
   bulletSpeed: 20
+  recoilForce: 0.1
+  recoilSpeed: 100
+  muzzlePos: {x: -0.487, y: 0.092}
   sprite: {fileID: -5973717018470272431, guid: be9d4be195bd5e6408fc7d44a304cc50, type: 3}
   projectilePrefab: {fileID: 2017514698187455462, guid: 0198c272d4e18094cacd16c6bf98abc9,
     type: 3}

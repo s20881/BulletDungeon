@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Rocket Launcher
   magSize: 1
+  reloadTime: 2
   fireRate: 1
-  baseDamage: 0
+  baseDamage: 100
   bulletSpeed: 10
+  recoilForce: 0.5
+  recoilSpeed: 10
+  muzzlePos: {x: -0.238, y: 0.072}
   sprite: {fileID: 6321443046475953421, guid: be9d4be195bd5e6408fc7d44a304cc50, type: 3}
   projectilePrefab: {fileID: 2017514698187455462, guid: 682b861d971982d49b4b45fce7e96543,
     type: 3}

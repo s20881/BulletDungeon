@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   magSize: 7
-  reloadTime: 2
+  reloadTime: 1
   fireRate: 2
   baseDamage: 10
   bulletSpeed: 15
@@ -22,6 +22,5 @@ MonoBehaviour:
   recoilSpeed: 50
   muzzlePos: {x: -0.13, y: 0.045}
   sprite: {fileID: -4855083040135353222, guid: be9d4be195bd5e6408fc7d44a304cc50, type: 3}
-  flashPrefab: {fileID: 0}
   projectilePrefab: {fileID: 2017514698187455462, guid: 0198c272d4e18094cacd16c6bf98abc9,
     type: 3}

@@ -5,15 +5,22 @@ using UnityEngine.UI;
 
 public class ReloadSlider : MonoBehaviour
 {
+    [SerializeField] private float distanceAbovePlayer = 1f;
     [SerializeField] private Image magImage;
     [SerializeField] private Image ringImage;
     private Slider slider;
+    private GameObject player;
 
     private void Start()
     {
         magImage.enabled = false;
         ringImage.enabled = false;
         slider = GetComponent<Slider>();
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+    private void Update()
+    {
+        transform.position = player.transform.position + new Vector3(0, distanceAbovePlayer, 0);
     }
     public void Play(float duration)
     {

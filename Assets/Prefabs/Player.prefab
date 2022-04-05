@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030122419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39009175}
@@ -448,7 +448,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.33
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5110,3 +5110,4 @@ MonoBehaviour:
   reloadSpeedMultiplier: 1
   equippedWeapon: {fileID: 11400000, guid: 2d0b169b862f73c4a8a2493fd930c3c8, type: 2}
   reloading: 0
+  slider: {fileID: 0}
