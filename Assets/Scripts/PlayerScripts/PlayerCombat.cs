@@ -52,6 +52,7 @@ public class PlayerCombat : MonoBehaviour
     public Weapon equippedWeapon;
     private bool onCooldown;
     public bool reloading;
+    [SerializeField] private ReloadSlider slider;
 
     private PlayerMovement playerMovement;
     private Animator animator;
@@ -76,7 +77,7 @@ public class PlayerCombat : MonoBehaviour
                 EventManager.Instance.RaiseOnPlayerShoot();
             }
         }
-        if(Input.GetButtonDown("Reload") && !reloading)
+        if(Input.GetButtonDown("Reload") && !reloading && mag < equippedWeapon.magSize)
         {
             StartCoroutine(ReloadCoroutine());
         }
@@ -102,6 +103,7 @@ public class PlayerCombat : MonoBehaviour
     private IEnumerator ReloadCoroutine()
     {
         reloading = true;
+        slider.Play(equippedWeapon.reloadTime / reloadSpeedMultiplier);
         yield return new WaitForSeconds(equippedWeapon.reloadTime / reloadSpeedMultiplier);
         Reload();
         reloading = false;
