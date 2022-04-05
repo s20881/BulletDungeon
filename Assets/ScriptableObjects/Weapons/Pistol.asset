@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   magSize: 7
+  reloadTime: 2
   fireRate: 2
-  baseDamage: 0
+  baseDamage: 10
   bulletSpeed: 15
   recoilForce: 0.05
   recoilSpeed: 50

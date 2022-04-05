@@ -48,8 +48,10 @@ public class PlayerCombat : MonoBehaviour
     public float fireRateMultiplier = 1f;
     public float damageMultiplier = 1f;
     public float bulletSpeedMultiplier = 1f;
+    public float reloadSpeedMultiplier = 1f;
     public Weapon equippedWeapon;
     private bool onCooldown;
+    public bool reloading;
 
     private PlayerMovement playerMovement;
     private Animator animator;
@@ -60,24 +62,23 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponent<Animator>();
         mag = equippedWeapon.magSize;
         onCooldown = false;
+        reloading = false;
     }
     private void Update()
     {
-        if(Input.GetButton("Fire1") && !onCooldown)
+        if(Input.GetButton("Fire1") && !onCooldown && !reloading)
         {
             if(!MagEmpty())
             {
                 Shoot();
                 mag--;
-                animator.SetTrigger("Shoot");
-                StartCoroutine(Cooldown());
+                StartCoroutine(ShootingCooldown(1 / (equippedWeapon.fireRate * fireRateMultiplier)));
                 EventManager.Instance.RaiseOnPlayerShoot();
             }
         }
-        if(Input.GetButtonDown("Reload"))
+        if(Input.GetButtonDown("Reload") && !reloading)
         {
-            Reload();
-            EventManager.Instance.RaiseOnPlayerReload();
+            StartCoroutine(ReloadCoroutine());
         }
     }
 
@@ -85,10 +86,10 @@ public class PlayerCombat : MonoBehaviour
     {
         equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, playerMovement.facing);
     }
-    public IEnumerator Cooldown()
+    public IEnumerator ShootingCooldown(float seconds)
     {
         onCooldown = true;
-        yield return new WaitForSeconds(1 / (equippedWeapon.fireRate * fireRateMultiplier));
+        yield return new WaitForSeconds(seconds);
         onCooldown = false;
     }
     private bool MagEmpty()
@@ -97,6 +98,14 @@ public class PlayerCombat : MonoBehaviour
             return true;
         else
             return false;
+    }
+    private IEnumerator ReloadCoroutine()
+    {
+        reloading = true;
+        yield return new WaitForSeconds(equippedWeapon.reloadTime / reloadSpeedMultiplier);
+        Reload();
+        reloading = false;
+        EventManager.Instance.RaiseOnPlayerReload();
     }
     private void Reload()
     {
