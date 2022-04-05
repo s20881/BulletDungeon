@@ -54,10 +54,12 @@ public class PlayerCombat : MonoBehaviour
     public bool reloading;
 
     private PlayerMovement playerMovement;
+    private Animator animator;
 
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        animator = GetComponent<Animator>();
         mag = equippedWeapon.magSize;
         onCooldown = false;
         reloading = false;
@@ -82,7 +84,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Shoot()
     {
-        equippedWeapon.Shoot(transform, damageMultiplier, bulletSpeedMultiplier, playerMovement.facing);
+        equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, playerMovement.facing);
     }
     public IEnumerator ShootingCooldown(float seconds)
     {
