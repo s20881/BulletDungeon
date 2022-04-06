@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Obstacle
-  - Room
-  - Cover
-  - Rooms
+  - Scrap
+  - CraftBacta
+  - CraftText
+  - Craft
+  - UpgradeHealth
   layers:
   - Default
   - TransparentFX
@@ -18,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - Player
+  - 
   - 
   - 
   - 
