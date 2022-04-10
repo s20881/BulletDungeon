@@ -57,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8374619341317517596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,14 +92,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 124100494072226523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231254fe7e5e7b54fa6afbd608ce7a37, type: 3}
+  m_Script: {fileID: 11500000, guid: fff41832ce151b8429e46240227cffb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sp: 0
+  firsttrig: 1
   u: {fileID: 5994785285394724999}
   d: {fileID: 1058107972960826798}
   r: {fileID: 7210778318761383897}
   l: {fileID: 6127082940404456626}
+  specialRoomtf: 0
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!61 &9112637081761597029
 BoxCollider2D:
@@ -165,7 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 311360771328337828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -226,6 +230,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -250,6 +255,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &7135136650127577468
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -316,7 +322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1252317362821288390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -361,7 +367,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557221630739313420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ea37044c2b8714a9f9d568f803c614, type: 3}
+  m_Script: {fileID: 11500000, guid: 78fa133ce0317d8458bd2e5e9a57383b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -407,7 +413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1663647302905020795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -468,6 +474,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -492,6 +499,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &8429622104130988957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,7 +566,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2929711261058611449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ea37044c2b8714a9f9d568f803c614, type: 3}
+  m_Script: {fileID: 11500000, guid: 78fa133ce0317d8458bd2e5e9a57383b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -658,6 +666,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -682,6 +691,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &7087821503403083795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -764,6 +774,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -788,6 +799,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &2547265656725335696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -854,7 +866,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4010479383369109928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ea37044c2b8714a9f9d568f803c614, type: 3}
+  m_Script: {fileID: 11500000, guid: 78fa133ce0317d8458bd2e5e9a57383b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -934,7 +946,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4542435027901319083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -995,6 +1007,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1019,6 +1032,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &6160572687987829043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1101,6 +1115,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1125,6 +1140,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &8263432003882415874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1249,6 +1265,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1273,6 +1290,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &7446969271670641215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1339,7 +1357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5811833680304126878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -1384,7 +1402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5861035090342487678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ea37044c2b8714a9f9d568f803c614, type: 3}
+  m_Script: {fileID: 11500000, guid: 78fa133ce0317d8458bd2e5e9a57383b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -1495,6 +1513,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1519,6 +1538,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &795068573058208994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1601,6 +1621,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1625,6 +1646,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &7665987359606226557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1691,7 +1713,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6306036487238897417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be89568d616175644b5b8b0f4e3cae16, type: 3}
+  m_Script: {fileID: 11500000, guid: 9790bf50c32432f4cb7f9b316b7fd8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -1735,7 +1757,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6832203138515147808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -1780,7 +1802,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6857652389699473064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -1841,6 +1863,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1865,6 +1888,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &4386376699022069486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1931,7 +1955,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7624944087512564877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bb3098a4ac2524b88ee81b27dca54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb945917176d904ab959dc1b924afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
@@ -1992,6 +2016,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2016,6 +2041,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &3309300141729987866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2098,6 +2124,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2122,6 +2149,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &6881529739413822584
 BoxCollider2D:
   m_ObjectHideFlags: 0
