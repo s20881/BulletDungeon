@@ -17,7 +17,7 @@ MonoBehaviour:
   reloadTime: 1
   fireRate: 2
   baseDamage: 10
-  bulletSpeed: 15
+  bulletSpeed: 25
   recoilForce: 0.05
   recoilSpeed: 50
   muzzlePos: {x: -0.13, y: 0.045}

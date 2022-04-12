@@ -10,6 +10,20 @@ public class EquippedWeapon : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float distanceFromPlayer = 1f;
     private float originalDistanceFromPlayer;
+    public Vector3 MuzzlePos
+    {
+        get
+        {
+            if(playerMovement.facing.x >= 0)
+            {
+                return playerCombat.equippedWeapon.muzzlePos;
+            }
+            else
+            {
+                return playerCombat.equippedWeapon.muzzlePos * new Vector3(1, -1, 1);
+            }
+        }
+    }
 
     private void OnEnable()
     {
@@ -38,12 +52,12 @@ public class EquippedWeapon : MonoBehaviour
         if (playerMovement.facing.x >= 0)
         {
             spriteRenderer.flipY = false;
-            flash.transform.localPosition = playerCombat.equippedWeapon.muzzlePos;
+            flash.transform.localPosition = MuzzlePos;
         }
         else
         {
             spriteRenderer.flipY = true;
-            flash.transform.localPosition = playerCombat.equippedWeapon.muzzlePos * new Vector3(1, -1, 1);
+            flash.transform.localPosition = MuzzlePos;
         }
     }
 

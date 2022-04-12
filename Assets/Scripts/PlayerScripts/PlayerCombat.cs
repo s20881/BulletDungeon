@@ -56,11 +56,13 @@ public class PlayerCombat : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private Animator animator;
+    private EquippedWeapon inGameWeapon;
 
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
+        inGameWeapon = GetComponentInChildren<EquippedWeapon>();
         mag = equippedWeapon.magSize;
         onCooldown = false;
         reloading = false;
@@ -85,7 +87,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void Shoot()
     {
-        equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, playerMovement.facing);
+        Vector3 bulletPos = inGameWeapon.transform.TransformPoint(inGameWeapon.MuzzlePos);
+        equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, bulletPos, playerMovement.facing);
     }
     public IEnumerator ShootingCooldown(float seconds)
     {

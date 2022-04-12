@@ -5004,7 +5004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8ea39d7b37b2145afcd96b0f12db9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
+  movementSpeed: 8
   facing: {x: 0, y: 0}
 --- !u!95 &1293750659043540810
 Animator:
