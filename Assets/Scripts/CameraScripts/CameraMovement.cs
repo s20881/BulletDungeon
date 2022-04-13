@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private GameObject objectToFollow;
 
-    public float offsetSmooth;
+    public float offsetSmooth = 6;
     private Vector3 playerPosition;
     void FixedUpdate()
     {

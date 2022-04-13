@@ -575,6 +575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390261574688366726, guid: 55ec203cc9937b349b73676d2607d3e3,
         type: 3}
+      propertyPath: offsetSmooth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390261574688366726, guid: 55ec203cc9937b349b73676d2607d3e3,
+        type: 3}
       propertyPath: objectToFollow
       value: 
       objectReference: {fileID: 1200274378}
