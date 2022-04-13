@@ -6,8 +6,11 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private GameObject objectToFollow;
 
-    private void Update()
+    public float offsetSmooth;
+    private Vector3 playerPosition;
+    void FixedUpdate()
     {
-        transform.position = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, transform.position.z);
+        playerPosition = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(transform.position, playerPosition, offsetSmooth * Time.deltaTime);
     }
 }
