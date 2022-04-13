@@ -9,7 +9,8 @@ public class RespEn : MonoBehaviour
     private Quaternion roomRot = Quaternion.Euler(0, 0, 0);
     public GameObject go;
     private SpawnerTrigger sp;
-    int i = 0;
+    private int i = 0;
+    private int wave = 0;
     private void Start()
     {
         
@@ -27,10 +28,21 @@ public class RespEn : MonoBehaviour
     {
         if (go.GetComponent<SpawnerTrigger>().sp)
         {
-            if (i == 0)
+            if (go.GetComponent<SpawnerTrigger>().wv)
             {
-                spawn();
-                i++;
+                if (gameData.enemMeter <8 && wave < 3)
+                {
+                    wave++;
+                    spawn();
+                }
+            }
+            else
+            {
+                if (i == 0)
+                {
+                    spawn();
+                    i++;
+                }
             }
         }
     }

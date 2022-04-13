@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnerTrigger : MonoBehaviour
 {
    public bool sp;
+    public bool wv;
     public bool firsttrig=true;
     public GameObject u;
     public GameObject d;
@@ -30,6 +31,7 @@ public class SpawnerTrigger : MonoBehaviour
             }
         }
         sp = false;
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
