@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class EnemyStatus : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100f;
-    [SerializeField] private float currentHealth = 100f;
+    public float maxHealth = 100f;
+    public float currentHealth = 100f;
     [SerializeField] private float damageReceivedMultiplier = 1f;
     [SerializeField] private bool invincible = false;
+    [SerializeField] private GameObject healthBarPrefab;
+    private GameObject worldSpaceCanvas;
 
+    private void Start()
+    {
+        Transform worldSpaceCanvas = GameObject.Find("WorldSpaceCanvas").transform;
+        GameObject healthBar = Instantiate(healthBarPrefab, worldSpaceCanvas);
+        healthBar.GetComponent<EnemyHealthBar>().enemy = this;
+    }
     public void Hit(float damage)
     {
         EventManager.Instance.RaiseOnDroneHit();
@@ -25,6 +33,7 @@ public class EnemyStatus : MonoBehaviour
     {
         EventManager.Instance.RaiseOnDroneDeath();
         GetComponent<Animator>().SetTrigger("Death");
+        Destroy(GetComponent<BoxCollider2D>());
         Destroy(this);
     }
 }

@@ -511,6 +511,8 @@ MonoBehaviour:
   currentHealth: 100
   damageReceivedMultiplier: 1
   invincible: 0
+  healthBarPrefab: {fileID: 5792398017132093608, guid: a3e2fc929dfcde543a14e8666467888e,
+    type: 3}
 --- !u!50 &1140603155
 Rigidbody2D:
   serializedVersion: 4

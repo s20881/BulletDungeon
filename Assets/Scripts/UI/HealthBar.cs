@@ -26,7 +26,7 @@ public class HealthBar : MonoBehaviour
         
     }
 
-    public void RefreshBar()
+    private void RefreshBar()
     {
         slider.value = player.currentHp / player.maxHp;
     }
