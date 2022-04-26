@@ -24,7 +24,7 @@ public class GameData : ScriptableObject
         {
             special = 0;
         }
-        if (spawnMeter >= 7)
+        if (spawnMeter >= 1)
         {
             switch (direction)
             {
