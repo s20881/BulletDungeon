@@ -13,6 +13,7 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private GameObject[] bossRooms;
     [SerializeField] private GameObject[] bosses;
+    [SerializeField] private GameObject[] amomed;
     public int special = 0;
     public int spawnMeter ;
     public int enemMeter;
@@ -40,7 +41,7 @@ public class GameData : ScriptableObject
         }
         else
         {
-            int rand = Random.Range(1, 6);
+            int rand = Random.Range(1, 5);
             
             if (rand == 2 && special<2)
             {
@@ -49,9 +50,9 @@ public class GameData : ScriptableObject
                 switch (direction)
                 {
                     case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(3,4)];
+                        return upRooms[Random.Range(3,5)];
                     case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(3,4)];
+                        return downRooms[Random.Range(3,5)];
                     case OpeningDirection.NeedLeftDoor:
                         return leftRooms[4];
                     case OpeningDirection.NeedRightDoor:
@@ -65,9 +66,9 @@ public class GameData : ScriptableObject
                 switch (direction)
                 {
                     case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(1, upRooms.Length-2)];
+                        return upRooms[Random.Range(1, upRooms.Length-3)];
                     case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(1, downRooms.Length-2)];
+                        return downRooms[Random.Range(1, downRooms.Length-3)];
                     case OpeningDirection.NeedLeftDoor:
                         return leftRooms[Random.Range(1, leftRooms.Length-2)];
                     case OpeningDirection.NeedRightDoor:
@@ -94,6 +95,11 @@ public class GameData : ScriptableObject
     public GameObject GetRandomBoss()
     {
         return bosses[Random.Range(0, bosses.Length)];
+
+    }
+    public GameObject GetRandomamomed()
+    {
+        return amomed[Random.Range(0, amomed.Length)];
 
     }
 }
