@@ -1,14 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private PlayerStatus playerStatus;
+    private PlayerStatus player;
+    private Slider slider;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+        slider = GetComponent<Slider>();
+    }
     private void Update()
     {
-        if (playerStatus == null) playerStatus = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
-        else
-        gameObject.transform.localScale = new Vector3(playerStatus.currentHp / playerStatus.maxHp, playerStatus.transform.localScale.y, playerStatus.transform.localScale.z);
+        RefreshBar();
+    }
+    private void OnEnable()
+    {
+        
+    }
+    private void OnDisable()
+    {
+        
+    }
+
+    private void RefreshBar()
+    {
+        slider.value = player.currentHp / player.maxHp;
     }
 }

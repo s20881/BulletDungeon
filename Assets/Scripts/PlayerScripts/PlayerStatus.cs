@@ -9,16 +9,24 @@ public class PlayerStatus : MonoBehaviour
     public float damageReceivedMultiplier = 1f;
     [SerializeField] private bool invincible = false;
 
-    public void PlayerHit(float damage)
+    public void Hit(float damage)
     {
+        EventManager.Instance.RaiseOnPlayerHit();
         if(!invincible)
+        {
             currentHp -= damage * damageReceivedMultiplier;
-        if (currentHp <= 0)
-            PlayerKilled();
+            if (currentHp <= 0)
+            {
+                Death();
+            }
+        }
     }
-    public void PlayerKilled()
+    [ContextMenu("Kill")] public void Death()
     {
-        Debug.Log("Player killed");
-        GameObject.Destroy(gameObject);
+        EventManager.Instance.RaiseOnPlayerDeath();
+        GetComponent<Animator>().SetTrigger("Death");
+        GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<PlayerCombat>().enabled = false;
+        Destroy(this);
     }
 }
