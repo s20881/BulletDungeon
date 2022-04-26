@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Obstacle
   - Room
+  - BossRoom
   - Cover
   - Rooms
   layers:
@@ -18,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - Player
+  - 
   - 
   - 
   - 
