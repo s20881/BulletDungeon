@@ -27,12 +27,14 @@ public class portalcont : MonoBehaviour
     {
         
         if (gameData.spawnMeter < 0 && gameData.enemMeter==0)
-        {
-          
+        {    
             spriteRenderer.enabled = true;
-            boxcollider.enabled = true;
-
-           
+            boxcollider.enabled = true;  
+        }
+        else
+        {
+            spriteRenderer.enabled = false;
+            boxcollider.enabled = false;
         }
         
     }

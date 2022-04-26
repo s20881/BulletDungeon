@@ -5,11 +5,13 @@ using UnityEngine;
 public class SpawnerTrigger : MonoBehaviour
 {
    public bool sp;
+    public bool wv;
     public bool firsttrig=true;
     public GameObject u;
     public GameObject d;
     public GameObject r;
     public GameObject l;
+    public GameObject minimaphide;
     public bool specialRoomtf;
     [SerializeField] GameData gameData;
     private  List<GameObject> entr;
@@ -30,6 +32,7 @@ public class SpawnerTrigger : MonoBehaviour
             }
         }
         sp = false;
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,6 +43,7 @@ public class SpawnerTrigger : MonoBehaviour
             {
                 gameData.spawnMeter--;
                 firsttrig = false;
+                minimaphide.SetActive(false);
             }
            
         }
