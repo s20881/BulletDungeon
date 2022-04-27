@@ -42,6 +42,7 @@ public class RoomSpawner : MonoBehaviour
       
             gameData.spawnMeter++;
     }
+    
 }
 
 public enum OpeningDirection
