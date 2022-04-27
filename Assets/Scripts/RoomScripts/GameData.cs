@@ -102,5 +102,6 @@ public class GameData : ScriptableObject
         return amomed[Random.Range(0, amomed.Length)];
 
     }
+    
 }
  
