@@ -24,7 +24,7 @@ public class GameData : ScriptableObject
         {
             special = 0;
         }
-        if (spawnMeter >= 1)
+        if (spawnMeter >= 8)
         {
             switch (direction)
             {
@@ -102,5 +102,6 @@ public class GameData : ScriptableObject
         return amomed[Random.Range(0, amomed.Length)];
 
     }
+    
 }
  

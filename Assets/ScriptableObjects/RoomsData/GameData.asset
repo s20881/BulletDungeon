@@ -50,11 +50,11 @@ MonoBehaviour:
   - {fileID: 4112891224978686465, guid: 1036d34b7217a71428e00f2bfa0d2137, type: 3}
   - {fileID: 8027093955560131015, guid: aff28ba1a8923b343b2c80c66a358685, type: 3}
   bosses:
-  - {fileID: 4903458976660933482, guid: 5a2a5aaf451bd4f45b848090b449e316, type: 3}
-  - {fileID: 4903458976660933482, guid: 5a2a5aaf451bd4f45b848090b449e316, type: 3}
+  - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
+  - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   amomed:
-  - {fileID: 4776324515099950351, guid: a19aafc9ec3415349ac13024644fb136, type: 3}
-  - {fileID: 5424810755127411306, guid: e63ae2ef9310169439a0d7e432fc55b1, type: 3}
+  - {fileID: 5175482497874004556, guid: 827a2e82560caae4097ba9e7ce71521b, type: 3}
+  - {fileID: 1537020886833328421, guid: 609f002c2e3fe914e99f045bfbe367b2, type: 3}
   special: 0
-  spawnMeter: 2
+  spawnMeter: 1
   enemMeter: 8

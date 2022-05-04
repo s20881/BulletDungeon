@@ -3915,7 +3915,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9d49b7f52bb249d439ab0cf94d82c5e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3934,10 +3934,10 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -389514103
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.0015674233, y: 0.0015674233, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -4055,7 +4055,7 @@ GameObject:
   - component: {fileID: 7135136650127577468}
   m_Layer: 0
   m_Name: D1
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4320,7 +4320,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
     type: 3}
-  m_Color: {r: 1, g: 0.84313726, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4487,7 +4487,7 @@ GameObject:
   - component: {fileID: 8429622104130988957}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4606,7 +4606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005031830603578082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0.09, z: -1}
   m_LocalScale: {x: 1.56, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 249681956207414540}
@@ -4851,7 +4851,7 @@ GameObject:
   - component: {fileID: 7087821503403083795}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4959,7 +4959,7 @@ GameObject:
   - component: {fileID: 2547265656725335696}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5124,7 +5124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4253784569285065020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0, z: -1}
+  m_LocalPosition: {x: -0.3, y: 0, z: -1}
   m_LocalScale: {x: 0.3, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 8674794652936002906}
@@ -5240,8 +5240,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4537422034283410597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.56, y: 1.6, z: 1}
+  m_LocalPosition: {x: 0, y: -0.09, z: -1}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 3692815697334205665}
   m_RootOrder: 0
@@ -5408,7 +5408,7 @@ GameObject:
   - component: {fileID: 6160572687987829043}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5516,7 +5516,7 @@ GameObject:
   - component: {fileID: 8263432003882415874}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5666,7 +5666,7 @@ GameObject:
   - component: {fileID: 7446969271670641215}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5817,7 +5817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5621874725132614760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0, z: -1}
+  m_LocalPosition: {x: 0.3, y: 0, z: -1}
   m_LocalScale: {x: 0.3, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 4269149428705750744}
@@ -6083,7 +6083,7 @@ GameObject:
   - component: {fileID: 795068573058208994}
   m_Layer: 0
   m_Name: U1
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6192,7 +6192,7 @@ GameObject:
   - component: {fileID: 7665987359606226557}
   m_Layer: 0
   m_Name: L1
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6328,7 +6328,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6257960431087121705}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 0.99, y: 0.99, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -6584,7 +6584,7 @@ GameObject:
   - component: {fileID: 4386376699022069486}
   m_Layer: 0
   m_Name: R1
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7620,7 +7620,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9d49b7f52bb249d439ab0cf94d82c5e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7642,7 +7642,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.0015674233, y: 0.0015674233, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -7663,7 +7663,7 @@ GameObject:
   - component: {fileID: 3309300141729987866}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7771,7 +7771,7 @@ GameObject:
   - component: {fileID: 6881529739413822584}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Room
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
