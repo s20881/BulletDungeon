@@ -208,6 +208,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863398557, guid: 21d56c89608a5ba4cab012fd0862a6be, type: 3}
+      propertyPath: invincible
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1293750659043540800, guid: 21d56c89608a5ba4cab012fd0862a6be,
         type: 3}
       propertyPath: m_Name
@@ -909,6 +913,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyDrone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7420665197414938320, guid: ea8d53ef8d868a240814afd5a70aba99,
         type: 3}
