@@ -55,6 +55,6 @@ MonoBehaviour:
   amomed:
   - {fileID: 5175482497874004556, guid: 827a2e82560caae4097ba9e7ce71521b, type: 3}
   - {fileID: 1537020886833328421, guid: 609f002c2e3fe914e99f045bfbe367b2, type: 3}
-  special: 0
-  spawnMeter: 1
-  enemMeter: 8
+  special: 2
+  spawnMeter: 12
+  enemMeter: 4
