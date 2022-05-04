@@ -16,8 +16,8 @@ MonoBehaviour:
   magSize: 0
   reloadTime: 0
   fireRate: 2
-  baseDamage: 10
-  bulletSpeed: 20
+  baseDamage: 1
+  bulletSpeed: 10
   recoilForce: 0
   recoilSpeed: 0
   muzzlePos: {x: 0, y: 0}
