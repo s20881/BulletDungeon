@@ -120,8 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e071704d4bccd248a3fb1eb22f57372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  type: Drone
   damageReceivedMultiplier: 1
   invincible: 0
   healthBarPrefab: {fileID: 5792398017132093608, guid: a3e2fc929dfcde543a14e8666467888e,
@@ -185,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4862ff9df8246b14988e83a1e9ac310c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.5
+  movementSpeed: 3
   currentDestination: {x: 0, y: 0}
 --- !u!114 &7420665197414938327
 MonoBehaviour:
