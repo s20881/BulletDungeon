@@ -71,7 +71,7 @@ public class EnemyStatus : MonoBehaviour
         else if (type == "Robot")
             EventManager.Instance.RaiseOnRobotDeath();
         GetComponent<Animator>().SetTrigger("Death");
-        Destroy(GetComponent<BoxCollider2D>());
+        Destroy(GetComponent<CircleCollider2D>());
         Destroy(this);
     }
 }

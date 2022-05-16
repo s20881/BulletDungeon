@@ -10,8 +10,6 @@ public class EnemyPathfinding : MonoBehaviour
     private EnemyMovement enemy;
     private Transform player;
 
-    [SerializeField] private GameObject markerPrefab;
-
     private void Start()
     {
         cc = GetComponent<CircleCollider2D>();
@@ -27,18 +25,16 @@ public class EnemyPathfinding : MonoBehaviour
         {
             if (PlayerInSight())
             {
-                Debug.Log("Player in sight");
                 enemy.currentDestination = Vector2.MoveTowards(transform.position, player.position, step);
             }
             else
             {
-                Debug.Log("Searching for path");
-                enemy.currentDestination = GetPath()[1];
+                var path = GetPath();
+                if(path != null && path.Count >= 2)
+                {
+                    enemy.currentDestination = GetPath()[1];
+                }
             }
-        }
-        else
-        {
-            Debug.Log("Moving or player close enough");
         }
     }
 
@@ -102,7 +98,6 @@ public class EnemyPathfinding : MonoBehaviour
         }
         if (target == null)
         {
-            Debug.Log("Pathfinding finished without finding the target.");
             return null;
         }
         else
@@ -146,23 +141,5 @@ public class EnemyPathfinding : MonoBehaviour
             return true;
         else
             return false;
-    }
-
-    // debug
-    [ContextMenu("Test path")] private void TestPath()
-    {
-        List<Vector3> path = GetPath();
-        foreach (Vector3 pos in path)
-        {
-            Instantiate<GameObject>(markerPrefab, pos, Quaternion.identity);
-        }
-    }
-    [ContextMenu("Accessible neighbors")] private void TestAccessibleNeighbors()
-    {
-        List<Vector3> neighbors = GetAccessibleNeighbors(GetNeighbors(transform.position), transform.position);
-        foreach (Vector3 pos in neighbors)
-        {
-            Instantiate<GameObject>(markerPrefab, pos, Quaternion.identity);
-        }
     }
 }
