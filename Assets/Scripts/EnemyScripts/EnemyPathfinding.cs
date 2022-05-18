@@ -30,10 +30,12 @@ public class EnemyPathfinding : MonoBehaviour
             else
             {
                 var path = GetPath();
-                if(path != null && path.Count >= 2)
+                if (path != null && path.Count >= 2)
                 {
                     enemy.currentDestination = GetPath()[1];
                 }
+                else
+                    Debug.Log("nie ma");
             }
         }
     }
