@@ -252,6 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredDistanceToPlayer: 1
   step: 1
+  retryDelay: 1
 --- !u!114 &2839167982470804774
 MonoBehaviour:
   m_ObjectHideFlags: 0

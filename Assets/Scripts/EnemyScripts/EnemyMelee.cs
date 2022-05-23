@@ -18,7 +18,6 @@ public class EnemyMelee : MonoBehaviour
     {
         onCooldown = false;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
-
     }
 
     public void Attack()
@@ -32,6 +31,5 @@ public class EnemyMelee : MonoBehaviour
         onCooldown = true;
         yield return new WaitForSeconds(1 / attackSpeed);
         onCooldown = false;
-        
     }
 }
