@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private Animator animator;
     private Transform player;
 
     private void Start()
@@ -16,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
         currentDestination = transform.position;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void FixedUpdate()
@@ -23,6 +25,11 @@ public class EnemyMovement : MonoBehaviour
         if (!ReachedDestination())
         {
             rb.MovePosition(Vector2.MoveTowards(transform.position, currentDestination, movementSpeed * Time.fixedDeltaTime));
+            animator.SetBool("running", true);
+        }
+        else
+        {
+            animator.SetBool("running", false);
         }
         UpdateFacing();
     }

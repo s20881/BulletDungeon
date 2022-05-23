@@ -6,15 +6,19 @@ public class EnemyPathfinding : MonoBehaviour
 {
     [SerializeField] private float desiredDistanceToPlayer = 1f;
     [SerializeField] private float step = 1f;
+    //[SerializeField] private float maxPathSearchRange = 100f;
+    [SerializeField] private float retryDelay = 1f;
     private CircleCollider2D cc;
     private EnemyMovement enemy;
     private Transform player;
+    private bool sleeping;
 
     private void Start()
     {
         cc = GetComponent<CircleCollider2D>();
         enemy = GetComponent<EnemyMovement>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        sleeping = false;
 
         if (desiredDistanceToPlayer < step * 0.71) // 0.71 > sqrt(2) / 2
             Debug.LogWarning("Desired distance to player is too small. It can be impossible to find a path.");
@@ -27,15 +31,9 @@ public class EnemyPathfinding : MonoBehaviour
             {
                 enemy.currentDestination = Vector2.MoveTowards(transform.position, player.position, step);
             }
-            else
+            else if (!sleeping)
             {
-                var path = GetPath();
-                if (path != null && path.Count >= 2)
-                {
-                    enemy.currentDestination = GetPath()[1];
-                }
-                else
-                    Debug.Log("nie ma");
+                StartCoroutine(TryPath());
             }
         }
     }
@@ -74,6 +72,8 @@ public class EnemyPathfinding : MonoBehaviour
         while(a.Count > 0 && target == null)
         {
             PathNode q = BestNode(a);
+            //if (Vector2.Distance(q.Position, transform.position) > maxPathSearchRange)
+            //    break;
             a.Remove(q);
             List<PathNode> children = new List<PathNode>();
             foreach(Vector3 neighbor in GetAccessibleNeighbors(GetNeighbors(q.Position), q.Position))
@@ -114,6 +114,20 @@ public class EnemyPathfinding : MonoBehaviour
             while (current != null);
             path.Reverse();
             return path;
+        }
+    }
+    private IEnumerator TryPath()
+    {
+        var path = GetPath();
+        if (path != null && path.Count >= 2)
+        {
+            enemy.currentDestination = GetPath()[1];
+        }
+        else
+        {
+            sleeping = true;
+            yield return new WaitForSeconds(retryDelay);
+            sleeping = false;
         }
     }
     private PathNode BestNode(List<PathNode> nodes)
