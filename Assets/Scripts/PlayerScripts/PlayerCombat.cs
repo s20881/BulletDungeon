@@ -130,5 +130,6 @@ public class PlayerCombat : MonoBehaviour
     public void AddAmmo(int ammo)
     {
         EquippedWeaponTotalAmmo += ammo;
+        
     }
 }
