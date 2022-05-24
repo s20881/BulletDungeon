@@ -43,6 +43,7 @@ MonoBehaviour:
   - {fileID: 6602888105068981666, guid: 3d4cedc2c2cbe56409ee061bd6e7683b, type: 3}
   enemies:
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
+  - {fileID: 2839167982470804785, guid: c462f12a847fd064cb634bbfb911e24f, type: 3}
   bossRooms:
   - {fileID: 8027093955560131015, guid: aff28ba1a8923b343b2c80c66a358685, type: 3}
   - {fileID: 2626658542461171944, guid: e36d164714440b843bcb41f3a93174d0, type: 3}
@@ -51,8 +52,8 @@ MonoBehaviour:
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   amomed:
-  - {fileID: 5175482497874004556, guid: 827a2e82560caae4097ba9e7ce71521b, type: 3}
-  - {fileID: 1537020886833328421, guid: 609f002c2e3fe914e99f045bfbe367b2, type: 3}
+  - {fileID: 6551374336014920955, guid: 25f4ecc4d98e6394f87f5da8cb93f16d, type: 3}
+  - {fileID: 6551374336014920955, guid: 25f4ecc4d98e6394f87f5da8cb93f16d, type: 3}
   special: 1
-  spawnMeter: -1
+  spawnMeter: 12
   enemMeter: 0

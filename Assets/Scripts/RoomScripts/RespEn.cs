@@ -22,7 +22,7 @@ public class RespEn : MonoBehaviour
         spawner = GetComponent<SpriteRenderer>();
         spawner.enabled = false;
         StartCoroutine(ExecuteAfterTime(2.0f));
-        StartCoroutine(spawntime(8.0f));
+        StartCoroutine(spawntime(11.0f));
        
     }
 
