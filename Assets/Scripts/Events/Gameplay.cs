@@ -9,10 +9,12 @@ public class Gameplay : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnDroneDeath += DecreaseEnemyMeter;
+        EventManager.OnRobotDeath += DecreaseEnemyMeter;
     }
     private void OnDisable()
     {
         EventManager.OnDroneDeath -= DecreaseEnemyMeter;
+        EventManager.OnRobotDeath -= DecreaseEnemyMeter;
     }
 
     private void DecreaseEnemyMeter()

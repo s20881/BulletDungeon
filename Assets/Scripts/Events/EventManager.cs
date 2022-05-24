@@ -22,6 +22,9 @@ public class EventManager : MonoBehaviour
     public delegate void PlayerSwitchWeapon();
     public static event PlayerSwitchWeapon OnPlayerSwitchWeapon;
 
+    public delegate void PlayerAmmoPickup();
+    public static event PlayerAmmoPickup OnPlayerAmmoPickup;
+
     public delegate void DroneHit();
     public static event DroneHit OnDroneHit;
 
@@ -72,6 +75,11 @@ public class EventManager : MonoBehaviour
     {
         if (OnPlayerSwitchWeapon != null)
             OnPlayerSwitchWeapon();
+    }
+    public void RaiseOnPlayerAmmoPickup()
+    {
+        if (OnPlayerAmmoPickup != null)
+            OnPlayerAmmoPickup();
     }
     public void RaiseOnDroneHit()
     {
