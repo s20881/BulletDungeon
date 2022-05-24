@@ -13,9 +13,12 @@ public class portalcont : MonoBehaviour
     string ok = "tak";
     string cancel = "nie";
     public bool boss = false;
+    public Light light;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         this.spriteRenderer = GetComponent<SpriteRenderer>();
         this.boxcollider = GetComponent<BoxCollider2D>();
        
@@ -29,12 +32,16 @@ public class portalcont : MonoBehaviour
         if (gameData.spawnMeter < 0 && gameData.enemMeter==0)
         {    
             spriteRenderer.enabled = true;
-            boxcollider.enabled = true;  
+            boxcollider.enabled = true;
+            light.enabled = true;
+           
         }
         else
         {
             spriteRenderer.enabled = false;
             boxcollider.enabled = false;
+            light.enabled = false;
+           
         }
         
     }

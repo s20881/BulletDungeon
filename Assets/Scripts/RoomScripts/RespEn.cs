@@ -13,33 +13,37 @@ public class RespEn : MonoBehaviour
     private int wave = 0;
     private SpriteRenderer spawner;
     private bool bol = false;
+    private int phase = 0;
+    private bool chek=false;
+    public Transform ve3;
+    public Vector2 ve2;
     private void Start()
     {
         spawner = GetComponent<SpriteRenderer>();
         spawner.enabled = false;
         StartCoroutine(ExecuteAfterTime(2.0f));
+        StartCoroutine(spawntime(8.0f));
+       
     }
 
     private void spawn()
     {
-
-        roomsParent = GameObject.FindGameObjectWithTag("Rooms").transform;
-
-        Instantiate(gameData.GetRandomEnemy(), transform.position, roomRot, roomsParent);
+        Instantiate(gameData.GetRandomEnemy(), ve3.position, roomRot);
+        Debug.Log(ve3.position);
         gameData.enemMeter++;
     }
     private void Update()
     {
+        if (gameData.enemMeter == 0)
+        {
+            phase = 0;
+        }
+       
         if (go.GetComponent<SpawnerTrigger>().sp)
         {
             if (go.GetComponent<SpawnerTrigger>().wv)
             {
-                if (gameData.enemMeter <8 && wave < 3)
-                {
-                    wave++;
-
-                    spawn();
-                }
+                chek = true;
             }
             else
             {
@@ -60,9 +64,30 @@ public class RespEn : MonoBehaviour
             if (bol)
             {
                 spawner.enabled = true;
+                gameData.enemMeter++;
                 yield return new WaitForSeconds(time);
+                gameData.enemMeter--;
                 spawner.enabled = false;
                 spawn();
+                break;
+            }
+            yield return new WaitForSeconds(0);
+        }
+    }
+    IEnumerator spawntime(float time)
+    {
+        int i = 0;
+        while (true)
+        {
+            if (chek)
+            {
+                while (i < 3)
+                {
+                    spawn();
+                    yield return new WaitForSeconds(time);
+                    i++;
+                   
+                }
                 break;
             }
             yield return new WaitForSeconds(0);
