@@ -314,6 +314,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   boxcollider: {fileID: 0}
   boss: 0
+  light: {fileID: 5244052287526948405}
 --- !u!95 &7632139502923521711
 Animator:
   serializedVersion: 3

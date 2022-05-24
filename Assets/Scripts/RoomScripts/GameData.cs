@@ -50,9 +50,9 @@ public class GameData : ScriptableObject
                 switch (direction)
                 {
                     case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(3,5)];
+                        return upRooms[Random.Range(3,4)];
                     case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(3,5)];
+                        return downRooms[Random.Range(3,4)];
                     case OpeningDirection.NeedLeftDoor:
                         return leftRooms[4];
                     case OpeningDirection.NeedRightDoor:
@@ -66,9 +66,9 @@ public class GameData : ScriptableObject
                 switch (direction)
                 {
                     case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(1, upRooms.Length-3)];
+                        return upRooms[Random.Range(1, upRooms.Length-2)];
                     case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(1, downRooms.Length-3)];
+                        return downRooms[Random.Range(1, downRooms.Length-2)];
                     case OpeningDirection.NeedLeftDoor:
                         return leftRooms[Random.Range(1, leftRooms.Length-2)];
                     case OpeningDirection.NeedRightDoor:

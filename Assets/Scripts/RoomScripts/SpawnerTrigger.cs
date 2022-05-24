@@ -16,8 +16,11 @@ public class SpawnerTrigger : MonoBehaviour
     [SerializeField] GameData gameData;
     private  List<GameObject> entr;
     private  List<GameObject> doors;
+
+    public GameObject enem;
     private void Start()
     {
+       // enem = GameObject.FindWithTag("Enemy");
         entr = new List<GameObject>();
         doors = new List<GameObject>();
         entr.Add(u);
@@ -41,6 +44,7 @@ public class SpawnerTrigger : MonoBehaviour
             sp = true;
             if (firsttrig)
             {
+                enem.GetComponent<EnemyMovement>().currentDestination = (Vector2)transform.position;
                 gameData.spawnMeter--;
                 firsttrig = false;
                 minimaphide.SetActive(false);
