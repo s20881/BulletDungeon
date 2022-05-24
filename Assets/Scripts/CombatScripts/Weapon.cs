@@ -20,15 +20,11 @@ public class Weapon : ScriptableObject
     public void Shoot(GameObject shooter, float damageMultiplier, float bulletSpeedMultiplier, Vector2 bulletPos, Vector2 direction)
     {
         GameObject projectile = Instantiate(projectilePrefab, bulletPos, Quaternion.FromToRotation(new Vector3(1, 0, 0), direction));
-        if(weaponName == "Rocket Launcher")
-        {
-            projectile.GetComponent<Rocket>().damage = baseDamage * damageMultiplier;
-        }
+        projectile.GetComponent<Bullet>().damage = baseDamage * damageMultiplier;
+        if(shooter.CompareTag("Player"))
+            projectile.GetComponent<Bullet>().hostile = false;
         else
-        {
-            projectile.GetComponent<Bullet>().damage = baseDamage * damageMultiplier;
-            projectile.GetComponent<Bullet>().shooter = shooter;
-        }
+            projectile.GetComponent<Bullet>().hostile = true;
         projectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed * bulletSpeedMultiplier;
     }
 }

@@ -13,18 +13,24 @@ public class EnemyMelee : MonoBehaviour
     public bool OnCooldown { get { return onCooldown; } }
 
     private PlayerStatus player;
+    private Animator animator;
 
     private void Start()
     {
         onCooldown = false;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+        animator = GetComponent<Animator>();
     }
 
     public void Attack()
     {
-        player.Hit(damage * damageMultiplier);
-        EventManager.Instance.RaiseOnRobotAttack();
-
+        if(!OnCooldown)
+        {
+            player.Hit(damage * damageMultiplier);
+            animator.SetTrigger("Attack");
+            EventManager.Instance.RaiseOnRobotAttack();
+            StartCoroutine(Cooldown());
+        }
     }
     public IEnumerator Cooldown()
     {

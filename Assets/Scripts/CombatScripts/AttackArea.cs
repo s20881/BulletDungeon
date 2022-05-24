@@ -1,24 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AttackArea : MonoBehaviour
 {
-    private Animator animator;
-    private EnemyMelee enemy;
-
-    private void Start()
-    {
-        animator = GetComponentInParent<Animator>();
-        enemy = GetComponentInParent<EnemyMelee>();
-    }
+    [SerializeField] private UnityEvent attackMethod;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(!enemy.OnCooldown)
-        {
-            animator.SetTrigger("Attack");
-            StartCoroutine(enemy.Cooldown());
-        }
+        attackMethod.Invoke();
     }
 }
