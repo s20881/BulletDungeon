@@ -127,4 +127,9 @@ public class PlayerCombat : MonoBehaviour
             EquippedWeaponTotalAmmo = 0;
         }
     }
+    public void AddAmmo(int ammo)
+    {
+        EquippedWeaponTotalAmmo += ammo;
+        
+    }
 }

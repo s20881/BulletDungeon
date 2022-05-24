@@ -4959,7 +4959,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9d49b7f52bb249d439ab0cf94d82c5e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5105,9 +5105,10 @@ MonoBehaviour:
   totalRifleAmmo: 90
   totalRocketAmmo: 5
   fireRateMultiplier: 1
-  damageMultiplier: 1
+  damageMultiplier: 5
   bulletSpeedMultiplier: 1
   reloadSpeedMultiplier: 1
   equippedWeapon: {fileID: 11400000, guid: 2d0b169b862f73c4a8a2493fd930c3c8, type: 2}
   reloading: 0
-  sliderPrefab: {fileID: 0}
+  sliderPrefab: {fileID: 3900657274261211677, guid: cd8ea34e758b1584ba5015bc875219fb,
+    type: 3}
