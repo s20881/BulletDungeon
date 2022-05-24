@@ -8,6 +8,7 @@ public class Rocket : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate<GameObject>(explosionPrefab, transform.position, Quaternion.identity);
+        GameObject explosion = Instantiate<GameObject>(explosionPrefab, transform.position, Quaternion.identity);
+        explosion.GetComponent<Explosion>().damage = GetComponent<Bullet>().damage;
     }
 }
