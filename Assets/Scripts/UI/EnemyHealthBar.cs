@@ -36,6 +36,6 @@ public class EnemyHealthBar : MonoBehaviour
 
     private void RefreshBar()
     {
-        slider.value = enemy.currentHealth / enemy.maxHealth;
+        slider.value = enemy.CurrentHealth / enemy.MaxHealth;
     }
 }

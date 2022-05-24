@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7420665197414938321}
   - component: {fileID: 7420665197414938318}
   - component: {fileID: 7420665197414938323}
-  - component: {fileID: 7420665197414938325}
   - component: {fileID: 7420665197414938322}
   - component: {fileID: 7420665197414938324}
   - component: {fileID: 7420665197414938327}
+  - component: {fileID: 2324928708445219577}
   m_Layer: 9
   m_Name: EnemyDrone
   m_TagString: Enemy
@@ -120,38 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e071704d4bccd248a3fb1eb22f57372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  type: Drone
   damageReceivedMultiplier: 1
   invincible: 0
   healthBarPrefab: {fileID: 5792398017132093608, guid: a3e2fc929dfcde543a14e8666467888e,
     type: 3}
---- !u!61 &7420665197414938325
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420665197414938319}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03127265, y: 0.15626252}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.37798166, y: 0.5028565}
-  m_EdgeRadius: 0
 --- !u!50 &7420665197414938322
 Rigidbody2D:
   serializedVersion: 4
@@ -185,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4862ff9df8246b14988e83a1e9ac310c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.5
+  movementSpeed: 3
   currentDestination: {x: 0, y: 0}
 --- !u!114 &7420665197414938327
 MonoBehaviour:
@@ -203,3 +176,19 @@ MonoBehaviour:
   damageMultiplier: 1
   bulletSpeedMultiplier: 1
   equippedWeapon: {fileID: 11400000, guid: 78804ff0420705240be4ee8bc30fff85, type: 2}
+--- !u!58 &2324928708445219577
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420665197414938319}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.13}
+  serializedVersion: 2
+  m_Radius: 0.35

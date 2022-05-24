@@ -31,6 +31,15 @@ public class EventManager : MonoBehaviour
     public delegate void DroneShoot();
     public static event DroneShoot OnDroneShoot;
 
+    public delegate void RobotHit();
+    public static event RobotHit OnRobotHit;
+
+    public delegate void RobotDeath();
+    public static event RobotDeath OnRobotDeath;
+
+    public delegate void RobotAttack();
+    public static event RobotAttack OnRobotAttack;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -78,5 +87,20 @@ public class EventManager : MonoBehaviour
     {
         if (OnDroneShoot != null)
             OnDroneShoot();
+    }
+    public void RaiseOnRobotHit()
+    {
+        if (OnRobotHit != null)
+            OnRobotHit();
+    }
+    public void RaiseOnRobotDeath()
+    {
+        if (OnRobotDeath != null)
+            OnRobotDeath();
+    }
+    public void RaiseOnRobotAttack()
+    {
+        if (OnRobotAttack != null)
+            OnRobotAttack();
     }
 }
