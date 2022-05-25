@@ -8,7 +8,11 @@ public class PlayerStatus : MonoBehaviour
     public float maxHp = 100f;
     public float damageReceivedMultiplier = 1f;
     [SerializeField] private bool invincible = false;
-
+    [SerializeField] GameData gameData;
+     void Start()
+    {
+        damageReceivedMultiplier = gameData.level;
+    }
     public void Hit(float damage)
     {
         EventManager.Instance.RaiseOnPlayerHit();

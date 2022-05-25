@@ -7,22 +7,24 @@ public class HealRoom : MonoBehaviour
     private bool act = false;
     private bool used = false;
     private GameObject player;
+    public ParticleSystem ps;
 
     void Start()
     {
         StartCoroutine(heal(1.0f));
         player = GameObject.FindWithTag("Player");
-        
+        ps.Stop();
     }
     void Update()
     {
-        
+       
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && used==false)
         {
             act = true;
+            ps.Play();
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
@@ -31,6 +33,7 @@ public class HealRoom : MonoBehaviour
         {
             act=false;
             used = true;
+            ps.Stop();
         }
     }
     IEnumerator heal(float time)

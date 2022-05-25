@@ -14,6 +14,8 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] bossRooms;
     [SerializeField] private GameObject[] bosses;
     [SerializeField] private GameObject[] amomed;
+    public float level=1;
+    public float levelenem = 1;
     public int special = 0;
     public int spawnMeter ;
     public int enemMeter;
@@ -41,7 +43,7 @@ public class GameData : ScriptableObject
         }
         else
         {
-            int rand = Random.Range(1, 5);
+            int rand = Random.Range(1, 6);
             
             if (rand == 2 && special<2)
             {
@@ -50,13 +52,13 @@ public class GameData : ScriptableObject
                 switch (direction)
                 {
                     case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(3,4)];
+                        return upRooms[Random.Range(4,5)];
                     case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(3,4)];
+                        return downRooms[Random.Range(4,5)];
                     case OpeningDirection.NeedLeftDoor:
-                        return leftRooms[4];
+                        return leftRooms[5];
                     case OpeningDirection.NeedRightDoor:
-                        return rightRooms[3];
+                        return rightRooms[4];
                     default: return null;
                 }
               

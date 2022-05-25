@@ -13,6 +13,7 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] private bool invincible = false;
     [SerializeField] private GameObject healthBarPrefab;
     private GameObject worldSpaceCanvas;
+    [SerializeField] GameData gameData;
 
     public float MaxHealth
     {
@@ -48,6 +49,7 @@ public class EnemyStatus : MonoBehaviour
         Transform worldSpaceCanvas = GameObject.Find("WorldSpaceCanvas").transform;
         GameObject healthBar = Instantiate(healthBarPrefab, worldSpaceCanvas);
         healthBar.GetComponent<EnemyHealthBar>().enemy = this;
+        damageReceivedMultiplier = gameData.levelenem;
     }
     public void Hit(float damage)
     {
