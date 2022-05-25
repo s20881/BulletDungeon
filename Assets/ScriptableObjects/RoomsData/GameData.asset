@@ -16,24 +16,28 @@ MonoBehaviour:
   - {fileID: 3915157970618594157, guid: 60598767c2da314428fc1ac25c1f8b25, type: 3}
   - {fileID: 4887750052434895630, guid: ee1a6dedc675a4843becb4e2837de1be, type: 3}
   - {fileID: 7828468452761748970, guid: 1de6f84f99abcf04eaec82c85912a81f, type: 3}
+  - {fileID: 623283979702020369, guid: f51d33fc4e0091e41b862b41f27c8993, type: 3}
   - {fileID: 6205423434328333639, guid: 79336a24815c667429f62f7d87f7ce43, type: 3}
   - {fileID: 1366939532271433806, guid: 9e0fda7aac0b6714ea41e5f113425367, type: 3}
   downRooms:
   - {fileID: 7753334095528656466, guid: 8b751e0de67011e41b4c84b14059eb31, type: 3}
   - {fileID: 4887750052434895630, guid: ee1a6dedc675a4843becb4e2837de1be, type: 3}
   - {fileID: 623283979702020369, guid: f51d33fc4e0091e41b862b41f27c8993, type: 3}
+  - {fileID: 2774932145931701175, guid: 51b193478e2ec1e4186e1da6940b03cd, type: 3}
   - {fileID: 6205423434328333639, guid: 79336a24815c667429f62f7d87f7ce43, type: 3}
   - {fileID: 6205423434328333639, guid: 79336a24815c667429f62f7d87f7ce43, type: 3}
   leftRooms:
   - {fileID: 8587248700668947793, guid: 9ff14fb980f253641bc54dba131df1e7, type: 3}
   - {fileID: 7332874267917893056, guid: edcc74882eb806445909c070e6ef0b2d, type: 3}
   - {fileID: 2774932145931701175, guid: 51b193478e2ec1e4186e1da6940b03cd, type: 3}
+  - {fileID: 6412958852604495800, guid: 7097ab9ff17db2a4da3726acc7082690, type: 3}
   - {fileID: 1366939532271433806, guid: 9e0fda7aac0b6714ea41e5f113425367, type: 3}
   - {fileID: 3741751087870118881, guid: f1c2b23c10be66c4b93610ac7c2b8b31, type: 3}
   rightRooms:
   - {fileID: 5533765569506447961, guid: 585240cc261bccd4fa302e05d2d34f00, type: 3}
   - {fileID: 7332874267917893056, guid: edcc74882eb806445909c070e6ef0b2d, type: 3}
   - {fileID: 6864902180986916978, guid: 09ca85c970226a84d8d562c24519e41e, type: 3}
+  - {fileID: 7828468452761748970, guid: 1de6f84f99abcf04eaec82c85912a81f, type: 3}
   - {fileID: 1366939532271433806, guid: 9e0fda7aac0b6714ea41e5f113425367, type: 3}
   - {fileID: 3741751087870118881, guid: f1c2b23c10be66c4b93610ac7c2b8b31, type: 3}
   covers:
@@ -52,8 +56,10 @@ MonoBehaviour:
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   amomed:
-  - {fileID: 5175482497874004556, guid: 827a2e82560caae4097ba9e7ce71521b, type: 3}
-  - {fileID: 1537020886833328421, guid: 609f002c2e3fe914e99f045bfbe367b2, type: 3}
+  - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
+  - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
+  level: 1.2
+  levelenem: 0.8
   special: 1
-  spawnMeter: 11
-  enemMeter: 1
+  spawnMeter: 12
+  enemMeter: 8

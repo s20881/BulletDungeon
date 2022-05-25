@@ -3876,8 +3876,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -10, y: -10, z: 0}
-  m_Size: {x: 20, y: 20, z: 1}
+  m_Origin: {x: -11, y: -11, z: 0}
+  m_Size: {x: 22, y: 22, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3992,6 +3992,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 2130117078579205924}
+  ve2: {x: 0, y: 0}
 --- !u!212 &6340046910943462123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4199,6 +4200,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 701963025410784837}
+  ve2: {x: 0, y: 0}
 --- !u!212 &6596212148916878240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4426,6 +4428,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 7845624315029844238}
+  ve2: {x: 0, y: 0}
 --- !u!212 &3767145507999951402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5441,6 +5444,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 4013167388031816869}
+  ve2: {x: 0, y: 0}
 --- !u!212 &2814764920924582300
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6019,6 +6023,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 3405856004648165622}
+  ve2: {x: 0, y: 0}
 --- !u!212 &6820509741313910624
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6523,6 +6528,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 7360781445846190503}
+  ve2: {x: 0, y: 0}
 --- !u!212 &4156293067843103893
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6621,6 +6627,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 4125843883140854376}
+  ve2: {x: 0, y: 0}
 --- !u!212 &2763129158983315749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6828,6 +6835,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   go: {fileID: 124100494072226523}
   ve3: {fileID: 5879374721623972189}
+  ve2: {x: 0, y: 0}
 --- !u!212 &2814750099857370579
 SpriteRenderer:
   m_ObjectHideFlags: 0
