@@ -10,6 +10,9 @@ TagManager:
   - Cover
   - Rooms
   - EnterDungeon
+  - HpBoost
+  - Scrap
+  - Gel
   layers:
   - Default
   - TransparentFX
