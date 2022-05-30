@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Robot
+  initialHealth: 200
   damageReceivedMultiplier: 1
   invincible: 0
   healthBarPrefab: {fileID: 5792398017132093608, guid: a3e2fc929dfcde543a14e8666467888e,
