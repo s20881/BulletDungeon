@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage;
-    public bool hostile;
+    [HideInInspector] public float damage;
+    [HideInInspector] public bool hostile;
 
     private BoxCollider2D bc;
 

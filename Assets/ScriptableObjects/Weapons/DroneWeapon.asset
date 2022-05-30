@@ -22,5 +22,5 @@ MonoBehaviour:
   recoilSpeed: 0
   muzzlePos: {x: 0, y: 0}
   sprite: {fileID: 0}
-  projectilePrefab: {fileID: 2017514698187455462, guid: 0198c272d4e18094cacd16c6bf98abc9,
+  projectilePrefab: {fileID: 7023243504318325915, guid: dc11606ccdda7b14cbe7a24661b5c685,
     type: 3}

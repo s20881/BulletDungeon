@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class EnemyStatus : MonoBehaviour
 {
     [SerializeField] private string type;
-    private float initialHealth = 100f;
+    [SerializeField] private float initialHealth = 100f;
     private float maxHealth;
     private float currentHealth;
     [SerializeField] private float damageReceivedMultiplier = 1f;
