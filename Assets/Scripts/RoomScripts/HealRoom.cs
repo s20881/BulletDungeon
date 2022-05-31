@@ -8,16 +8,25 @@ public class HealRoom : MonoBehaviour
     private bool used = false;
     private GameObject player;
     public ParticleSystem ps;
-
+    public GameObject localscale;
+    private Vector3 scaleChange;
+    private int cont;
     void Start()
     {
         StartCoroutine(heal(1.0f));
         player = GameObject.FindWithTag("Player");
         ps.Stop();
+        scaleChange=new Vector3(-0.2f, 0.0f, 0.0f);
+        cont = 0;
     }
     void Update()
     {
-       
+       if(cont == 10)
+        {
+            used = true;
+            ps.Stop();
+            act = false;
+        }
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,7 +41,7 @@ public class HealRoom : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             act=false;
-            used = true;
+           // used = true;
             ps.Stop();
         }
     }
@@ -45,8 +54,13 @@ public class HealRoom : MonoBehaviour
             {
                 while (true)
                 {
-                    if(player.GetComponent<PlayerStatus>().currentHp<100)
-                    player.GetComponent<PlayerStatus>().currentHp += 5;
+                    if (player.GetComponent<PlayerStatus>().currentHp < 90 && cont <10)
+                    {
+                        player.GetComponent<PlayerStatus>().currentHp += 10;
+                        localscale.transform.localScale += scaleChange;
+                        cont++;
+                    }
+                    
                     yield return new WaitForSeconds(time);
                     if (!act)
                         break;

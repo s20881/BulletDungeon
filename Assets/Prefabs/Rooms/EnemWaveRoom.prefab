@@ -2892,6 +2892,11 @@ PrefabInstance:
       propertyPath: specialRoomtf
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8449636421396278117, guid: daa0669c9b4f4ef4eac93d3043b139c4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9046164845998481898, guid: daa0669c9b4f4ef4eac93d3043b139c4,
         type: 3}
       propertyPath: m_RootOrder
