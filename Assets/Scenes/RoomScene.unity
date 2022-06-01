@@ -1402,6 +1402,11 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[367].second.m_TileSpriteIndex
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8113201647472675914, guid: 60598767c2da314428fc1ac25c1f8b25,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9078927925099335109, guid: 60598767c2da314428fc1ac25c1f8b25,
         type: 3}
       propertyPath: m_ChunkCullingBounds.x
@@ -1502,7 +1507,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.8115187
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1526,7 +1531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2532285, y: -8.321102, z: -10}
+  m_LocalPosition: {x: 0, y: -8.321102, z: -10}
   m_LocalScale: {x: 0.6784, y: 0.5865, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1545,6 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1823624093}
+  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!1001 &697128654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2355,6 +2361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1823624093}
+  gameData: {fileID: 0}
 --- !u!4 &1191635951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8660239276694678725, guid: 60598767c2da314428fc1ac25c1f8b25,
@@ -2699,6 +2706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1823624093}
+  gameData: {fileID: 0}
 --- !u!1 &1684319242
 GameObject:
   m_ObjectHideFlags: 0

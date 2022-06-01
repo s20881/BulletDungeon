@@ -58,8 +58,10 @@ MonoBehaviour:
   amomed:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
-  level: 1.2
-  levelenem: 0.8
-  special: 1
-  spawnMeter: 12
+  level: 1
+  levelenem: 1
+  special: 2
+  spawnMeter: 11
   enemMeter: 8
+  cx: -20
+  cy: 20
