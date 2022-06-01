@@ -19,6 +19,8 @@ public class GameData : ScriptableObject
     public int special = 0;
     public int spawnMeter ;
     public int enemMeter;
+    public float cx;
+    public float cy;
 
     public GameObject GetRandomRoom(OpeningDirection direction)
     {
