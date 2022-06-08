@@ -10,7 +10,11 @@ public class Lobby_Dungeon : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+<<<<<<< Updated upstream
             SceneManager.LoadScene("Scenes/New Scene", LoadSceneMode.Single);
+=======
+            SceneManager.LoadScene("Scenes/RoomScene", LoadSceneMode.Single);
+>>>>>>> Stashed changes
         }
     }
 }

@@ -9,9 +9,15 @@ TagManager:
   - Room
   - Cover
   - Rooms
+<<<<<<< Updated upstream
   - EnterDungeon
   - HpBoost
   - Scrap
+=======
+  - BossRoom
+  - Scrap
+  - HpBoost
+>>>>>>> Stashed changes
   - Gel
   layers:
   - Default
