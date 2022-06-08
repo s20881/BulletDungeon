@@ -9,16 +9,7 @@ TagManager:
   - Room
   - Cover
   - Rooms
-<<<<<<< Updated upstream
-  - EnterDungeon
-  - HpBoost
-  - Scrap
-=======
   - BossRoom
-  - Scrap
-  - HpBoost
->>>>>>> Stashed changes
-  - Gel
   layers:
   - Default
   - TransparentFX
@@ -29,8 +20,8 @@ TagManager:
   - 
   - 
   - Player
-  - 
-  - 
+  - Enemy
+  - Obstacle
   - 
   - 
   - 
@@ -53,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: und
+    uniqueID: 530830715
+    locked: 0
+  - name: floor
+    uniqueID: 3905453193
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
