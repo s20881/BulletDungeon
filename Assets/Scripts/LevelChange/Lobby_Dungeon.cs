@@ -10,7 +10,7 @@ public class Lobby_Dungeon : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Scenes/New Scene", LoadSceneMode.Single);
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
         }
     }
 }

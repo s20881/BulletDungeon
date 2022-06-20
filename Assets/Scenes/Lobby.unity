@@ -893,6 +893,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8390261574688366726, guid: 55ec203cc9937b349b73676d2607d3e3,
         type: 3}
+      propertyPath: gameData
+      value: 
+      objectReference: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e,
+        type: 2}
+    - target: {fileID: 8390261574688366726, guid: 55ec203cc9937b349b73676d2607d3e3,
+        type: 3}
       propertyPath: offsetSmooth
       value: 6
       objectReference: {fileID: 0}
@@ -956,7 +962,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8390261574688366726, guid: 55ec203cc9937b349b73676d2607d3e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55ec203cc9937b349b73676d2607d3e3, type: 3}
 --- !u!1 &196081854
 GameObject:
@@ -2989,6 +2996,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3, type: 3}
+--- !u!1 &474904448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8390261574688366722, guid: 55ec203cc9937b349b73676d2607d3e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 195797445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &474904450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474904448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4c9a77809b3224fb5515806d72a72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 1616358876}
+  offsetSmooth: 6
 --- !u!1001 &566651755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15147,7 +15174,7 @@ PrefabInstance:
     - target: {fileID: 1293750659043540815, guid: 21d56c89608a5ba4cab012fd0862a6be,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1293750659043540815, guid: 21d56c89608a5ba4cab012fd0862a6be,
         type: 3}
@@ -15441,7 +15468,7 @@ PrefabInstance:
     - target: {fileID: 1856496374928757136, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1856496374928757136, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3,
         type: 3}
