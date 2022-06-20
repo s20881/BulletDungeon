@@ -52,7 +52,8 @@ public class PlayerCombat : MonoBehaviour
     public Weapon equippedWeapon;
     private bool onCooldown;
     public bool reloading;
-    [SerializeField] private ReloadSlider slider;
+    [SerializeField] private GameObject sliderPrefab;
+    private ReloadSlider slider;
 
     private PlayerMovement playerMovement;
     private Animator animator;
@@ -63,6 +64,7 @@ public class PlayerCombat : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         inGameWeapon = GetComponentInChildren<EquippedWeapon>();
+        slider = Instantiate<GameObject>(sliderPrefab, GameObject.Find("WorldSpaceCanvas").transform).GetComponent<ReloadSlider>();
         mag = equippedWeapon.magSize;
         onCooldown = false;
         reloading = false;
@@ -124,5 +126,10 @@ public class PlayerCombat : MonoBehaviour
             mag += EquippedWeaponTotalAmmo;
             EquippedWeaponTotalAmmo = 0;
         }
+    }
+    public void AddAmmo(int ammo)
+    {
+        EquippedWeaponTotalAmmo += ammo;
+        EventManager.Instance.RaiseOnPlayerAmmoPickup();
     }
 }
