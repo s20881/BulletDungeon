@@ -21,7 +21,9 @@ public class GameData : ScriptableObject
     public int enemMeter;
     public float cx;
     public float cy;
-
+    public bool isbossroom = false;
+    public int bossMeter;
+    //eventt when die player zerowanie bossmeter i isboss na flase
     public GameObject GetRandomRoom(OpeningDirection direction)
     {
         if (spawnMeter == 0)

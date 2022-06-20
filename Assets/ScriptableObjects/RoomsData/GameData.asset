@@ -51,17 +51,18 @@ MonoBehaviour:
   bossRooms:
   - {fileID: 8027093955560131015, guid: aff28ba1a8923b343b2c80c66a358685, type: 3}
   - {fileID: 2626658542461171944, guid: e36d164714440b843bcb41f3a93174d0, type: 3}
-  - {fileID: 2626658542461171944, guid: e36d164714440b843bcb41f3a93174d0, type: 3}
   bosses:
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
   amomed:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
-  level: 1
-  levelenem: 1
-  special: 2
-  spawnMeter: 11
-  enemMeter: 8
-  cx: -20
-  cy: 20
+  level: 1.3
+  levelenem: 0.70000005
+  special: 1
+  spawnMeter: 13
+  enemMeter: 0
+  cx: 0
+  cy: 0
+  isbossroom: 0
+  bossMeter: 2

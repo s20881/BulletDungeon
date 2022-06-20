@@ -52,13 +52,20 @@ public class portalcont : MonoBehaviour
             bool st = EditorUtility.DisplayDialog(title,message,ok,cancel);
             if (st)
             {
-                if (!boss)
+                if (!gameData.isbossroom)
                 {
                     SceneManager.LoadScene("BossScene");
+                    gameData.isbossroom = true;
                 }
                 else
                 {
                     SceneManager.LoadScene("RoomScene");
+                    gameData.isbossroom = false;
+                    gameData.level += 0.15f;
+                    gameData.levelenem -= 0.15f;
+                    gameData.bossMeter += 1;
+
+
                 }
                
             }

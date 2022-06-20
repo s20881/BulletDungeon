@@ -2357,11 +2357,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181926955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4fcc33bc233f5848b7e8aef5d0e08a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 69fcd670405a8434cafc4d2e132ad27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 1823624093}
-  gameData: {fileID: 0}
+  objectToFollow: {fileID: 0}
 --- !u!4 &1191635951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8660239276694678725, guid: 60598767c2da314428fc1ac25c1f8b25,
@@ -2702,11 +2701,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1664530838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4fcc33bc233f5848b7e8aef5d0e08a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 69fcd670405a8434cafc4d2e132ad27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 1823624093}
-  gameData: {fileID: 0}
+  objectToFollow: {fileID: 0}
 --- !u!1 &1684319242
 GameObject:
   m_ObjectHideFlags: 0
