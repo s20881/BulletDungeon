@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage;
-    public GameObject shooter;
+    [HideInInspector] public float damage;
+    [HideInInspector] public bool hostile;
 
     private BoxCollider2D bc;
 
@@ -15,12 +15,12 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (shooter.CompareTag("Player") && collision.CompareTag("Enemy"))
+        if (!hostile && collision.CompareTag("Enemy"))
         {
             collision.GetComponent<EnemyStatus>().Hit(damage);
             Destroy(gameObject);
         }
-        else if (shooter.CompareTag("Enemy") && collision.CompareTag("Player"))
+        else if (hostile && collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerStatus>().Hit(damage);
             Destroy(gameObject);
@@ -29,9 +29,5 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
     }
 }

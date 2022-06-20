@@ -10,9 +10,6 @@ TagManager:
   - Cover
   - Rooms
   - BossRoom
-  - Scrap
-  - HpBoost
-  - Gel
   layers:
   - Default
   - TransparentFX
@@ -55,4 +52,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Effects
+    uniqueID: 4281543125
     locked: 0

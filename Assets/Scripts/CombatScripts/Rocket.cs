@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public float damage;
-
-    private BoxCollider2D bc;
+    [SerializeField] GameObject explosionPrefab;
+    private float damage;
 
     private void Start()
     {
-        bc = GetComponent<BoxCollider2D>();
+        damage = GetComponent<Bullet>().damage;
+        GetComponent<Bullet>().damage = 0f;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnDestroy()
     {
-        Debug.Log("Explosion");
-        if(collision.transform.CompareTag("Obstacle") || collision.transform.CompareTag("Enemy"))
-            Destroy(gameObject);
-    }
-    private void OnBecameInvisible()
-    {
-        GameObject.Destroy(gameObject);
+        GameObject explosion = Instantiate<GameObject>(explosionPrefab, transform.position, Quaternion.identity);
+        explosion.GetComponent<Explosion>().damage = damage;
+        explosion.GetComponent<Explosion>().hostile = GetComponent<Bullet>().hostile;
     }
 }

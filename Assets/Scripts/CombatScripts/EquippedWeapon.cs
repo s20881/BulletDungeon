@@ -45,7 +45,7 @@ public class EquippedWeapon : MonoBehaviour
         flash.transform.localPosition = playerCombat.equippedWeapon.muzzlePos;
         RefreshSprite();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         transform.localPosition = playerMovement.facing * distanceFromPlayer;
         transform.rotation = Quaternion.FromToRotation(Vector3.right, playerMovement.facing);

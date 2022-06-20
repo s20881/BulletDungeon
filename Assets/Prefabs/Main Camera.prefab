@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8390261574688366724}
   - component: {fileID: 8390261574688366725}
   - component: {fileID: 8390261574688366726}
-  - component: {fileID: -7391239424134610501}
+  - component: {fileID: 3507274260939441535}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 0}
---- !u!114 &-7391239424134610501
+--- !u!114 &3507274260939441535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

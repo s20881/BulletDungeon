@@ -4959,7 +4959,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9d49b7f52bb249d439ab0cf94d82c5e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5043,7 +5043,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1293750659043540812
@@ -5059,7 +5059,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016859904, y: -0.17913508}
+  m_Offset: {x: 0.0008062273, y: -0.0012959689}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5070,7 +5070,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.40147737, y: 0.5742903}
+  m_Size: {x: 0.43680963, y: 0.5483799}
   m_EdgeRadius: 0
 --- !u!114 &863398557
 MonoBehaviour:
@@ -5088,6 +5088,7 @@ MonoBehaviour:
   maxHp: 100
   damageReceivedMultiplier: 1
   invincible: 0
+  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!114 &4285562612430540693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,9 +5106,10 @@ MonoBehaviour:
   totalRifleAmmo: 90
   totalRocketAmmo: 5
   fireRateMultiplier: 1
-  damageMultiplier: 1
+  damageMultiplier: 5
   bulletSpeedMultiplier: 1
   reloadSpeedMultiplier: 1
   equippedWeapon: {fileID: 11400000, guid: 2d0b169b862f73c4a8a2493fd930c3c8, type: 2}
   reloading: 0
-  slider: {fileID: 0}
+  sliderPrefab: {fileID: 3900657274261211677, guid: cd8ea34e758b1584ba5015bc875219fb,
+    type: 3}

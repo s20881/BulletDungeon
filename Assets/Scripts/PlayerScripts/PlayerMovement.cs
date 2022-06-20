@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         if (movementDirectionVector.x != 0 || movementDirectionVector.y != 0)
         {
             animator.SetBool("isRunning", true);
-            facing = movementDirectionVector;
         }
         else
         {
