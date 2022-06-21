@@ -32,5 +32,7 @@ public class PlayerStatus : MonoBehaviour
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerCombat>().enabled = false;
         Destroy(this);
+        gameData.isDead = true;
     }
+       
 }
