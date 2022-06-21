@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 10f;
-    public Vector2 currentDestination;
+    [HideInInspector] public Vector2 currentDestination;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
