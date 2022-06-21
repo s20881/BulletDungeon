@@ -9,6 +9,7 @@ public class AttackArea : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        attackMethod.Invoke();
+        if(collision.CompareTag("Player"))
+            attackMethod.Invoke();
     }
 }
