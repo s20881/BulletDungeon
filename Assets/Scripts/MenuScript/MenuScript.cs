@@ -6,7 +6,7 @@ public class MenuScript : MonoBehaviour
 {
     public void PLayGame()
     {
-        SceneManager.LoadScene("RoomScene");
+        SceneManager.LoadScene("Lobby");
     }
     public void Quit()
     {
