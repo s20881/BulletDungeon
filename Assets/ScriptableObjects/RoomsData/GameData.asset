@@ -61,11 +61,11 @@ MonoBehaviour:
   level: 0.7
   levelenem: 1.2
   special: 2
-  spawnMeter: 10
-  enemMeter: 7
+  spawnMeter: 11
+  enemMeter: 1
   cx: 0
-  cy: 20
-  isbossroom: 0
+  cy: 0
+  isbossroom: 1
   bossMeter: 0
   isDead: 0
   VolumeVal: 0.5633772
