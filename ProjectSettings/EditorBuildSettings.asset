@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prefabs/Scenes/Lobby.unity
     guid: 1dd2448f9e9fe5742901c7c346a9746b
+  - enabled: 1
+    path: Assets/Prefabs/Scenes/EndScene.unity
+    guid: c99ddf222cd5ec742b59025ff8279204
   m_configObjects: {}

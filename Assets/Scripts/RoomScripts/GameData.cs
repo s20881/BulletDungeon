@@ -22,8 +22,9 @@ public class GameData : ScriptableObject
     public float cx;
     public float cy;
     public bool isbossroom = false;
-    public int bossMeter;
+    public int bossMeter=0;
     public bool isDead = false;
+    public float VolumeVal;
     //eventt when die player zerowanie bossmeter i isboss na flase
     public GameObject GetRandomRoom(OpeningDirection direction)
     {
