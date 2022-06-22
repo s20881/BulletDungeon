@@ -3,7 +3,11 @@ guid: 0a1f7e0684d4cbb4d9bb5924939cb0dd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Panel: {instanceID: 0}
+  - scrapT: {fileID: 4785101132048028922, guid: 7ab8276a5e7b78542af642c0a0c6eb9e,
+      type: 3}
+  - gelT: {fileID: 4741082200808509678, guid: 75651379979015944af8ba4061b9b006, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

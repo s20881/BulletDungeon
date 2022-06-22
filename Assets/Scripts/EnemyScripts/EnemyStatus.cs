@@ -14,6 +14,9 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] private GameObject healthBarPrefab;
     private GameObject worldSpaceCanvas;
     [SerializeField] GameData gameData;
+    public GameObject scrapDrop;
+    public GameObject gelDrop;
+    public GameObject mediGelDrop;
 
     public float MaxHealth
     {
@@ -68,6 +71,7 @@ public class EnemyStatus : MonoBehaviour
     }
     [ContextMenu("Kill")] public void Death()
     {
+        int rand = Random.Range(1, 6);
         if (type == "Drone")
             EventManager.Instance.RaiseOnDroneDeath();
         else if (type == "Robot")
@@ -75,5 +79,22 @@ public class EnemyStatus : MonoBehaviour
         GetComponent<Animator>().SetTrigger("Death");
         Destroy(GetComponent<CircleCollider2D>());
         Destroy(this);
+
+
+        switch (rand)
+        {
+            case 4:
+                Instantiate(scrapDrop, transform.position, Quaternion.identity);
+                break;
+            case 5:
+                Instantiate(gelDrop, transform.position, Quaternion.identity);
+                break;
+            case 6:
+                Instantiate(mediGelDrop, transform.position, Quaternion.identity);
+                break;
+            default:
+                break;
+        }
+        
     }
 }

@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Camera cam;
+    private float getHP;
+    private float getMaxHP;
 
     public Vector2 facing;
     Vector2 movementDirectionVector;
@@ -27,6 +29,21 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         HandleInput();
+        if (Input.GetKeyDown("h"))
+        {
+            getHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().currentHp;
+            getMaxHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().maxHp;
+            if (getHP < getMaxHP - 33)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().currentHp += 33;
+                PlayerItems.MediGel -= 1;
+            }
+            else if (getMaxHP-getHP<33 && getMaxHP - getHP>0)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().currentHp = getMaxHP;
+                PlayerItems.MediGel -= 1;
+            }
+        }
     }
     private void FixedUpdate()
     {

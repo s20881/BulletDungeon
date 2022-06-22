@@ -13,6 +13,7 @@ TagManager:
   - Scrap
   - HpBoost
   - Gel
+  - MediGel
   layers:
   - Default
   - TransparentFX

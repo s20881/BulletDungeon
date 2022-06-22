@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerCraft : MonoBehaviour
 {
     private int Upgrade = 0;
-    private int p = 0;
+    public static int p = 0;
 
     public GameObject Panel;
+    public TextMeshProUGUI scrapT;
+    public TextMeshProUGUI gelT;
 
     public void OpenPanel()
     {
+
         if(Panel != null)
         {
             Panel.SetActive(true);
             Time.timeScale = 0;
+            
         }
     }
     public void ClosePanel()
@@ -32,6 +37,8 @@ public class PlayerCraft : MonoBehaviour
     void Update()
     {
         HandlePanels();
+        scrapT.SetText("Scrap: " + PlayerItems.scrap.ToString());
+        gelT.SetText("Gel: " + PlayerItems.gel.ToString());
         if (Input.GetKeyDown("e"))
         {
             switch (Upgrade)
