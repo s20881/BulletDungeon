@@ -23,8 +23,12 @@ public class AfterDeadLoad : MonoBehaviour
         {
             if (gameData.isDead==true)
             {
+                gameData.level -= (gameData.bossMeter * 0.15f);
+                gameData.levelenem += (gameData.bossMeter * 0.15f);
+                gameData.bossMeter = 0;
+                gameData.isbossroom = false;
                 spriteRenderer.enabled = true;
-                yield return new WaitForSeconds(3.5f);
+                yield return new WaitForSeconds(3.0f);
                 gameData.isDead = false;
                 SceneManager.LoadScene("Lobby");
                 break;
