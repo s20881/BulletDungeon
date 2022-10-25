@@ -5,6 +5,7 @@ using UnityEngine;
 public class SetCameraCord : MonoBehaviour
 {
     [SerializeField] GameData gameData;
+    //ustawianie punktów odniesienia kamery
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

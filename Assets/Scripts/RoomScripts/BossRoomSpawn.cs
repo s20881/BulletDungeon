@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossRoomSpawn : MonoBehaviour
 {
+    //Respienie randomowego Bossrooma
     [SerializeField] GameData gameData;
     private Transform roomsParent;
     private Quaternion roomRot = Quaternion.Euler(0, 0, 0);
@@ -11,13 +12,8 @@ public class BossRoomSpawn : MonoBehaviour
     {
         spawn();
     }
-
     private void spawn()
     {
-
-       
-
         Instantiate(gameData.GetRandomBossRoom(), transform.position, roomRot);
-
     }
 }

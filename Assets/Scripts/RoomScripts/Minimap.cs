@@ -9,8 +9,7 @@ public class Minimap : MonoBehaviour
     
     private bool mini;
     private bool full;
-   
-    // Start is called before the first frame update
+
     void Start()
     {
         minc.SetActive(false);
@@ -18,8 +17,7 @@ public class Minimap : MonoBehaviour
         mini = false;
         full = false;
     }
-
-    // Update is called once per frame
+//zmiana wyswietlania minimapy
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnerTrigger : MonoBehaviour
 {
-   public bool sp;
+    //zmienne pomocnicze
+    public bool sp;
     public bool wv;
     public bool firsttrig=true;
     public GameObject u;
@@ -13,72 +14,121 @@ public class SpawnerTrigger : MonoBehaviour
     public GameObject l;
     public GameObject minimaphide;
     public bool specialRoomtf;
-    [SerializeField] GameData gameData;
-    private  List<GameObject> entr;
-    private  List<GameObject> doors;
-
     public GameObject enem;
-    private void Start()
+    private int ex;
+    //gamedata i listy wejsc
+    [SerializeField] GameData gameData;
+    private  List<GameObject> entrUD;
+    private  List<GameObject> doorsLR;
+    private List<GameObject> entrLR;
+    private List<GameObject> doorsUD;
+
+    private void Start()//ustalenie które wejscia mają się otwierać
     {
-       // enem = GameObject.FindWithTag("Enemy");
-        entr = new List<GameObject>();
-        doors = new List<GameObject>();
-        entr.Add(u);
-        entr.Add(d);
-        entr.Add(l);
-        entr.Add(r);
-        foreach (GameObject o in entr)
+        entrUD = new List<GameObject>();
+        doorsLR = new List<GameObject>();
+        entrLR = new List<GameObject>();
+        doorsUD = new List<GameObject>();
+        entrUD.Add(u);
+        entrUD.Add(d);
+        entrLR.Add(l);
+        entrLR.Add(r);
+        ex = 1;
+        foreach (GameObject o in entrUD)
         {           
             if (!o.activeSelf)
             {
-                doors.Add(o);         
+                doorsUD.Add(o);
+                
+                o.transform.position =new Vector3(o.transform.position.x + 3.0f, o.transform.position.y, o.transform.position.z);
+            }
+        }
+        foreach (GameObject o in entrLR)
+        {
+            if (!o.activeSelf)
+            {
+                doorsLR.Add(o);
+
+                o.transform.position = new Vector3(o.transform.position.x , o.transform.position.y+ 3.0f, o.transform.position.z);
             }
         }
         sp = false;
        
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)//aktywacja trigera aktualizacja gamedata
     {
         if (collision.CompareTag("Player"))
         {
             sp = true;
             if (firsttrig)
             {
-                enem.GetComponent<EnemyMovement>().currentDestination = (Vector2)transform.position;
+                enem.GetComponent<EnemyMovement>().currentDestination = (Vector2)transform.position; // zmiana punktu odniesienia przeciwników do aktualnego pokoju
                 gameData.spawnMeter--;
                 firsttrig = false;
                 minimaphide.SetActive(false);
-            }
-           
+                foreach (GameObject o in doorsUD)//zamykanie pomieszczeń
+                {
+                    Vector3 v = new Vector3(o.transform.position.x - 3.0f, o.transform.position.y, o.transform.position.z);
+                    StartCoroutine(MoveOverSeconds(o, v, 1f));
+                }
+                foreach (GameObject o in doorsLR)//zamykanie pomieszczeń
+                {
+                    Vector3 v = new Vector3(o.transform.position.x , o.transform.position.y - 3.0f, o.transform.position.z);
+                    StartCoroutine(MoveOverSeconds(o, v, 1f));
+                }
+
+            }          
         }
     }
+    //otwieranie/zamykanie pomieszczen
     private void Update()
     {
-        if (specialRoomtf)
+        
+        if (!specialRoomtf && sp)
         {
-            
-        }
-        else
-        if (sp)
-        {
-            if (gameData.enemMeter == 0)
+            if (gameData.enemMeter == 8)
+                ex = 0;
+            if (gameData.enemMeter == 0 && ex < 1)
             {
-                foreach (GameObject o in doors)
+                foreach (GameObject o in doorsUD)
                 {
-                    o.SetActive(false);
-                   
+                    Vector3 v = new Vector3(o.transform.position.x + 3.0f, o.transform.position.y, o.transform.position.z);
+                    StartCoroutine(MoveOverSeconds(o, v, 1f));
                 }
+                foreach (GameObject o in doorsLR)
+                {
+                    Vector3 v = new Vector3(o.transform.position.x , o.transform.position.y + 3.0f, o.transform.position.z);
+                    StartCoroutine(MoveOverSeconds(o, v, 1f));
+                }
+                ex += 1;
             }
             else
             {
-                foreach (GameObject o in doors)
+                foreach (GameObject o in doorsUD)
                 {
                     o.SetActive(true);
+
+                }
+                foreach (GameObject o in doorsLR)
+                {
+                    o.SetActive(true);
+
                 }
             }
-                      
         }
-        
+                
+    }
+    public IEnumerator MoveOverSeconds(GameObject objectToMove, Vector3 end, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = objectToMove.transform.position;
+        while (elapsedTime < seconds)
+        {
+            objectToMove.transform.position = Vector3.Lerp(startingPos, end, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToMove.transform.position = end;
     }
 
 }

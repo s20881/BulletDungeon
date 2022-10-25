@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnBoss : MonoBehaviour
 {
+    //repienie bossów
     [SerializeField] GameData gameData;
     private Transform roomsParent;
     private Quaternion roomRot = Quaternion.Euler(0, 0, 0);

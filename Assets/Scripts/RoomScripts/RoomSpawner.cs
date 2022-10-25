@@ -15,9 +15,9 @@ public class RoomSpawner : MonoBehaviour
     public bool Spawned
     {
         get { return spawned; }
-        set { spawned = value; if (value == true)
-                MapController.AssignRoom(transform.position);
-
+        set { 
+            spawned = value; if (value == true)
+            MapController.AssignRoom(transform.position);
         }
     }
     private void Start()
@@ -38,9 +38,7 @@ public class RoomSpawner : MonoBehaviour
     private void spawn()
     {
         Instantiate(gameData.GetRandomRoom(openingDirection), transform.position, roomRot, roomsParent);
-
-      
-            gameData.spawnMeter++;
+        gameData.spawnMeter++;
     }
     
 }
