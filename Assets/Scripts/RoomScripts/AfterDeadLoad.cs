@@ -23,8 +23,10 @@ public class AfterDeadLoad : MonoBehaviour
         {
             if (gameData.isDead==true)
             {
+                //Przwyrócenie poziomu trudnoœci gry po œmierci gracza
                 gameData.level -= (gameData.bossMeter * 0.15f);
                 gameData.levelenem += (gameData.bossMeter * 0.15f);
+                //Zresetowanie danych gry z GameData oraz za³¹dowanie lobby po œmierci
                 gameData.bossMeter = 0;
                 gameData.isbossroom = false;
                 spriteRenderer.enabled = true;

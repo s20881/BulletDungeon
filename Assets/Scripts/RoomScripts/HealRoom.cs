@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class HealRoom : MonoBehaviour
 {
+    //skrypt fontanny lecz¹cej
     private bool act = false;
     private bool used = false;
     private GameObject player;
     public ParticleSystem ps;
     public GameObject localscale;
     private Vector3 scaleChange;
-    private int cont;
+    private int cont; //licznik ilosci leczenia
     void Start()
     {
         StartCoroutine(heal(1.0f));
@@ -41,13 +42,11 @@ public class HealRoom : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             act=false;
-           // used = true;
             ps.Stop();
         }
     }
     IEnumerator heal(float time)
     {
-
         while (true)
         {
             if (act)

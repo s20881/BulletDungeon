@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="GameData", menuName ="Data/GameData")]
 public class GameData : ScriptableObject
 {
+    //Kontener zawierający objekty
     [SerializeField] private GameObject[] upRooms;
     [SerializeField] private GameObject[] downRooms;
     [SerializeField] private GameObject[] leftRooms;
@@ -14,11 +15,15 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] bossRooms;
     [SerializeField] private GameObject[] bosses;
     [SerializeField] private GameObject[] amomed;
+    //Ogólne zmienne
+    //Poziom trudności
     public float level=1;
     public float levelenem = 1;
+    //Liczniki 
     public int special = 0;
     public int spawnMeter ;
     public int enemMeter;
+    //parametry
     public float cx;
     public float cy;
     public bool isbossroom = false;
@@ -32,7 +37,7 @@ public class GameData : ScriptableObject
         {
             special = 0;
         }
-        if (spawnMeter >= 8)
+        if (spawnMeter >= 8)//uzupełnianie zamkniętymi pomieszczeniami 
         {
             switch (direction)
             {
@@ -50,8 +55,7 @@ public class GameData : ScriptableObject
         else
         {
             int rand = Random.Range(1, 6);
-            
-            if (rand == 2 && special<2)
+            if (rand == 2 && special<2)//szansa na pojawienie sie specjanych pomieszczeń
             {
                 
                 special++;
@@ -71,7 +75,7 @@ public class GameData : ScriptableObject
             }
             else
             {
-                switch (direction)
+                switch (direction)//respienie normalnych pokoi
                 {
                     case OpeningDirection.NeedUpDoor:
                         return upRooms[Random.Range(1, upRooms.Length-2)];
@@ -86,6 +90,7 @@ public class GameData : ScriptableObject
             }
         }
     }
+    //metody zwracające odpowiednie objekty
     public GameObject GetRandomCover()
     {
         return covers[Random.Range(0, covers.Length)];
