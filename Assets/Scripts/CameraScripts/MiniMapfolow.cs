@@ -12,6 +12,7 @@ public class MiniMapfolow : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, transform.position.z);
+        if (objectToFollow ?? false)
+            transform.position = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, transform.position.z);
     }
 }

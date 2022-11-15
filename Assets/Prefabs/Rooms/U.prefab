@@ -314,7 +314,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   boxcollider: {fileID: 0}
   boss: 0
-  light: {fileID: 5244052287526948405}
+  light1: {fileID: 5244052287526948405}
 --- !u!95 &7632139502923521711
 Animator:
   serializedVersion: 3
@@ -341,6 +341,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357660442600338637, guid: daa0669c9b4f4ef4eac93d3043b139c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 438502285899041004, guid: daa0669c9b4f4ef4eac93d3043b139c4,
         type: 3}
       propertyPath: m_IsActive
@@ -4013,7 +4018,7 @@ PrefabInstance:
     - target: {fileID: 9046164845998481898, guid: daa0669c9b4f4ef4eac93d3043b139c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daa0669c9b4f4ef4eac93d3043b139c4, type: 3}

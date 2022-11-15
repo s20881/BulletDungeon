@@ -35,7 +35,8 @@ public class EnemyMovement : MonoBehaviour
     }
     private void UpdateFacing()
     {
-        if (player.position.x > transform.position.x)
+        if (player ?? false)
+            if (player.position.x > transform.position.x)
             sr.flipX = false;
         else
             sr.flipX = true;

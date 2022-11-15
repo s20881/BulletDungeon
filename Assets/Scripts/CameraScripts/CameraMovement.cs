@@ -8,7 +8,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] GameData gameData;
     private void Update()
     {
-        if (gameData.isbossroom)
+        if (objectToFollow ?? false)
+            if (gameData.isbossroom)
         {
             if (objectToFollow.transform.position.x >  - 1.7f && objectToFollow.transform.position.x <  1.7f && objectToFollow.transform.position.y >  - 6f && objectToFollow.transform.position.y < + 6f)
             {
@@ -53,6 +54,7 @@ public class CameraMovement : MonoBehaviour
     }
     public void refresh()
     {
-        transform.position = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, transform.position.z);
+        if (objectToFollow ?? false)
+            transform.position = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, transform.position.z);
     }
 }

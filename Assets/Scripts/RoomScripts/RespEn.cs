@@ -5,15 +5,11 @@ using UnityEngine;
 public class RespEn : MonoBehaviour
 {
     [SerializeField] GameData gameData;
-    private Transform roomsParent;
     private Quaternion roomRot = Quaternion.Euler(0, 0, 0);
     public GameObject go;
-    private SpawnerTrigger sp;
     private int i = 0;
-    private int wave = 0;
     private SpriteRenderer spawner;
     private bool bol = false;
-    private int phase = 0;
     private bool chek=false;
     public Transform ve3;
     public Vector2 ve2;
@@ -29,16 +25,10 @@ public class RespEn : MonoBehaviour
     private void spawn()
     {
         Instantiate(gameData.GetRandomEnemy(), ve3.position, roomRot);
-        Debug.Log(ve3.position);
         gameData.enemMeter++;
     }
     private void Update()
     {
-        if (gameData.enemMeter == 0)
-        {
-            phase = 0;
-        }
-       
         if (go.GetComponent<SpawnerTrigger>().sp)
         {
             if (go.GetComponent<SpawnerTrigger>().wv)

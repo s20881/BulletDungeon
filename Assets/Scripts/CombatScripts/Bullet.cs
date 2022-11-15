@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
         }
         else if (hostile && collision.CompareTag("Player"))
         {
+            if(collision.GetComponent<PlayerStatus>()!=null)
             collision.GetComponent<PlayerStatus>().Hit(damage);
             Destroy(gameObject);
         }

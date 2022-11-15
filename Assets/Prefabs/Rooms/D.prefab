@@ -221,7 +221,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   boxcollider: {fileID: 0}
   boss: 0
-  light: {fileID: 7785496617245173865}
+  light1: {fileID: 7785496617245173865}
 --- !u!95 &1108581535793011787
 Animator:
   serializedVersion: 3
@@ -1798,7 +1798,7 @@ PrefabInstance:
     - target: {fileID: 3347177864955182383, guid: daa0669c9b4f4ef4eac93d3043b139c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3405856004648165622, guid: daa0669c9b4f4ef4eac93d3043b139c4,
         type: 3}

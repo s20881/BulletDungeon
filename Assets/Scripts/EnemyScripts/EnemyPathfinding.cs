@@ -25,11 +25,13 @@ public class EnemyPathfinding : MonoBehaviour
     }
     private void Update()
     {
-        if (enemy.ReachedDestination() && Vector3.Distance(player.position, transform.position) > desiredDistanceToPlayer)
+        if (player ?? false)
+            if (enemy.ReachedDestination() && Vector3.Distance(player.position, transform.position) > desiredDistanceToPlayer)
         {
-            if (PlayerInSight())
+                if (cc ?? false)
+                    if (PlayerInSight())
             {
-                enemy.currentDestination = Vector2.MoveTowards(transform.position, player.position, step);
+                        enemy.currentDestination = Vector2.MoveTowards(transform.position, player.position, step);
             }
             else if (!sleeping)
             {
