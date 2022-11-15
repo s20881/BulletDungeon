@@ -19,7 +19,8 @@ public class EnemyShooting : MonoBehaviour
     }
     public void Shoot()
     {
-        if(!onCooldown)
+        if (player ?? false)
+            if (!onCooldown)
         {
             Vector2 direction = (player.transform.position - transform.position).normalized;
             equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, transform.position, direction);

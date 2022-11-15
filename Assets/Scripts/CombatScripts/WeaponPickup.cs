@@ -19,6 +19,7 @@ public class WeaponPickup : MonoBehaviour
     }
     private void Update()
     {
+        if (player != null) 
         if(DistanceToPlayer() < maxDistance && Input.GetButtonDown("Switch Weapon") && !player.GetComponent<PlayerCombat>().reloading)
         {
             PickUp();

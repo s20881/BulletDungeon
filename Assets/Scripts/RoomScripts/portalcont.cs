@@ -13,7 +13,7 @@ public class portalcont : MonoBehaviour
     string ok = "tak";
     string cancel = "nie";
     public bool boss = false;
-    public Light light;
+    public Light light1;
     
     // Start is called before the first frame update
     void Start()
@@ -33,14 +33,14 @@ public class portalcont : MonoBehaviour
         {    
             spriteRenderer.enabled = true;
             boxcollider.enabled = true;
-            light.enabled = true;
+            light1.enabled = true;
            
         }
         else
         {
             spriteRenderer.enabled = false;
             boxcollider.enabled = false;
-            light.enabled = false;
+            light1.enabled = false;
            
         }
         

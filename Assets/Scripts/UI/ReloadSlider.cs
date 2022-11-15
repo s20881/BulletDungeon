@@ -20,7 +20,8 @@ public class ReloadSlider : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, distanceAbovePlayer, 0);
+        if (player ?? false)
+            transform.position = player.transform.position + new Vector3(0, distanceAbovePlayer, 0);
     }
     public void Play(float duration)
     {

@@ -24,7 +24,8 @@ public class EnemyMelee : MonoBehaviour
 
     public void Attack()
     {
-        if(!OnCooldown)
+        if (player ?? false)
+            if (!OnCooldown)
         {
             player.Hit(damage * damageMultiplier);
             animator.SetTrigger("Attack");
