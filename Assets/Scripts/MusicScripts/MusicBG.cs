@@ -12,7 +12,7 @@ public class MusicBG : MonoBehaviour
     }
 	public void Update()
     {
-
+        audios.volume = gameData.VolumeVal;
     }
 	IEnumerator silentmus()
     {
