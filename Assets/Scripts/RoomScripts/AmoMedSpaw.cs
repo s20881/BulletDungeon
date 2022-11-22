@@ -22,7 +22,7 @@ public class AmoMedSpaw : MonoBehaviour
         {
             if (i == 0)
             {
-                int rand = Random.Range(1, 5);
+                int rand = Random.Range(1, 4);
                 if (rand==2) {
                     spawn();
                     i++;

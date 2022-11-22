@@ -28,7 +28,7 @@ public class portalcont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(light1 ?? false)
         if (gameData.spawnMeter < 0 && gameData.enemMeter==0)
         {    
             spriteRenderer.enabled = true;
