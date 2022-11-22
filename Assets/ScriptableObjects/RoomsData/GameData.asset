@@ -53,19 +53,19 @@ MonoBehaviour:
   - {fileID: 2626658542461171944, guid: e36d164714440b843bcb41f3a93174d0, type: 3}
   - {fileID: 4112891224978686465, guid: 1036d34b7217a71428e00f2bfa0d2137, type: 3}
   bosses:
-  - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
-  - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
+  - {fileID: 3780591457665618103, guid: 901a3e358dcafc74a80f136769c879cc, type: 3}
+  - {fileID: 3780591457665618103, guid: 901a3e358dcafc74a80f136769c879cc, type: 3}
   amomed:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
-  level: 1
-  levelenem: 0.9000001
-  special: 2
-  spawnMeter: 12
-  enemMeter: 8
+  level: 0.70000005
+  levelenem: 1.2
+  special: 1
+  spawnMeter: 1
+  enemMeter: 2
   cx: 0
   cy: 20
   isbossroom: 0
   bossMeter: 0
   isDead: 0
-  VolumeVal: 0.28106058
+  VolumeVal: 0

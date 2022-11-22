@@ -37,7 +37,7 @@ public class GameData : ScriptableObject
         {
             special = 0;
         }
-        if (spawnMeter >= 8)//uzupełnianie zamkniętymi pomieszczeniami 
+        if (spawnMeter >= 2)//uzupełnianie zamkniętymi pomieszczeniami 
         {
             switch (direction)
             {
