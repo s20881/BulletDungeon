@@ -6,5 +6,5 @@ public class PlayerItems : MonoBehaviour
 {
     public static int gel = 82;
     public static int scrap = 131;
-    public static int MediGel = 0;
+    public static int MediGel = 1;
 }
