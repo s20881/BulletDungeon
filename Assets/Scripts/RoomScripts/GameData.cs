@@ -30,6 +30,7 @@ public class GameData : ScriptableObject
     public int bossMeter=0;
     public bool isDead = false;
     public float VolumeVal;
+    public bool PortalPenl = false;
     //eventt when die player zerowanie bossmeter i isboss na flase
     public GameObject GetRandomRoom(OpeningDirection direction)
     {
@@ -37,7 +38,7 @@ public class GameData : ScriptableObject
         {
             special = 0;
         }
-        if (spawnMeter >= 2)//uzupełnianie zamkniętymi pomieszczeniami 
+        if (spawnMeter >= 0)//uzupełnianie zamkniętymi pomieszczeniami 
         {
             switch (direction)
             {

@@ -8,14 +8,10 @@ public class portalcont : MonoBehaviour
     [SerializeField] GameData gameData;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D boxcollider;
-    string title = "BulletDungeon";
-    string message = "Czy chcesz przejœæ dalej";
-    string ok = "tak";
-    string cancel = "nie";
     public bool boss = false;
     public Light light1;
+    public GameObject panel;
     
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -47,38 +43,12 @@ public class portalcont : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Player"))
         {
-            bool st = EditorUtility.DisplayDialog(title,message,ok,cancel);
-            if (st)
-            {
-                
-                    if (!gameData.isbossroom)
-                    {
-                    
-                    SceneManager.LoadScene("BossScene");
-                        gameData.isbossroom = true;
-                    }
-                    else
-                    {
-                    if (gameData.bossMeter == 2)
-                    {
-                        SceneManager.LoadScene("EndScene");
-                    }
-                    else
-                    {
-                        SceneManager.LoadScene("RoomScene");
-                        gameData.isbossroom = false;
-                        gameData.level += 0.15f;
-                        gameData.levelenem -= 0.15f;
-                        gameData.bossMeter += 1;
-                    }
-                   
-                    }
-                
-               
-               
-            }
+            gameData.PortalPenl = true;
+            Time.timeScale = 0f;
         }
     }
+    
 }
