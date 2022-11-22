@@ -10,6 +10,11 @@ TagManager:
   - Cover
   - Rooms
   - BossRoom
+  - HpBoost
+  - MediGel
+  - Gel
+  - Scrap
+  - panel
   layers:
   - Default
   - TransparentFX
