@@ -58,15 +58,15 @@ MonoBehaviour:
   amomed:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
-  level: 1.15
-  levelenem: 0.7500001
+  level: 0.7
+  levelenem: 1.2
   special: 0
   spawnMeter: -1
-  enemMeter: 0
+  enemMeter: 1
   cx: 0
-  cy: 20
+  cy: 0
   isbossroom: 1
-  bossMeter: 2
+  bossMeter: 0
   isDead: 0
   VolumeVal: 0
   PortalPenl: 0
