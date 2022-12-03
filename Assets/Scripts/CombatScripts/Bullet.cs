@@ -30,5 +30,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("ExploBarel"))
+        {
+            Destroy(gameObject);
+            collision.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<ExploBarel>().setac();
+        }
     }
 }
