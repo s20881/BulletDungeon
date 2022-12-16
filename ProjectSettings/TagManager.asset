@@ -15,6 +15,7 @@ TagManager:
   - Gel
   - Scrap
   - panel
+  - Debug
   layers:
   - Default
   - TransparentFX
@@ -55,8 +56,14 @@ TagManager:
   - name: floor
     uniqueID: 3905453193
     locked: 0
+  - name: Fire
+    uniqueID: 4288003691
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Boss
+    uniqueID: 2182262631
     locked: 0
   - name: Effects
     uniqueID: 4281543125

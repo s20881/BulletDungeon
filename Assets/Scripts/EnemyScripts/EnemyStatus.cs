@@ -72,8 +72,9 @@ public class EnemyStatus : MonoBehaviour
             EventManager.Instance.RaiseOnDroneDeath();
         else if (type == "Robot")
             EventManager.Instance.RaiseOnRobotDeath();
+        else if(type == "Boss")
+            EventManager.Instance.RaiseOnBossDeath();
         GetComponent<Animator>().SetTrigger("Death");
         Destroy(GetComponent<CircleCollider2D>());
-        Destroy(this);
     }
 }

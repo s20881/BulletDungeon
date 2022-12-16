@@ -9,7 +9,7 @@ public class PlayerStatus : MonoBehaviour
     public float damageReceivedMultiplier = 1f;
     [SerializeField] private bool invincible = false;
     [SerializeField] GameData gameData;
-     void Start()
+    void Start()
     {
         damageReceivedMultiplier = gameData.level;
     }
