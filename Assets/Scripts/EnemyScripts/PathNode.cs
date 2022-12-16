@@ -7,7 +7,6 @@ public class PathNode
     private Vector3 position;
     private PathNode parent;
     private Vector3 target;
-    private float desiredDistanceToTarget;
     private float g;
     private float h;
 
@@ -31,13 +30,27 @@ public class PathNode
     {
         get { return g + h; }
     }
+    public List<Vector3> Backtrack
+    {
+        get
+        {
+            List<Vector3> path = new List<Vector3>();
+            PathNode current = this;
+            while (current != null)
+            {
+                path.Add(current.Position);
+                current = current.Parent;
+            }
+            path.Reverse();
+            return path;
+        }
+    }
 
-    public PathNode(Vector3 position, PathNode parent, Vector3 target, float desiredDistanceToTarget)
+    public PathNode(Vector3 position, PathNode parent, Vector3 target)
     {
         this.position = position;
         this.parent = parent;
         this.target = target;
-        this.desiredDistanceToTarget = desiredDistanceToTarget;
         InitG();
         InitH();
     }

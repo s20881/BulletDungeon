@@ -1683,7 +1683,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 863398557, guid: 21d56c89608a5ba4cab012fd0862a6be, type: 3}
       propertyPath: invincible
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 863398557, guid: 21d56c89608a5ba4cab012fd0862a6be, type: 3}
       propertyPath: damageReceivedMultiplier

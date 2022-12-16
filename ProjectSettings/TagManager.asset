@@ -10,6 +10,7 @@ TagManager:
   - Cover
   - Rooms
   - BossRoom
+  - Debug
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: floor
     uniqueID: 3905453193
+    locked: 0
+  - name: Fire
+    uniqueID: 4288003691
     locked: 0
   - name: Default
     uniqueID: 0

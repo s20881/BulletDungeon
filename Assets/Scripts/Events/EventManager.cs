@@ -10,6 +10,9 @@ public class EventManager : MonoBehaviour
     public delegate void PlayerHit();
     public static event PlayerHit OnPlayerHit;
 
+    public delegate void PlayerHeal();
+    public static event PlayerHeal OnPlayerHeal;
+
     public delegate void PlayerDeath();
     public static event PlayerDeath OnPlayerDeath;
 
@@ -43,6 +46,12 @@ public class EventManager : MonoBehaviour
     public delegate void RobotAttack();
     public static event RobotAttack OnRobotAttack;
 
+    public delegate void BossHit();
+    public static event BossHit OnBossHit;
+
+    public delegate void BossDeath();
+    public static event BossDeath OnBossDeath;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -55,6 +64,11 @@ public class EventManager : MonoBehaviour
     {
         if (OnPlayerHit != null)
             OnPlayerHit();
+    }
+    public void RaiseOnPlayerHeal()
+    {
+        if (OnPlayerHeal != null)
+            OnPlayerHeal();
     }
     public void RaiseOnPlayerDeath()
     {
@@ -110,5 +124,15 @@ public class EventManager : MonoBehaviour
     {
         if (OnRobotAttack != null)
             OnRobotAttack();
+    }
+    public void RaiseOnBossHit()
+    {
+        if (OnBossHit != null)
+            OnBossHit();
+    }
+    public void RaiseOnBossDeath()
+    {
+        if (OnBossDeath != null)
+            OnBossDeath();
     }
 }

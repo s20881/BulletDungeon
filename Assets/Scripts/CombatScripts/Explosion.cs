@@ -19,7 +19,6 @@ public class Explosion : MonoBehaviour
                 foreach (Collider2D enemy in hits)
                 {
                     enemy.GetComponent<EnemyStatus>().Hit(damage);
-                    Debug.Log("Hit enemy for " + damage + " damage");
                 }
             }
             else
