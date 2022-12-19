@@ -16,6 +16,7 @@ public class PlayerFollower : MonoBehaviour
     {
         enemyMovement = GetComponent<EnemyMovement>();
         pathfinder = GetComponent<Pathfinder>();
+        pathfinder.target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
     }
     private void Update()

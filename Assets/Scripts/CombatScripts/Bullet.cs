@@ -7,23 +7,16 @@ public class Bullet : MonoBehaviour
     [HideInInspector] public float damage;
     [HideInInspector] public bool hostile;
 
-    private BoxCollider2D bc;
-
-    private void Start()
-    {
-        bc = GetComponent<BoxCollider2D>();
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!hostile && collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<EnemyStatus>().Hit(damage);
+            collision.GetComponent<Health>().Hit(damage);
             Destroy(gameObject);
         }
         else if (hostile && collision.CompareTag("Player"))
         {
-            if(collision.GetComponent<PlayerStatus>()!=null)
-            collision.GetComponent<PlayerStatus>().Hit(damage);
+            collision.GetComponent<Health>().Hit(damage);
             Destroy(gameObject);
         }
         else if(collision.CompareTag("Obstacle"))
@@ -32,9 +25,9 @@ public class Bullet : MonoBehaviour
         }
         else if (collision.CompareTag("ExploBarel"))
         {
-            Destroy(gameObject);
             collision.gameObject.SetActive(false);
             collision.gameObject.GetComponent<ExploBarel>().setac();
+            Destroy(gameObject);
         }
     }
 }

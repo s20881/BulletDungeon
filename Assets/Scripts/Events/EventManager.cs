@@ -7,6 +7,9 @@ public class EventManager : MonoBehaviour
     private static EventManager _instance;
     public static EventManager Instance { get { return _instance; } }
 
+    public delegate void PlayerSpawn();
+    public static event PlayerSpawn OnPlayerSpawn;
+
     public delegate void PlayerHit();
     public static event PlayerHit OnPlayerHit;
 
@@ -60,6 +63,11 @@ public class EventManager : MonoBehaviour
             _instance = this;
     }
 
+    public void RaiseOnPlayerSpawn()
+    {
+        if(OnPlayerSpawn != null)
+            OnPlayerSpawn();
+    }
     public void RaiseOnPlayerHit()
     {
         if (OnPlayerHit != null)

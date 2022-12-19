@@ -6,21 +6,18 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     public float damage = 10f;
-    [SerializeField] private float duration = 5f;
-    private PlayerStatus player;
+    private Health player;
     private Collider2D trigger;
 
     private void Start()
     {
         trigger = GetComponent<Collider2D>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
-        StartCoroutine(Duration());
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Hit");
             ApplyDamage();
         }
     }
@@ -28,10 +25,5 @@ public class Fire : MonoBehaviour
     private void ApplyDamage()
     {
         player.Hit(damage * Time.deltaTime);
-    }
-    private IEnumerator Duration()
-    {
-        yield return new WaitForSeconds(duration);
-        Destroy(gameObject);
     }
 }

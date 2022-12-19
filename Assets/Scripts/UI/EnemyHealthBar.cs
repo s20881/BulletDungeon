@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-    public EnemyStatus enemy;
+    public Health enemy;
     public float distanceAboveEnemy = 1f;
     private Slider slider;
 
@@ -24,14 +24,6 @@ public class EnemyHealthBar : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    private void OnEnable()
-    {
-        
-    }
-    private void OnDisable()
-    {
-        
     }
 
     private void RefreshBar()

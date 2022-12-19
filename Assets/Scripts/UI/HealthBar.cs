@@ -5,29 +5,21 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    private PlayerStatus player;
+    private Health player;
     private Slider slider;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         slider = GetComponent<Slider>();
     }
     private void Update()
     {
         RefreshBar();
     }
-    private void OnEnable()
-    {
-        
-    }
-    private void OnDisable()
-    {
-        
-    }
 
     private void RefreshBar()
     {
-        slider.value = player.currentHp / player.maxHp;
+        slider.value = player.CurrentHealth / player.MaxHealth;
     }
 }

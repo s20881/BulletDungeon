@@ -45,9 +45,7 @@ MonoBehaviour:
   - {fileID: 4546479071621363341, guid: cab9b9c85d1fb3d4282ebcd06ca9b41b, type: 3}
   - {fileID: 7480289336872000184, guid: 57150120e045d5446b4aad62742099ce, type: 3}
   - {fileID: 6602888105068981666, guid: 3d4cedc2c2cbe56409ee061bd6e7683b, type: 3}
-  enemies:
-  - {fileID: 7420665197414938319, guid: ea8d53ef8d868a240814afd5a70aba99, type: 3}
-  - {fileID: 2839167982470804785, guid: c462f12a847fd064cb634bbfb911e24f, type: 3}
+  enemies: 0000000001000000
   bossRooms:
   - {fileID: 8027093955560131015, guid: aff28ba1a8923b343b2c80c66a358685, type: 3}
   - {fileID: 2626658542461171944, guid: e36d164714440b843bcb41f3a93174d0, type: 3}

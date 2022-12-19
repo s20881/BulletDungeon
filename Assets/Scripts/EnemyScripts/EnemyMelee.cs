@@ -12,13 +12,13 @@ public class EnemyMelee : MonoBehaviour
 
     public bool OnCooldown { get { return onCooldown; } }
 
-    private PlayerStatus player;
+    private Health player;
     private Animator animator;
 
     private void Start()
     {
         onCooldown = false;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
         animator = GetComponent<Animator>();
     }
 

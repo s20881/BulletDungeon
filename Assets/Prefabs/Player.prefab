@@ -4917,12 +4917,12 @@ GameObject:
   - component: {fileID: 1293750659043540810}
   - component: {fileID: 1293750659043540813}
   - component: {fileID: 1293750659043540812}
-  - component: {fileID: 863398557}
   - component: {fileID: 5290618750229756448}
   - component: {fileID: 4285562612430540693}
   - component: {fileID: -7096589935110190941}
   - component: {fileID: -5119579671446199824}
   - component: {fileID: 2075651823319930523}
+  - component: {fileID: 8116236913302198591}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -5089,23 +5089,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43680963, y: 0.5483799}
   m_EdgeRadius: 0
---- !u!114 &863398557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293750659043540800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8c950cd8452a8458222186400aeff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHp: 100
-  maxHp: 100
-  damageReceivedMultiplier: 1
-  invincible: 0
-  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!114 &5290618750229756448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5180,4 +5163,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41df1e3b6488d464fa0d0a5e93f6d0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cross: {fileID: 7735810276949624691, guid: 68bc241c92a5d114ab80cc99c361fbea, type: 3}
+--- !u!114 &8116236913302198591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293750659043540800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db76afa6ef3dc748b37cd73642e728b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageReceivedMultiplier: 1
+  invincible: 0

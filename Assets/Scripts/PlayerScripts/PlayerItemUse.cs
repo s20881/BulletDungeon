@@ -22,16 +22,16 @@ public class PlayerItemUse : MonoBehaviour
         {
             if (PlayerItems.MediGel > 1)
             { 
-                getHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().currentHp;
-                getMaxHP = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().maxHp;
+                getHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().CurrentHealth;
+                getMaxHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().MaxHealth;
                 if (getHP < getMaxHP - 33)
                 {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().currentHp += 33;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(33);
                     PlayerItems.MediGel -= 1;
                 }
                 else if (getMaxHP - getHP < 33 && getMaxHP - getHP > 0)
                 {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().currentHp = getMaxHP;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(getMaxHP);
                     PlayerItems.MediGel -= 1;
                 }
             }

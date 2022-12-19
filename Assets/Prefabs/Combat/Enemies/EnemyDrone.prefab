@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7420665197414938320}
   - component: {fileID: 7420665197414938321}
   - component: {fileID: 7420665197414938318}
-  - component: {fileID: 7420665197414938323}
   - component: {fileID: 7420665197414938322}
   - component: {fileID: 7420665197414938324}
   - component: {fileID: 7420665197414938327}
   - component: {fileID: 2324928708445219577}
+  - component: {fileID: -2088572318795563023}
   m_Layer: 9
   m_Name: EnemyDrone
   m_TagString: Enemy
@@ -108,24 +108,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7420665197414938323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420665197414938319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e071704d4bccd248a3fb1eb22f57372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: Drone
-  damageReceivedMultiplier: 1
-  invincible: 0
-  healthBarPrefab: {fileID: 5792398017132093608, guid: a3e2fc929dfcde543a14e8666467888e,
-    type: 3}
-  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!50 &7420665197414938322
 Rigidbody2D:
   serializedVersion: 4
@@ -193,3 +175,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.13}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &-2088572318795563023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420665197414938319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db76afa6ef3dc748b37cd73642e728b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 100
+  damageReceivedMultiplier: 1
+  invincible: 0

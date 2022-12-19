@@ -26,14 +26,13 @@ public class ExploBarel : MonoBehaviour
             var distance = Vector3.Distance(transform.position, e.transform.position);
             if(distance < 2.5)
             {
-                e.GetComponent<EnemyStatus>().Hit(200);
+                e.GetComponent<Health>().Hit(200);
             }
         }
         player = GameObject.FindGameObjectWithTag("Player");
         if (Vector3.Distance(player.transform.position,transform.position)<2.5)
         {
-            player.GetComponent<PlayerStatus>().Hit(10);
+            player.GetComponent<Health>().Hit(10);
         }
     }
-
 }
