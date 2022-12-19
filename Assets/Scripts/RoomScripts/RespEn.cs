@@ -5,7 +5,6 @@ using UnityEngine;
 public class RespEn : MonoBehaviour
 {
     [SerializeField] GameData gameData;
-    private Quaternion roomRot = Quaternion.Euler(0, 0, 0);
     public GameObject go;
     private int i = 0;
     private SpriteRenderer spawner;
@@ -24,7 +23,7 @@ public class RespEn : MonoBehaviour
 
     private void spawn()
     {
-        Instantiate(gameData.GetRandomEnemy(), ve3.position, roomRot);
+        EnemySpawner.Instance.Spawn(gameData.GetRandomEnemy(), ve3.position);
         gameData.enemMeter++;
     }
     private void Update()

@@ -53,9 +53,9 @@ public class HealRoom : MonoBehaviour
             {
                 while (true)
                 {
-                    if (player.GetComponent<PlayerStatus>().currentHp < 90 && cont <10)
+                    if (player.GetComponent<Health>().CurrentHealth < 90 && cont <10)
                     {
-                        player.GetComponent<PlayerStatus>().currentHp += 10;
+                        player.GetComponent<Health>().Heal(10);
                         localscale.transform.localScale += scaleChange;
                         cont++;
                     }

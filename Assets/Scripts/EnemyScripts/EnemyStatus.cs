@@ -48,7 +48,7 @@ public class EnemyStatus : MonoBehaviour
         maxHealth = initialHealth;
         Transform worldSpaceCanvas = GameObject.Find("WorldSpaceCanvas").transform;
         GameObject healthBar = Instantiate(healthBarPrefab, worldSpaceCanvas);
-        healthBar.GetComponent<EnemyHealthBar>().enemy = this;
+        //healthBar.GetComponent<EnemyHealthBar>().enemy = this;
         damageReceivedMultiplier = gameData.levelenem;
     }
     public void Hit(float damage)

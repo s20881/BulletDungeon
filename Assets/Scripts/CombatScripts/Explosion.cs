@@ -18,7 +18,7 @@ public class Explosion : MonoBehaviour
                 Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius, mask);
                 foreach (Collider2D enemy in hits)
                 {
-                    enemy.GetComponent<EnemyStatus>().Hit(damage);
+                    enemy.GetComponent<Health>().Hit(damage);
                 }
             }
             else
@@ -27,7 +27,7 @@ public class Explosion : MonoBehaviour
                 Collider2D player = Physics2D.OverlapCircle(transform.position, GetComponent<CircleCollider2D>().radius, mask);
                 if(player != null)
                 {
-                    player.GetComponent<PlayerStatus>().Hit(damage);
+                    player.GetComponent<Health>().Hit(damage);
                 }
             }
             damageApplied = true;

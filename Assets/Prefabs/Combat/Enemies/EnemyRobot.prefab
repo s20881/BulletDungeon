@@ -87,11 +87,12 @@ GameObject:
   - component: {fileID: 2839167982470804798}
   - component: {fileID: 2839167982470804796}
   - component: {fileID: 2839167982470804794}
-  - component: {fileID: 2839167982470804792}
   - component: {fileID: 2839167982470804795}
   - component: {fileID: 2839167982470804793}
   - component: {fileID: 2839167982470804797}
   - component: {fileID: 2839167982470804774}
+  - component: {fileID: 3762613717366047970}
+  - component: {fileID: 3049846120785674150}
   m_Layer: 9
   m_Name: EnemyRobot
   m_TagString: Enemy
@@ -206,25 +207,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2839167982470804792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839167982470804785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e071704d4bccd248a3fb1eb22f57372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: Robot
-  initialHealth: 200
-  damageReceivedMultiplier: 1
-  invincible: 0
-  healthBarPrefab: {fileID: 5792398017132093608, guid: a3e2fc929dfcde543a14e8666467888e,
-    type: 3}
-  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!114 &2839167982470804795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,9 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d94d62962ebb64c9a923cfe78a92d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredDistanceToPlayer: 1
+  target: {fileID: 0}
+  desiredDistanceToTarget: 1
   step: 1
-  retryDelay: 1
+  maxIterations: 1000
 --- !u!114 &2839167982470804774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,3 +269,31 @@ MonoBehaviour:
   damageMultiplier: 1
   attackSpeed: 1
   attackSpeedMultiplier: 1
+--- !u!114 &3762613717366047970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839167982470804785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db76afa6ef3dc748b37cd73642e728b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 200
+  damageReceivedMultiplier: 1
+  invincible: 0
+--- !u!114 &3049846120785674150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2839167982470804785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa72aae51c762d449f18979013122d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathSearchDelay: 1

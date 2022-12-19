@@ -11,7 +11,7 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] leftRooms;
     [SerializeField] private GameObject[] rightRooms;
     [SerializeField] private GameObject[] covers;
-    [SerializeField] private GameObject[] enemies;
+    [SerializeField] private EnemyType[] enemies;
     [SerializeField] private GameObject[] bossRooms;
     [SerializeField] private GameObject[] bosses;
     [SerializeField] private GameObject[] amomed;
@@ -96,7 +96,7 @@ public class GameData : ScriptableObject
     {
         return covers[Random.Range(0, covers.Length)];
     }
-    public GameObject GetRandomEnemy()
+    public EnemyType GetRandomEnemy()
     {
         return enemies[Random.Range(0, enemies.Length)];
         

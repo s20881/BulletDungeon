@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8441209157715996104}
   - component: {fileID: 8441209157715996105}
   - component: {fileID: 1476999015301701539}
+  - component: {fileID: -8782703696900582362}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -117,9 +118,9 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 5
+      minMaxState: 3
+      scalar: 1.5
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4857,3 +4858,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8782703696900582362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8441209157715996116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6f0e7a55bf0a74895f29aa0fd0ab81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5

@@ -11,7 +11,7 @@ public class HealthBoost : MonoBehaviour
         if (PlayerItems.scrap >= 20)
         {
             PlayerItems.scrap -= 20;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().maxHp += 5;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().MaxHealth += 5;
         }
     }
     public void PotionCraftButton()
@@ -32,7 +32,7 @@ public class HealthBoost : MonoBehaviour
         {
             PlayerItems.gel -= 25;
             PlayerItems.scrap -= 50;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().damageReceivedMultiplier -= 0.05f;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier -= 0.05f;
         }
     }
 
