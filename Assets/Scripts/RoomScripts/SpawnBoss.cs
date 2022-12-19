@@ -17,6 +17,6 @@ public class SpawnBoss : MonoBehaviour
 
     private void spawn()
     {
-        Instantiate(gameData.GetRandomBoss(), transform.position, roomRot);
+        EnemySpawner.Instance.Spawn(gameData.GetRandomBoss(), transform.position);
     }
 }

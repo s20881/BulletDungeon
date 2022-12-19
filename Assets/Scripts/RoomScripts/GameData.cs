@@ -13,7 +13,7 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] covers;
     [SerializeField] private EnemyType[] enemies;
     [SerializeField] private GameObject[] bossRooms;
-    [SerializeField] private GameObject[] bosses;
+    [SerializeField] private EnemyType[] bosses;
     [SerializeField] private GameObject[] amomed;
     //Ogólne zmienne
     //Poziom trudności
@@ -106,7 +106,7 @@ public class GameData : ScriptableObject
         return bossRooms[Random.Range(0, bossRooms.Length)];
 
     }
-    public GameObject GetRandomBoss()
+    public EnemyType GetRandomBoss()
     {
         return bosses[Random.Range(0, bosses.Length)];
 
