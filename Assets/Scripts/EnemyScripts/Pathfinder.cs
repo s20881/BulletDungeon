@@ -18,7 +18,7 @@ public class Pathfinder : MonoBehaviour
             Debug.LogWarning("Desired distance to target is too small. It can be impossible to find a path because of the step.");
             desiredDistanceToTarget = step;
         }
-        if(desiredDistanceToTarget < cc.radius * 2 * 0.71) // desired distance should be at least sqrt(2) * 2 * collider_radius
+        if(desiredDistanceToTarget < cc.radius * 2 * 1.42) // desired distance should be at least sqrt(2) * 2 * collider_radius
         {
             Debug.LogWarning("Desired distance to target is too small. It can be impossible to find a path bezcause of the collider.");
         }

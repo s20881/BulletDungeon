@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  desiredDistanceToTarget: 1
+  desiredDistanceToTarget: 1.5
   step: 1
   maxIterations: 1000
 --- !u!114 &2839167982470804774
