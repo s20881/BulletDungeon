@@ -14,7 +14,10 @@ public class EnemyStatus : MonoBehaviour
     [SerializeField] private GameObject healthBarPrefab;
     private GameObject worldSpaceCanvas;
     [SerializeField] GameData gameData;
+    public GameObject gelPrefab;
+    public GameObject scrapPrefab;
 
+    const float gelDropChance = 3f / 10f, scrapDropChance = 7f / 10f, overallDropChance = 9f / 10f;
     public float MaxHealth
     {
         get
@@ -57,7 +60,7 @@ public class EnemyStatus : MonoBehaviour
             EventManager.Instance.RaiseOnDroneHit();
         else if (type == "Robot")
             EventManager.Instance.RaiseOnRobotHit();
-        if(!invincible)
+        if (!invincible)
         {
             CurrentHealth -= damage * damageReceivedMultiplier;
             if (CurrentHealth <= 0)
@@ -66,15 +69,29 @@ public class EnemyStatus : MonoBehaviour
             }
         }
     }
-    [ContextMenu("Kill")] public void Death()
+    [ContextMenu("Kill")]
+    public void Death()
     {
         if (type == "Drone")
             EventManager.Instance.RaiseOnDroneDeath();
         else if (type == "Robot")
             EventManager.Instance.RaiseOnRobotDeath();
-        else if(type == "Boss")
+        else if (type == "Boss")
             EventManager.Instance.RaiseOnBossDeath();
         GetComponent<Animator>().SetTrigger("Death");
         Destroy(GetComponent<CircleCollider2D>());
+        Destroy(this);
+        float a = Random.Range(0f, 1f);
+        if (a <= overallDropChance)
+        {
+            if (a <= gelDropChance)
+            {
+                Instantiate(gelPrefab, this.gameObject.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(scrapPrefab, this.gameObject.transform.position, Quaternion.identity);
+            }
+        }
     }
 }

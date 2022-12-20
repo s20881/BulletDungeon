@@ -284,6 +284,10 @@ MonoBehaviour:
   initialHealth: 200
   damageReceivedMultiplier: 1
   invincible: 0
+  gelPrefab: {fileID: 2334087501419220691, guid: e1634e32fc6ec024da6b5ec0d7c79aa0,
+    type: 3}
+  scrapPrefab: {fileID: 1856496374928757148, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3,
+    type: 3}
 --- !u!114 &3049846120785674150
 MonoBehaviour:
   m_ObjectHideFlags: 0

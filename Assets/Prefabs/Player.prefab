@@ -5023,6 +5023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bd52d6a90beb94faa7e3f85a45347f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: {fileID: 1374643180598457936, guid: 20a24817b386f3142a78ceaf0baf5355,
+    type: 3}
+  isOpen: 0
 --- !u!95 &1293750659043540810
 Animator:
   serializedVersion: 3
@@ -5139,6 +5142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bd52d6a90beb94faa7e3f85a45347f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: {fileID: 1374643180598457936, guid: 20a24817b386f3142a78ceaf0baf5355,
+    type: 3}
+  isOpen: 0
 --- !u!114 &-5119579671446199824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5175,5 +5181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db76afa6ef3dc748b37cd73642e728b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialHealth: 100
   damageReceivedMultiplier: 1
   invincible: 0
+  gelPrefab: {fileID: 0}
+  scrapPrefab: {fileID: 0}
