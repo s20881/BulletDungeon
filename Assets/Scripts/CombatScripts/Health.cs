@@ -10,13 +10,9 @@ public class Health : MonoBehaviour
     [SerializeField] private bool invincible = false;
     private Animator animator;
 
-    public GameObject gelPrefab;
-    public GameObject scrapPrefab;
-
     private float _currentHealth;
     private float _maxHealth;
 
-    const float gelDropChance = 3f / 10f, scrapDropChance = 7f / 10f, overallDropChance = 2f / 10f;
     public float CurrentHealth
     {
         get { return _currentHealth; }
@@ -51,7 +47,6 @@ public class Health : MonoBehaviour
             if (_currentHealth <= 0)
             {
                 Death();
-                itemDrop();
             }
         }
     }
@@ -64,20 +59,5 @@ public class Health : MonoBehaviour
     private void Death()
     {
         animator.SetTrigger("Death");
-    }
-    private void itemDrop()
-    {
-        float a = Random.Range(0f, 1f);
-        if (a <= overallDropChance)
-        {
-            if (a <= gelDropChance)
-            {
-                Instantiate(gelPrefab, this.gameObject.transform.position, Quaternion.identity);
-            }
-            else
-            {
-                Instantiate(scrapPrefab, this.gameObject.transform.position, Quaternion.identity);
-            }
-        }
     }
 }
