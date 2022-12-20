@@ -401,6 +401,25 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &1184211194419005230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70469053d967b4a49bad5b7259142dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gelPrefab: {fileID: 2334087501419220691, guid: e1634e32fc6ec024da6b5ec0d7c79aa0,
+    type: 3}
+  scrapPrefab: {fileID: 1856496374928757148, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3,
+    type: 3}
+  gelDropChance: 0.3
+  scrapDropChance: 0.7
+  overallDropChance: 0.2
 --- !u!1101 &2787581378076878825
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -440,6 +459,7 @@ AnimatorState:
   - {fileID: -4201308680463429988}
   m_StateMachineBehaviours:
   - {fileID: -9197506758231814130}
+  - {fileID: 1184211194419005230}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
