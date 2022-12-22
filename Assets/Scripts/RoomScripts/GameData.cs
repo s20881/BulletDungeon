@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 [CreateAssetMenu(fileName ="GameData", menuName ="Data/GameData")]
 public class GameData : ScriptableObject
@@ -10,6 +11,7 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] downRooms;
     [SerializeField] private GameObject[] leftRooms;
     [SerializeField] private GameObject[] rightRooms;
+    [SerializeField] private GameObject[] specialRooms;
     [SerializeField] private GameObject[] covers;
     [SerializeField] private EnemyType[] enemies;
     [SerializeField] private GameObject[] bossRooms;
@@ -37,8 +39,9 @@ public class GameData : ScriptableObject
         if (spawnMeter == 0)
         {
             special = 0;
+            isbossroom = false;
         }
-        if (spawnMeter >= 0)//uzupełnianie zamkniętymi pomieszczeniami 
+        if (spawnMeter >= 5)//uzupełnianie zamkniętymi pomieszczeniami 
         {
             switch (direction)
             {
@@ -57,35 +60,22 @@ public class GameData : ScriptableObject
         {
             int rand = Random.Range(1, 6);
             if (rand == 2 && special<2)//szansa na pojawienie sie specjanych pomieszczeń
-            {
-                
+            {              
                 special++;
-                switch (direction)
-                {
-                    case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(4,5)];
-                    case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(4,5)];
-                    case OpeningDirection.NeedLeftDoor:
-                        return leftRooms[5];
-                    case OpeningDirection.NeedRightDoor:
-                        return rightRooms[4];
-                    default: return null;
-                }
-              
+                return GetSpecial();
             }
             else
             {
                 switch (direction)//respienie normalnych pokoi
                 {
                     case OpeningDirection.NeedUpDoor:
-                        return upRooms[Random.Range(1, upRooms.Length-2)];
+                        return upRooms[Random.Range(1, upRooms.Length)];
                     case OpeningDirection.NeedDownDoor:
-                        return downRooms[Random.Range(1, downRooms.Length-2)];
+                        return downRooms[Random.Range(1, downRooms.Length)];
                     case OpeningDirection.NeedLeftDoor:
-                        return leftRooms[Random.Range(1, leftRooms.Length-2)];
+                        return leftRooms[Random.Range(1, leftRooms.Length)];
                     case OpeningDirection.NeedRightDoor:
-                        return rightRooms[Random.Range(1, rightRooms.Length-2)];
+                        return rightRooms[Random.Range(1, rightRooms.Length)];
                     default: return null;
                 }
             }
@@ -116,6 +106,11 @@ public class GameData : ScriptableObject
         return amomed[Random.Range(0, amomed.Length)];
 
     }
-    
+    public GameObject GetSpecial()
+    {
+        return specialRooms[Random.Range(0, specialRooms.Length)];
+
+    }
+
 }
  
