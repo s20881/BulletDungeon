@@ -918,10 +918,20 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[34].second.m_TileSpriteIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3527868031020551852, guid: 71fa1dcc7ec22ad4eac8090b51c7172b,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3968988108291736176, guid: 71fa1dcc7ec22ad4eac8090b51c7172b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174284802576108681, guid: 71fa1dcc7ec22ad4eac8090b51c7172b,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5370366608181000448, guid: 71fa1dcc7ec22ad4eac8090b51c7172b,
         type: 3}
@@ -947,6 +957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753257652215033017, guid: 71fa1dcc7ec22ad4eac8090b51c7172b,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71fa1dcc7ec22ad4eac8090b51c7172b, type: 3}

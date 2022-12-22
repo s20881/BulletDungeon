@@ -29,5 +29,11 @@ public class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<ExploBarel>().setac();
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("GelBox") || collision.CompareTag("ScrapBox"))
+        {
+            collision.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<DropBoxs>().setac();
+            Destroy(gameObject);
+        }
     }
 }

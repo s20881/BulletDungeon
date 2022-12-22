@@ -16,6 +16,9 @@ TagManager:
   - Scrap
   - panel
   - Debug
+  - ExploBarel
+  - GelBox
+  - ScrapBox
   layers:
   - Default
   - TransparentFX
