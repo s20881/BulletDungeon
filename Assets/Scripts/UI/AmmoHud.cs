@@ -30,6 +30,6 @@ public class AmmoHud : MonoBehaviour
     }
     private void Refresh()
     {
-        tmp.text = pc.EquippedWeaponTotalAmmo + "/" + pc.mag;
+        tmp.text = pc.mag + "/" + pc.EquippedWeaponTotalAmmo;
     }
 }
