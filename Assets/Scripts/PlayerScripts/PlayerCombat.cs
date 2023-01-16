@@ -54,16 +54,19 @@ public class PlayerCombat : MonoBehaviour
     public bool reloading;
     [SerializeField] private GameObject sliderPrefab;
     private ReloadSlider slider;
+    [SerializeField] private AudioClip reloadSound;
 
     private PlayerMovement playerMovement;
     private Animator animator;
     private EquippedWeapon inGameWeapon;
+    private AudioSource audioSource;
 
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         inGameWeapon = GetComponentInChildren<EquippedWeapon>();
+        audioSource = GetComponent<AudioSource>();
         slider = Instantiate<GameObject>(sliderPrefab, GameObject.Find("WorldSpaceCanvas").transform).GetComponent<ReloadSlider>();
         mag = equippedWeapon.magSize;
         onCooldown = false;
@@ -113,6 +116,7 @@ public class PlayerCombat : MonoBehaviour
         Reload();
         reloading = false;
         EventManager.Instance.RaiseOnPlayerReload();
+        audioSource.PlayOneShot(reloadSound);
     }
     private void Reload()
     {

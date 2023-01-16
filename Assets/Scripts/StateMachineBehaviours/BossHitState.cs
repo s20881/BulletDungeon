@@ -7,6 +7,5 @@ public class BossHitState : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         EventManager.Instance.RaiseOnBossHit();
-        Debug.Log("Boss hit");
     }
 }

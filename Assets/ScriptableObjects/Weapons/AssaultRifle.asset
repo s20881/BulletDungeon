@@ -24,3 +24,4 @@ MonoBehaviour:
   sprite: {fileID: -5973717018470272431, guid: be9d4be195bd5e6408fc7d44a304cc50, type: 3}
   projectilePrefab: {fileID: 2017514698187455462, guid: 0198c272d4e18094cacd16c6bf98abc9,
     type: 3}
+  shootSound: {fileID: 8300000, guid: 4bf07acee060bbb49b80620a1263857c, type: 3}

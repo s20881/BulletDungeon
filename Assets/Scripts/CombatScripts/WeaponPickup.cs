@@ -9,6 +9,7 @@ public class WeaponPickup : MonoBehaviour
     public float maxDistance = 1f;
 
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
     private GameObject player;
 
     private void Start()
@@ -16,6 +17,7 @@ public class WeaponPickup : MonoBehaviour
         mag = weapon.magSize;
         player = GameObject.FindGameObjectWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -36,6 +38,7 @@ public class WeaponPickup : MonoBehaviour
         weapon = previousPlayerWeapon;
         spriteRenderer.sprite = weapon.sprite;
         EventManager.Instance.RaiseOnPlayerSwitchWeapon();
+        audioSource.Play();
     }
     public float DistanceToPlayer()
     {
