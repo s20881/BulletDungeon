@@ -26,13 +26,15 @@ public class GameData : ScriptableObject
     public int spawnMeter ;
     public int enemMeter;
     //parametry
-    public float cx;
-    public float cy;
+    public float cx=0;
+    public float cy=0;
     public bool isbossroom = false;
     public int bossMeter=0;
     public bool isDead = false;
     public float VolumeVal;
+    public float EffectsVolume;
     public bool PortalPenl = false;
+    public int roomstospawn = 5;
     //eventt when die player zerowanie bossmeter i isboss na flase
     public GameObject GetRandomRoom(OpeningDirection direction)
     {
@@ -41,7 +43,7 @@ public class GameData : ScriptableObject
             special = 0;
             isbossroom = false;
         }
-        if (spawnMeter >= 5)//uzupełnianie zamkniętymi pomieszczeniami 
+        if (spawnMeter >= roomstospawn)//uzupełnianie zamkniętymi pomieszczeniami 
         {
             switch (direction)
             {
