@@ -17,6 +17,10 @@ MonoBehaviour:
   - {fileID: 4887750052434895630, guid: ee1a6dedc675a4843becb4e2837de1be, type: 3}
   - {fileID: 7828468452761748970, guid: 1de6f84f99abcf04eaec82c85912a81f, type: 3}
   - {fileID: 623283979702020369, guid: f51d33fc4e0091e41b862b41f27c8993, type: 3}
+  - {fileID: 7380623782818279071, guid: ed03cf37238c26948907ddc81b515b06, type: 3}
+  - {fileID: 6864902180986916978, guid: 09ca85c970226a84d8d562c24519e41e, type: 3}
+  - {fileID: 6475887444460400408, guid: 3f8873d97a599da4aa12c25ae2729dc2, type: 3}
+  - {fileID: 6412958852604495800, guid: 7097ab9ff17db2a4da3726acc7082690, type: 3}
   downRooms:
   - {fileID: 7753334095528656466, guid: 8b751e0de67011e41b4c84b14059eb31, type: 3}
   - {fileID: 4887750052434895630, guid: ee1a6dedc675a4843becb4e2837de1be, type: 3}
@@ -46,19 +50,21 @@ MonoBehaviour:
   - {fileID: 8027093955560131015, guid: aff28ba1a8923b343b2c80c66a358685, type: 3}
   - {fileID: 2626658542461171944, guid: e36d164714440b843bcb41f3a93174d0, type: 3}
   - {fileID: 4112891224978686465, guid: 1036d34b7217a71428e00f2bfa0d2137, type: 3}
-  bosses: 0000000000000000
+  bosses: 0200000002000000
   amomed:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
-  level: 0.7
-  levelenem: 1.2
-  special: 1
-  spawnMeter: 7
+  level: 1
+  levelenem: 0.9000001
+  special: 0
+  spawnMeter: 9
   enemMeter: 0
-  cx: -20
-  cy: 40
+  cx: 0
+  cy: 0
   isbossroom: 0
   bossMeter: 0
   isDead: 0
-  VolumeVal: 0
+  VolumeVal: 0.79302377
+  EffectsVolume: 0.24340327
   PortalPenl: 0
+  roomstospawn: 5
