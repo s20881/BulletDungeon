@@ -57,14 +57,14 @@ MonoBehaviour:
   level: 1
   levelenem: 0.9000001
   special: 0
-  spawnMeter: 9
+  spawnMeter: -1
   enemMeter: 0
   cx: 0
-  cy: 0
-  isbossroom: 0
-  bossMeter: 0
+  cy: 19.580101
+  isbossroom: 1
+  bossMeter: 2
   isDead: 0
-  VolumeVal: 0.79302377
-  EffectsVolume: 0.24340327
+  VolumeVal: 0
+  EffectsVolume: 0
   PortalPenl: 0
-  roomstospawn: 5
+  roomstospawn: 0
