@@ -28,8 +28,8 @@ public class PlayerCraft : MonoBehaviour
     public GameObject PauzaMenu;
     public void OpenPanel()
     {
-        arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
-        hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
+       // arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+       // hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
         if (Panel != null)
         {
             PauzaMenu.SetActive(false);
@@ -53,6 +53,9 @@ public class PlayerCraft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+        hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
+
         HandlePanels();
         scrapAmount.SetText(PlayerItems.scrap.ToString());
         gelAmount.SetText(PlayerItems.gel.ToString());
