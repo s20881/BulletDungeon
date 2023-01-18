@@ -24,7 +24,7 @@ public class ItemController : MonoBehaviour
         }
         if (collision.CompareTag("MediGel"))
         {
-            if (PlayerItems.MediGel < 2)
+            if (PlayerItems.MediGel < 3)
             {
                 Destroy(collision.gameObject);
                 PlayerItems.MediGel++;
