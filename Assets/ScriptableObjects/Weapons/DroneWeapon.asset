@@ -25,3 +25,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 7023243504318325915, guid: dc11606ccdda7b14cbe7a24661b5c685,
     type: 3}
   shootSound: {fileID: 8300000, guid: a4de78baa77752944834e4bd689ee874, type: 3}
+  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
