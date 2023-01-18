@@ -9,14 +9,21 @@ public class PortalMenu : MonoBehaviour
 {
     [SerializeField] GameData gameData;
     public GameObject panel;
+    public GameObject PauzaMenu;
     private void Update()
     {
         if (gameData.PortalPenl)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>().enabled = false;
+            PauzaMenu.SetActive(false);
             panel.SetActive(true);
         }
         else
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled =true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>().enabled = true;
+            PauzaMenu.SetActive(true);
             panel.SetActive(false);
         }
     }
