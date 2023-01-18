@@ -397,17 +397,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'BulletDungeon
-
-
-
-
-    Thank you for playing!
-
-
-
-
-    Autors:'
+  m_Text: "Thank you for playing Bullet Dungeon!\n\n\n\n\nAuthors:\nJakub Kopczewski\nMi\u0142osz
+    Majchrowski\nFilip Panek"
 --- !u!222 &797476723
 CanvasRenderer:
   m_ObjectHideFlags: 0
