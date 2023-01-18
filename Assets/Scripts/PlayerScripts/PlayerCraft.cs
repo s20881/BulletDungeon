@@ -20,11 +20,16 @@ public class PlayerCraft : MonoBehaviour
     public TextMeshProUGUI gunpowderInventory;
     public TextMeshProUGUI grenadesInventory;
     public TextMeshProUGUI mediGelInventory;
+    public TextMeshProUGUI armor;
+    public TextMeshProUGUI health;
+    float arm;
+    float hp;
 
     public void OpenPanel()
     {
-
-        if(Panel != null)
+        arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+        hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
+        if (Panel != null)
         {
             Panel.SetActive(true);
             Time.timeScale = 0;
@@ -57,6 +62,8 @@ public class PlayerCraft : MonoBehaviour
         gunpowderInventory.SetText(PlayerItems.gunpowder.ToString());
         grenadesInventory.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
         mediGelInventory.SetText(PlayerItems.MediGel.ToString() + "/3");
+        armor.SetText(arm.ToString());
+        health.SetText(hp.ToString());
         if (Input.GetKeyDown("e"))
         {
             switch (Upgrade)
