@@ -35,9 +35,8 @@ public class PlayerItemUse : MonoBehaviour
                 }
                 particles.SetActive(true);
                 Instantiate(particles, transform.position, Quaternion.identity);
-                HealingCoroutine(2);
+                StartCoroutine(HealingCoroutine(2));
                 Destroy(particles);
-
             }
         }
     }
