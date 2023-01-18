@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Camera cam;
 
     public Vector2 facing;
-    Vector2 movementDirectionVector;
+    public Vector2 movementDirectionVector;
 
     private void Start()
     {

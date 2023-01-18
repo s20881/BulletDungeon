@@ -2344,6 +2344,23 @@ PrefabInstance:
       propertyPath: cross
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4285562612430540693, guid: 21d56c89608a5ba4cab012fd0862a6be,
+        type: 3}
+      propertyPath: grenade
+      value: 
+      objectReference: {fileID: 5896537396578992619, guid: 6b2a6f025198f9b40ab339e797d2ede2,
+        type: 3}
+    - target: {fileID: 4285562612430540693, guid: 21d56c89608a5ba4cab012fd0862a6be,
+        type: 3}
+      propertyPath: totalGrenades
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290618750229756448, guid: 21d56c89608a5ba4cab012fd0862a6be,
+        type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 5985488420127129845, guid: 96d63b8e0eff77347a2803f1f6411174,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2075651823319930523, guid: 21d56c89608a5ba4cab012fd0862a6be, type: 3}

@@ -9,13 +9,27 @@ public class PlayerCraft : MonoBehaviour
     public static int p = 0;
 
     public GameObject Panel;
-    public TextMeshProUGUI scrapT;
-    public TextMeshProUGUI gelT;
+    public TextMeshProUGUI scrapAmount;
+    public TextMeshProUGUI gelAmount;
+    public TextMeshProUGUI gunpowderAmount;
+    public TextMeshProUGUI grenadesAmount;
+    public TextMeshProUGUI mediGelAmount;
+
+    public TextMeshProUGUI scrapInventory;
+    public TextMeshProUGUI gelInventory;
+    public TextMeshProUGUI gunpowderInventory;
+    public TextMeshProUGUI grenadesInventory;
+    public TextMeshProUGUI mediGelInventory;
+    public TextMeshProUGUI armor;
+    public TextMeshProUGUI health;
+    float arm;
+    float hp;
 
     public void OpenPanel()
     {
-
-        if(Panel != null)
+        arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+        hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
+        if (Panel != null)
         {
             Panel.SetActive(true);
             Time.timeScale = 0;
@@ -37,8 +51,19 @@ public class PlayerCraft : MonoBehaviour
     void Update()
     {
         HandlePanels();
-        scrapT.SetText("Scrap: " + PlayerItems.scrap.ToString());
-        gelT.SetText("Gel: " + PlayerItems.gel.ToString());
+        scrapAmount.SetText(PlayerItems.scrap.ToString());
+        gelAmount.SetText(PlayerItems.gel.ToString());
+        gunpowderAmount.SetText(PlayerItems.gunpowder.ToString());
+        grenadesAmount.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
+        mediGelAmount.SetText(PlayerItems.MediGel.ToString() + "/3");
+
+        scrapInventory.SetText(PlayerItems.scrap.ToString());
+        gelInventory.SetText(PlayerItems.gel.ToString());
+        gunpowderInventory.SetText(PlayerItems.gunpowder.ToString());
+        grenadesInventory.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
+        mediGelInventory.SetText(PlayerItems.MediGel.ToString() + "/3");
+        armor.SetText(arm.ToString());
+        health.SetText(hp.ToString());
         if (Input.GetKeyDown("e"))
         {
             switch (Upgrade)

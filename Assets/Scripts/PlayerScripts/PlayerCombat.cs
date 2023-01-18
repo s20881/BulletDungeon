@@ -8,6 +8,8 @@ public class PlayerCombat : MonoBehaviour
     public int totalPistolAmmo = 21;
     public int totalRifleAmmo = 90;
     public int totalRocketAmmo = 5;
+    public static int totalGrenades = 1;
+    public GameObject grenade;
 
     private int _equippedWeaponTotalAmmo;
 
@@ -87,6 +89,11 @@ public class PlayerCombat : MonoBehaviour
         if(Input.GetButtonDown("Reload") && !reloading && mag < equippedWeapon.magSize)
         {
             StartCoroutine(ReloadCoroutine());
+        }
+        if (Input.GetKeyDown(KeyCode.G) && totalGrenades>0)
+        {
+            Instantiate(grenade, transform.position, Quaternion.identity);
+            totalGrenades--;
         }
     }
 
