@@ -23,6 +23,8 @@ public class PauseMenuScript : MonoBehaviour
                 Pause();
             }
         }
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled = !IsPaused;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>().enabled = !IsPaused;
 
     }
     public void Resume()
@@ -30,6 +32,7 @@ public class PauseMenuScript : MonoBehaviour
         pauseMenuUi.SetActive(false);
         Time.timeScale = 1.0f;
         IsPaused = false;
+
     }
     void Pause()
     {

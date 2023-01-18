@@ -43,8 +43,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.051390648, g: 0, b: 1, a: 1}
-  m_Intensity: 8
-  m_Range: 10
+  m_Intensity: 7
+  m_Range: 9
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -136,8 +136,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.051390648, g: 0, b: 1, a: 1}
-  m_Intensity: 8
-  m_Range: 10
+  m_Intensity: 7
+  m_Range: 9
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -263,8 +263,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.051390648, g: 0, b: 1, a: 1}
-  m_Intensity: 8
-  m_Range: 10
+  m_Intensity: 7
+  m_Range: 9
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -356,8 +356,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.051390648, g: 0, b: 1, a: 1}
-  m_Intensity: 8
-  m_Range: 10
+  m_Intensity: 7
+  m_Range: 9
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -18661,6 +18661,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tiles.Array.data[600].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866706252364150016, guid: 5f64e58281f80374fa7a4a93312a1548,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5511907496836920403, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}
