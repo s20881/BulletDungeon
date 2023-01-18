@@ -11,6 +11,7 @@ public class WeaponPickup : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
     private GameObject player;
+    [SerializeField] private GameData gameData;
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class WeaponPickup : MonoBehaviour
         weapon = previousPlayerWeapon;
         spriteRenderer.sprite = weapon.sprite;
         EventManager.Instance.RaiseOnPlayerSwitchWeapon();
-        audioSource.Play();
+        audioSource.PlayOneShot(audioSource.clip, gameData.EffectsVolume);
     }
     public float DistanceToPlayer()
     {

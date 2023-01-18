@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: e0772db11b4a9724a968989b74d54bcb, type: 2}
   maxDistance: 1
-  switchSound: {fileID: 0}
+  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
 --- !u!82 &5706205211742198656
 AudioSource:
   m_ObjectHideFlags: 0

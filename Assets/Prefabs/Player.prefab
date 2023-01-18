@@ -5012,6 +5012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 8
   facing: {x: 0, y: 0}
+  movementDirectionVector: {x: 0, y: 0}
 --- !u!114 &1460899032816400985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,6 +5107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
+  particles: {fileID: 0}
   facing: {x: 0, y: 0}
 --- !u!114 &4285562612430540693
 MonoBehaviour:
@@ -5123,6 +5125,8 @@ MonoBehaviour:
   totalPistolAmmo: 21
   totalRifleAmmo: 90
   totalRocketAmmo: 5
+  grenade: {fileID: 0}
+  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   fireRateMultiplier: 1
   damageMultiplier: 5
   bulletSpeedMultiplier: 1
