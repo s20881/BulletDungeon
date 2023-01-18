@@ -6376,7 +6376,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 623014604956965142}
     - target: {fileID: 4285562612430540693, guid: 21d56c89608a5ba4cab012fd0862a6be,
         type: 3}
       propertyPath: grenade
@@ -6633,7 +6633,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
-  particles: {fileID: 0}
+  particles: {fileID: 5985488420127129845, guid: 96d63b8e0eff77347a2803f1f6411174,
+    type: 3}
   facing: {x: 0, y: 0}
 --- !u!1001 &1349480223
 PrefabInstance:
