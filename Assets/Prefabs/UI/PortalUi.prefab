@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3249390096378945405}
   - component: {fileID: 6177420851095323301}
   - component: {fileID: 6202906559762983291}
+  - component: {fileID: 1893292692827725134}
   m_Layer: 5
   m_Name: PortalUi
   m_TagString: Untagged
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4772751916525428748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -115,6 +116,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
   panel: {fileID: 8168936322525748316}
+--- !u!222 &1893292692827725134
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4772751916525428748}
+  m_CullTransparentMesh: 1
 --- !u!1001 &89201183024259116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,12 +179,12 @@ PrefabInstance:
     - target: {fileID: 8097767130568227959, guid: 14786571a1af7eb40aeb2a241bd2b55d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 540.3777
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 8097767130568227959, guid: 14786571a1af7eb40aeb2a241bd2b55d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 363.6437
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 8097767130568227959, guid: 14786571a1af7eb40aeb2a241bd2b55d,
         type: 3}
@@ -215,12 +224,12 @@ PrefabInstance:
     - target: {fileID: 8097767130568227959, guid: 14786571a1af7eb40aeb2a241bd2b55d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.0050354
       objectReference: {fileID: 0}
     - target: {fileID: 8097767130568227959, guid: 14786571a1af7eb40aeb2a241bd2b55d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000030518
       objectReference: {fileID: 0}
     - target: {fileID: 8097767130568227959, guid: 14786571a1af7eb40aeb2a241bd2b55d,
         type: 3}

@@ -33,6 +33,9 @@ public class RoomSpawner : MonoBehaviour
             Spawned = true;
             spawn();
         }
+        gameData.cx = 0;
+        gameData.cy = 0;
+
     }
      
     private void spawn()
