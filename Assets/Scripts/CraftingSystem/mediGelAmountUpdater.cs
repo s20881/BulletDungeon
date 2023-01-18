@@ -7,13 +7,10 @@ public class mediGelAmountUpdater : MonoBehaviour
 {
     private TextMeshProUGUI txt;
     private int mediGel;
-    // Start is called before the first frame update
     void Start()
     {
         txt = GetComponent<TextMeshProUGUI>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         mediGel = PlayerItems.MediGel;

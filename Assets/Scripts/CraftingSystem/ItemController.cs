@@ -17,12 +17,25 @@ public class ItemController : MonoBehaviour
             Destroy(collision.gameObject);
             PlayerItems.gel++;
         }
+        if (collision.CompareTag("Gunpowder"))
+        {
+            Destroy(collision.gameObject);
+            PlayerItems.gunpowder++;
+        }
         if (collision.CompareTag("MediGel"))
         {
             if (PlayerItems.MediGel < 2)
             {
                 Destroy(collision.gameObject);
                 PlayerItems.MediGel++;
+            }
+        }
+        if (collision.CompareTag("Grenade"))
+        {
+            if (PlayerCombat.totalGrenades < 3)
+            {
+                Destroy(collision.gameObject);
+                PlayerCombat.totalGrenades++;
             }
         }
     }

@@ -6,16 +6,15 @@ public class PlayerItemUse : MonoBehaviour
 {
     public float movementSpeed = 1f;
 
-    private Rigidbody2D rb;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
-    private Camera cam;
+    public GameObject particles;
     private float getHP;
     private float getMaxHP;
 
     public Vector2 facing;
-    Vector2 movementDirectionVector;
-
+    private void Start()
+    {
+        particles.SetActive(false);
+    }
     private void Update()
     {
         if (Input.GetKeyDown("h"))
@@ -24,17 +23,29 @@ public class PlayerItemUse : MonoBehaviour
             { 
                 getHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().CurrentHealth;
                 getMaxHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().MaxHealth;
-                if (getHP < getMaxHP - 33)
+                if (getHP < getMaxHP - 33f)
                 {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(33);
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(33f);
                     PlayerItems.MediGel -= 1;
                 }
-                else if (getMaxHP - getHP < 33 && getMaxHP - getHP > 0)
+                else if (getMaxHP - getHP < 33f && getMaxHP - getHP > 0f)
                 {
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(getMaxHP);
                     PlayerItems.MediGel -= 1;
                 }
+                Instantiate(particles, transform.position, Quaternion.identity);
+                HealingCoroutine(2);
+                particles.SetActive(true);
+                Destroy(particles);
+
             }
         }
     }
+    private IEnumerator HealingCoroutine(float duration)
+    {
+        particles.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
+        yield return new WaitForSeconds(duration);
+        particles.SetActive(false);
+    }
 }
+

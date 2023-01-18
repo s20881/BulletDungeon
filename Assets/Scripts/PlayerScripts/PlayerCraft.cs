@@ -9,8 +9,17 @@ public class PlayerCraft : MonoBehaviour
     public static int p = 0;
 
     public GameObject Panel;
-    public TextMeshProUGUI scrapT;
-    public TextMeshProUGUI gelT;
+    public TextMeshProUGUI scrapAmount;
+    public TextMeshProUGUI gelAmount;
+    public TextMeshProUGUI gunpowderAmount;
+    public TextMeshProUGUI grenadesAmount;
+    public TextMeshProUGUI mediGelAmount;
+
+    public TextMeshProUGUI scrapInventory;
+    public TextMeshProUGUI gelInventory;
+    public TextMeshProUGUI gunpowderInventory;
+    public TextMeshProUGUI grenadesInventory;
+    public TextMeshProUGUI mediGelInventory;
 
     public void OpenPanel()
     {
@@ -37,8 +46,17 @@ public class PlayerCraft : MonoBehaviour
     void Update()
     {
         HandlePanels();
-        scrapT.SetText("Scrap: " + PlayerItems.scrap.ToString());
-        gelT.SetText("Gel: " + PlayerItems.gel.ToString());
+        scrapAmount.SetText(PlayerItems.scrap.ToString());
+        gelAmount.SetText(PlayerItems.gel.ToString());
+        gunpowderAmount.SetText(PlayerItems.gunpowder.ToString());
+        grenadesAmount.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
+        mediGelAmount.SetText(PlayerItems.MediGel.ToString() + "/3");
+
+        scrapInventory.SetText(PlayerItems.scrap.ToString());
+        gelInventory.SetText(PlayerItems.gel.ToString());
+        gunpowderInventory.SetText(PlayerItems.gunpowder.ToString());
+        grenadesInventory.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
+        mediGelInventory.SetText(PlayerItems.MediGel.ToString() + "/3");
         if (Input.GetKeyDown("e"))
         {
             switch (Upgrade)

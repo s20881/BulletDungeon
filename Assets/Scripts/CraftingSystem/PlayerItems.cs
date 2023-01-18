@@ -7,9 +7,10 @@ public class PlayerItems : MonoBehaviour
     public GameObject Inventory;
     public bool isOpen;
 
-    public static int gel = 82;
-    public static int scrap = 131;
+    public static int gel = 15;
+    public static int scrap = 11;
     public static int MediGel = 1;
+    public static int gunpowder = 2;
     private void Start()
     {
         isOpen = false;

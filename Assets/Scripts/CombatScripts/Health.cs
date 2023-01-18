@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float initialHealth = 100f;
+    [SerializeField] public float initialHealth = 100f;
     public float damageReceivedMultiplier = 1f;
     [SerializeField] private bool invincible = false;
     private Animator animator;
@@ -55,6 +55,24 @@ public class Health : MonoBehaviour
         _currentHealth += healthPoints;
         if (CurrentHealth > MaxHealth)
             _currentHealth = MaxHealth;
+    }
+    public void upgradeHealth()
+    {
+        if(initialHealth <= 175f)
+        {
+            initialHealth += 5f;
+            PlayerItems.scrap -= 25;
+            PlayerItems.gel -= 75;
+        }
+    }
+    public void upgradeArmor()
+    {
+        if(damageReceivedMultiplier > 0.75f)
+        {
+            damageReceivedMultiplier -= 0.05f;
+            PlayerItems.scrap -= 50;
+            PlayerItems.gel -= 150;
+        }
     }
     private void Death()
     {

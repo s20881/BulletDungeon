@@ -19,6 +19,8 @@ TagManager:
   - ExploBarel
   - GelBox
   - ScrapBox
+  - Gunpowder
+  - Grenade
   layers:
   - Default
   - TransparentFX
