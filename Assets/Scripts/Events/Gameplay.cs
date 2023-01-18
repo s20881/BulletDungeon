@@ -11,6 +11,7 @@ public class Gameplay : MonoBehaviour
     {
         EventManager.OnDroneDeath += DecreaseEnemyMeter;
         EventManager.OnRobotDeath += DecreaseEnemyMeter;
+        EventManager.OnBossDeath += DecreaseEnemyMeter;
         EventManager.OnPlayerDeath += GameDataSetDead;
         EventManager.OnPlayerSpawn += SetPlayerDamageReceiverMultiplier;
     }
@@ -18,6 +19,7 @@ public class Gameplay : MonoBehaviour
     {
         EventManager.OnDroneDeath -= DecreaseEnemyMeter;
         EventManager.OnRobotDeath -= DecreaseEnemyMeter;
+        EventManager.OnBossDeath -= DecreaseEnemyMeter;
         EventManager.OnPlayerDeath -= GameDataSetDead;
         EventManager.OnPlayerSpawn -= SetPlayerDamageReceiverMultiplier;
     }

@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public int totalRocketAmmo = 5;
     public static int totalGrenades = 1;
     public GameObject grenade;
+    [SerializeField] private GameData gameData;
 
     private int _equippedWeaponTotalAmmo;
 
@@ -123,7 +124,7 @@ public class PlayerCombat : MonoBehaviour
         Reload();
         reloading = false;
         EventManager.Instance.RaiseOnPlayerReload();
-        audioSource.PlayOneShot(reloadSound);
+        audioSource.PlayOneShot(reloadSound, gameData.EffectsVolume);
     }
     private void Reload()
     {

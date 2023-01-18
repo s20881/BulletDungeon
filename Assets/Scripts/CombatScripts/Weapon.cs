@@ -17,6 +17,7 @@ public class Weapon : ScriptableObject
     public Sprite sprite;
     [SerializeField] private GameObject projectilePrefab;
     public AudioClip shootSound;
+    [SerializeField] private GameData gameData;
     
     public void Shoot(GameObject shooter, float damageMultiplier, float bulletSpeedMultiplier, Vector2 bulletPos, Vector2 direction)
     {
@@ -31,6 +32,6 @@ public class Weapon : ScriptableObject
             else
                 projectile.GetComponent<Bullet>().hostile = true;
         projectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed * bulletSpeedMultiplier;
-        shooter.GetComponent<AudioSource>().PlayOneShot(shootSound);
+        shooter.GetComponent<AudioSource>().PlayOneShot(shootSound, gameData.EffectsVolume);
     }
 }

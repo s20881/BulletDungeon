@@ -24,3 +24,5 @@ MonoBehaviour:
   sprite: {fileID: 0}
   projectilePrefab: {fileID: 8441209157715996116, guid: c4b52e236b5ce6b47a6608d6e078eb78,
     type: 3}
+  shootSound: {fileID: 0}
+  gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
