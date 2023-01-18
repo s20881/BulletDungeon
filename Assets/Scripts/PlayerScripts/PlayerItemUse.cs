@@ -33,9 +33,9 @@ public class PlayerItemUse : MonoBehaviour
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(getMaxHP);
                     PlayerItems.MediGel -= 1;
                 }
+                particles.SetActive(true);
                 Instantiate(particles, transform.position, Quaternion.identity);
                 HealingCoroutine(2);
-                particles.SetActive(true);
                 Destroy(particles);
 
             }
