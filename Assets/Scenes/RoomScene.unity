@@ -291,6 +291,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6202906559762983291, guid: 02e82ca63aee8514db50a5bbcbaccc3c,
+        type: 3}
+      propertyPath: PauzaMenu
+      value: 
+      objectReference: {fileID: 1565566673}
     - target: {fileID: 8168936322525748316, guid: 02e82ca63aee8514db50a5bbcbaccc3c,
         type: 3}
       propertyPath: m_IsActive
@@ -3889,6 +3894,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548151384}
   m_CullTransparentMesh: 1
+--- !u!1 &1565566673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4128708819244221854, guid: ac15537e2f8651e47bdd2dcd429f06f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 846706687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1582415454
 GameObject:
   m_ObjectHideFlags: 0

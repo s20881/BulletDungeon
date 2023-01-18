@@ -263,6 +263,12 @@ PrefabInstance:
       objectReference: {fileID: 1507593192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac15537e2f8651e47bdd2dcd429f06f1, type: 3}
+--- !u!1 &591641504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4128708819244221854, guid: ac15537e2f8651e47bdd2dcd429f06f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 591641503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &704644600 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2104469757102520087, guid: ac15537e2f8651e47bdd2dcd429f06f1,
@@ -1233,6 +1239,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6202906559762983291, guid: 02e82ca63aee8514db50a5bbcbaccc3c,
+        type: 3}
+      propertyPath: PauzaMenu
+      value: 
+      objectReference: {fileID: 591641504}
     - target: {fileID: 8168936322525748316, guid: 02e82ca63aee8514db50a5bbcbaccc3c,
         type: 3}
       propertyPath: m_IsActive

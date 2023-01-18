@@ -25,12 +25,14 @@ public class PlayerCraft : MonoBehaviour
     float arm;
     float hp;
 
+    public GameObject PauzaMenu;
     public void OpenPanel()
     {
         arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
         hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
         if (Panel != null)
         {
+            PauzaMenu.SetActive(false);
             Panel.SetActive(true);
             Time.timeScale = 0;
             
@@ -40,6 +42,7 @@ public class PlayerCraft : MonoBehaviour
     {
         if (Panel != null)
         {
+            
             Panel.SetActive(false);
             Time.timeScale = 1;
         }
@@ -81,6 +84,7 @@ public class PlayerCraft : MonoBehaviour
     {
         if (p == 0)
         {
+            PauzaMenu.SetActive(true);
             Panel.SetActive(false);
             p = 1;
         }
