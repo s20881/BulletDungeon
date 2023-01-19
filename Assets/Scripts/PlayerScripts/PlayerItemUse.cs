@@ -36,15 +36,13 @@ public class PlayerItemUse : MonoBehaviour
                 particles.SetActive(true);
                 Instantiate(particles, transform.position, Quaternion.identity);
                 StartCoroutine(HealingCoroutine(2));
-                Destroy(particles);
+                particles.SetActive(false);
             }
         }
     }
     private IEnumerator HealingCoroutine(float duration)
     {
-        particles.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
         yield return new WaitForSeconds(duration);
-        particles.SetActive(false);
     }
 }
 
