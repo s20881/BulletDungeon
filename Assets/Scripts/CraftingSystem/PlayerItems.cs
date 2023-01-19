@@ -9,7 +9,7 @@ public class PlayerItems : MonoBehaviour
 
     public static int gel = 15;
     public static int scrap = 11;
-    public static int MediGel = 1;
+    public static int MediGel = 2;
     public static int gunpowder = 2;
     private void Start()
     {

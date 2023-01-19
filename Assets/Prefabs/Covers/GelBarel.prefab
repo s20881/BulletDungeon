@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9149174533580858266}
   - component: {fileID: 2618921498938130346}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floors_134
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1547918500785166487}
   - component: {fileID: 6883572116181255635}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player_blue_left_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 1218394965838866876}
   - component: {fileID: 5822129322809816617}
   - component: {fileID: 3637110998201849956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GelBarel
   m_TagString: GelBox
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2864440122756490271}
   - component: {fileID: 4217365765422050017}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: props and items x1_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466947384293258899}
   - component: {fileID: 3596906083593479434}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5623480220130632648}
   - component: {fileID: 6686574430930958609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724493464887031788}
   - component: {fileID: 5275972078610952894}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: gel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
