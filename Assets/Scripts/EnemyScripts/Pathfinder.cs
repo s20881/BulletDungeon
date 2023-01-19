@@ -39,6 +39,8 @@ public class Pathfinder : MonoBehaviour
     }
     private List<Vector3> GetAccessibleNeighbors(Vector3 pos)
     {
+        if(cc == null)
+            cc = GetComponent<CircleCollider2D>();
         List<Vector3> neighbors = GetNeighbors(pos);
         List<Vector3> result = new List<Vector3>();
         foreach(Vector3 neighbor in neighbors)
