@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6119583156657133415}
   - component: {fileID: 1650263258584075837}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 568199929392067576}
   - component: {fileID: 2151121825046535221}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1622273248671301565}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: scraps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 985613825124572162}
   - component: {fileID: 8617839060051319463}
   - component: {fileID: 5740120505272211714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ScrapBox
   m_TagString: ScrapBox
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5253448054578604236}
   - component: {fileID: 3781407070461327338}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4549765455509194901}
   - component: {fileID: 1219145236998376029}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8597205761604227221}
   - component: {fileID: 5692961421132326612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3183904335084597598}
   - component: {fileID: 6217502699187448593}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3862148871328007317}
   - component: {fileID: 9221620578288993001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1718415802945020186}
   - component: {fileID: 1645887464603569581}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floors_134
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633313626245416146}
   - component: {fileID: 7542549467378942280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8978326588576680901}
   - component: {fileID: 8611262382912147898}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +1005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059209091905369992}
   - component: {fileID: 983956551895858575}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6466829260211827586}
   - component: {fileID: 1438518285095059567}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565765551108031022}
   - component: {fileID: 116225429331347139}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pixel_scrap (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

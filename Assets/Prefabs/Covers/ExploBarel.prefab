@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6179341652187063253}
   - component: {fileID: 247080511046552382}
   - component: {fileID: 3834299021386800093}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4814,7 +4814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6646635446709875626}
   - component: {fileID: 2919785271764916418}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4899,7 +4899,7 @@ GameObject:
   - component: {fileID: 5229765419078305168}
   - component: {fileID: 2735327209596255554}
   - component: {fileID: 966079932299600654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExploBarel
   m_TagString: ExploBarel
   m_Icon: {fileID: 0}
@@ -5016,6 +5016,8 @@ MonoBehaviour:
   explosion: {fileID: 772271703122905395, guid: a6655126cf068d945be766862bbef613,
     type: 3}
   ve3: {fileID: 5915399345049091289}
+  enemies: []
+  player: {fileID: 0}
 --- !u!1 &6748577117674952851
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,7 +5029,7 @@ GameObject:
   - component: {fileID: 5531360569650625123}
   - component: {fileID: 6196321171301832618}
   - component: {fileID: 5729038190816356816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
