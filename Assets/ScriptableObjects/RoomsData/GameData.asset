@@ -67,4 +67,4 @@ MonoBehaviour:
   VolumeVal: 0.3580447
   EffectsVolume: 0.21606898
   PortalPenl: 0
-  roomstospawn: 5
+  roomstospawn: 1
