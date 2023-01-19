@@ -56,15 +56,15 @@ MonoBehaviour:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   level: 1
   levelenem: 0.9000001
-  special: 0
-  spawnMeter: -1
-  enemMeter: 1
+  special: 2
+  spawnMeter: 16
+  enemMeter: 6
   cx: 0
   cy: 0
-  isbossroom: 1
-  bossMeter: 2
+  isbossroom: 0
+  bossMeter: 0
   isDead: 0
   VolumeVal: 0.3580447
   EffectsVolume: 0.21606898
   PortalPenl: 0
-  roomstospawn: 0
+  roomstospawn: 10
