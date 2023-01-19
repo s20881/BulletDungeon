@@ -40,7 +40,7 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 0f;
         IsPaused = true;
         //akt.GetComponent<TextMeshProUGUI>().text= "AKT nr. " + gameData.bossMeter.ToString();
-        akt.GetComponent<TextMeshProUGUI>().SetText("AKT nr. " + gameData.bossMeter.ToString());
+        akt.GetComponent<TextMeshProUGUI>().SetText("AKT nr. " + (gameData.bossMeter+1).ToString());
         //akt.text = "AKT nr. " + gameData.bossMeter.ToString();
     }
 }

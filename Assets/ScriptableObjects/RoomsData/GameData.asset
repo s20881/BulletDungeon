@@ -56,9 +56,9 @@ MonoBehaviour:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   level: 1
   levelenem: 0.9000001
-  special: 2
-  spawnMeter: 16
-  enemMeter: 6
+  special: 1
+  spawnMeter: 9
+  enemMeter: 0
   cx: 0
   cy: 0
   isbossroom: 0
