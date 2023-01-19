@@ -58,7 +58,7 @@ MonoBehaviour:
   levelenem: 0.9000001
   special: 2
   spawnMeter: 16
-  enemMeter: 6
+  enemMeter: 1
   cx: 0
   cy: 0
   isbossroom: 0
