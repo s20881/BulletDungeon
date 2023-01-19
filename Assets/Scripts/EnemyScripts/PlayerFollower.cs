@@ -21,6 +21,8 @@ public class PlayerFollower : MonoBehaviour
     }
     private void Update()
     {
+        if (pathfinder.target == null)
+            pathfinder.target = GameObject.FindGameObjectWithTag("Player").transform;
         if(currentPath != null && currentPath.Count > 0)
         {
             enemyMovement.currentDestination = currentPath[0];
