@@ -8,29 +8,35 @@ public class Explosion : MonoBehaviour
     [HideInInspector] public bool hostile;
     private bool damageApplied = false;
 
+    private void Update()
+    {
+        if(!damageApplied && damage != 0f)
+            ApplyDamage();
+    }
     public void ApplyDamage()
     {
-        if(!damageApplied)
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius);
+        foreach(Collider2D hit in hits)
         {
-            if(!hostile)
+            if(hit.CompareTag("Player") && hostile)
             {
-                int mask = LayerMask.GetMask("Enemy");
-                Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius, mask);
-                foreach (Collider2D enemy in hits)
-                {
-                    enemy.GetComponent<Health>().Hit(damage);
-                }
+                hit.GetComponent<Health>().Hit(damage);
             }
-            else
+            else if(hit.CompareTag("Enemy") && !hostile)
             {
-                int mask = LayerMask.GetMask("Player");
-                Collider2D player = Physics2D.OverlapCircle(transform.position, GetComponent<CircleCollider2D>().radius, mask);
-                if(player != null)
-                {
-                    player.GetComponent<Health>().Hit(damage);
-                }
+                hit.GetComponent<Health>().Hit(damage);
             }
-            damageApplied = true;
+            else if(hit.CompareTag("ExploBarel"))
+            {
+                hit.gameObject.SetActive(false);
+                hit.GetComponent<ExploBarel>().setac();
+            }
+            else if(hit.CompareTag("GelBox") || hit.CompareTag("ScrapBox"))
+            {
+                hit.gameObject.SetActive(false);
+                hit.GetComponent<DropBoxs>().setac();
+            }
         }
+        damageApplied = true;
     }
 }

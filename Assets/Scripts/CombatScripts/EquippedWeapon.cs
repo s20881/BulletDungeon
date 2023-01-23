@@ -52,13 +52,12 @@ public class EquippedWeapon : MonoBehaviour
         if (playerMovement.facing.x >= 0)
         {
             spriteRenderer.flipY = false;
-            flash.transform.localPosition = MuzzlePos;
         }
         else
         {
             spriteRenderer.flipY = true;
-            flash.transform.localPosition = MuzzlePos;
         }
+        flash.transform.localPosition = MuzzlePos;
     }
 
     private void ShootEffect()
