@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 5853810931996640164}
   - component: {fileID: 4149849621369088400}
   - component: {fileID: 6783787020611832409}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 6370247847420052466}
   - component: {fileID: 1043592999322986924}
   - component: {fileID: 6587911021846764135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 2755040925045809948}
   - component: {fileID: 4509564849501429805}
   - component: {fileID: 8837492203422028829}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 8713298682896291461}
   - component: {fileID: 7447798849969614443}
   - component: {fileID: 5984777712866544918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 141422110827863150}
   - component: {fileID: 1085054392464506875}
   - component: {fileID: 3090394506159080688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 2761943197269866003}
   - component: {fileID: 8098796780905273620}
   - component: {fileID: 6060479887561372135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2108,7 +2108,7 @@ GameObject:
   - component: {fileID: 8122976644098660346}
   - component: {fileID: 3779588552487292022}
   - component: {fileID: 2795138683776337751}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 4683282312041197834}
   - component: {fileID: 995683627891200889}
   - component: {fileID: 5120404116796698656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2647,7 +2647,7 @@ GameObject:
   - component: {fileID: 158382923484004718}
   - component: {fileID: 8375743970356864296}
   - component: {fileID: 2673945009460407533}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2757,7 +2757,7 @@ GameObject:
   - component: {fileID: 4541003875997584325}
   - component: {fileID: 5485324184714660458}
   - component: {fileID: 814467358554418992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (5)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2960,7 +2960,7 @@ GameObject:
   - component: {fileID: 5643080066609029510}
   - component: {fileID: 1775830214557645119}
   - component: {fileID: 1839561286148962589}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -3183,7 +3183,7 @@ GameObject:
   - component: {fileID: 1669886037075678261}
   - component: {fileID: 2942871926537896290}
   - component: {fileID: 7448860190556729467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -3293,7 +3293,7 @@ GameObject:
   - component: {fileID: 1669682696412552016}
   - component: {fileID: 1070009322304128783}
   - component: {fileID: 7622457984544171124}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -3403,7 +3403,7 @@ GameObject:
   - component: {fileID: 186169272058970708}
   - component: {fileID: 7187691237045561013}
   - component: {fileID: 3623868230425779531}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -8430,7 +8430,7 @@ GameObject:
   - component: {fileID: 3308226469339586213}
   - component: {fileID: 3780408818391003103}
   - component: {fileID: 1228644514373338079}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (6)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -13495,7 +13495,7 @@ GameObject:
   - component: {fileID: 8023420008070940860}
   - component: {fileID: 8778507782875290222}
   - component: {fileID: 4645332801561458760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -13605,7 +13605,7 @@ GameObject:
   - component: {fileID: 9203081955010706550}
   - component: {fileID: 5773650250333783326}
   - component: {fileID: 4924881923457662261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -13756,7 +13756,7 @@ PrefabInstance:
     - target: {fileID: 2866706252364150016, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2978111339447840180, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}
@@ -13773,10 +13773,20 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.2924528
       objectReference: {fileID: 0}
-    - target: {fileID: 3932990156887661712, guid: 5f64e58281f80374fa7a4a93312a1548,
+    - target: {fileID: 2994060596494474207, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932990156887661712, guid: 5f64e58281f80374fa7a4a93312a1548,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312274767891877194, guid: 5f64e58281f80374fa7a4a93312a1548,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5111539883206690944, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}
@@ -13806,7 +13816,7 @@ PrefabInstance:
     - target: {fileID: 8427178567423938337, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8823843402538745136, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}

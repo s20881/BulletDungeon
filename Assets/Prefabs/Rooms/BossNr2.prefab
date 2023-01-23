@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7994403268312500105}
   - component: {fileID: 2984694604789655208}
   - component: {fileID: 1227742658570902934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -5204,7 +5204,7 @@ GameObject:
   - component: {fileID: 3893972202197006071}
   - component: {fileID: 3636557841604175466}
   - component: {fileID: 2945267222013337719}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -5314,7 +5314,7 @@ GameObject:
   - component: {fileID: 8692347238048864699}
   - component: {fileID: 6090923609750599608}
   - component: {fileID: 8265762446651994378}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -5424,7 +5424,7 @@ GameObject:
   - component: {fileID: 3410349552083661791}
   - component: {fileID: 4686424082344677092}
   - component: {fileID: 3956427479550871005}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -5627,7 +5627,7 @@ GameObject:
   - component: {fileID: 7513721743297166420}
   - component: {fileID: 7923169142003271856}
   - component: {fileID: 4917772264367542942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -10541,7 +10541,7 @@ GameObject:
   - component: {fileID: 397045690673861636}
   - component: {fileID: 9146749459189255848}
   - component: {fileID: 9069379774719935569}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -10744,7 +10744,7 @@ GameObject:
   - component: {fileID: 6603095018966994886}
   - component: {fileID: 7561416986610673556}
   - component: {fileID: 2403154553818808391}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (5)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -11548,6 +11548,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994060596494474207, guid: 5f64e58281f80374fa7a4a93312a1548,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312274767891877194, guid: 5f64e58281f80374fa7a4a93312a1548,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6716278006336637596, guid: 5f64e58281f80374fa7a4a93312a1548,
         type: 3}

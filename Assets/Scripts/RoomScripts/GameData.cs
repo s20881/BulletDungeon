@@ -17,6 +17,7 @@ public class GameData : ScriptableObject
     [SerializeField] private GameObject[] bossRooms;
     [SerializeField] private EnemyType[] bosses;
     [SerializeField] private GameObject[] amomed;
+    [SerializeField] private GameObject[] weapons;
     //Ogólne zmienne
     //Poziom trudności
     public float level=1;
@@ -112,6 +113,22 @@ public class GameData : ScriptableObject
     {
         return specialRooms[Random.Range(0, specialRooms.Length)];
 
+    }
+    public GameObject RandomWeapon()
+    {
+        int rand = Random.Range(1, 6);
+        if(rand < 2)
+        {
+            return weapons[2];
+        }
+        else if (rand < 4)
+        {
+            return weapons[0];
+        }
+        else
+        {
+            return weapons[1];
+        }
     }
 
 }
