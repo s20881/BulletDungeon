@@ -2392,6 +2392,11 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[69].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: 1843569032279877518, guid: daa0669c9b4f4ef4eac93d3043b139c4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.21
+      objectReference: {fileID: 0}
     - target: {fileID: 4010479383369109928, guid: daa0669c9b4f4ef4eac93d3043b139c4,
         type: 3}
       propertyPath: m_IsActive

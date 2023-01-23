@@ -54,11 +54,15 @@ MonoBehaviour:
   amomed:
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
   - {fileID: 3075838260532067667, guid: e6187fcca96009742923a751345e489d, type: 3}
+  weapons:
+  - {fileID: 7144999659348823773, guid: 8dc885945cee94f43b00f4712f69dc46, type: 3}
+  - {fileID: 1145482863057814086, guid: da710c6f57e87cc4b872f340e65a8cb8, type: 3}
+  - {fileID: 1247355630887670903, guid: d6d93718da86fde49ab61a07edaeaa38, type: 3}
   level: 1
   levelenem: 0.9000001
   special: 2
-  spawnMeter: 16
-  enemMeter: 1
+  spawnMeter: 11
+  enemMeter: 0
   cx: 0
   cy: 0
   isbossroom: 0
