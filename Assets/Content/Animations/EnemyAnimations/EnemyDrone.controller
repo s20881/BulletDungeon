@@ -210,9 +210,13 @@ MonoBehaviour:
     type: 3}
   scrapPrefab: {fileID: 1856496374928757148, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3,
     type: 3}
+  gunpowderPrefab: {fileID: 0}
+  grenadePrefab: {fileID: 0}
   gelDropChance: 0.3
   scrapDropChance: 0.7
+  gunpowderDropChance: 0.1
   overallDropChance: 0.2
+  grenadeDropChance: 0.025
 --- !u!114 &-2125467947441073651
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,10 +336,10 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6523481862910828841}
-    m_Position: {x: 580, y: 210, z: 0}
+    m_Position: {x: 300, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2066233206692519041}
-    m_Position: {x: 300, y: 210, z: 0}
+    m_Position: {x: 20, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8542530119444240124}
     m_Position: {x: 300, y: 10, z: 0}
@@ -345,9 +349,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 110, z: 0}
-  m_ExitPosition: {x: 610, y: 110, z: 0}
+  m_AnyStatePosition: {x: 40, y: 20, z: 0}
+  m_EntryPosition: {x: 40, y: 120, z: 0}
+  m_ExitPosition: {x: 600, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 7959374423304496964}
 --- !u!1101 &2720458951740039554

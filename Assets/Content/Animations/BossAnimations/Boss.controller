@@ -97,9 +97,13 @@ MonoBehaviour:
     type: 3}
   scrapPrefab: {fileID: 1856496374928757148, guid: 51b9d1bae1fe13c4c92ce18280d8c8b3,
     type: 3}
+  gunpowderPrefab: {fileID: 0}
+  grenadePrefab: {fileID: 0}
   gelDropChance: 0.3
   scrapDropChance: 0.7
+  gunpowderDropChance: 0.1
   overallDropChance: 0.2
+  grenadeDropChance: 0.025
 --- !u!1102 &-6943409218347571643
 AnimatorState:
   serializedVersion: 6
@@ -576,9 +580,9 @@ AnimatorStateMachine:
   - first: {fileID: -9124956281065043660}
     second: []
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -60, y: 80, z: 0}
-  m_EntryPosition: {x: -60, y: 120, z: 0}
-  m_ExitPosition: {x: -60, y: 40, z: 0}
+  m_AnyStatePosition: {x: -60, y: 90, z: 0}
+  m_EntryPosition: {x: -60, y: 130, z: 0}
+  m_ExitPosition: {x: -60, y: 50, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 2343390521082061797}
 --- !u!114 &-1156005349274753678
