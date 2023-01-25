@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class mediGelAmountUpdater : MonoBehaviour
 {
+    [SerializeField] PlayerItems items;
     private TextMeshProUGUI txt;
     private int mediGel;
     void Start()
@@ -13,7 +14,7 @@ public class mediGelAmountUpdater : MonoBehaviour
     }
     void Update()
     {
-        mediGel = PlayerItems.MediGel;
+        mediGel = items.MediGel;
         txt.text = mediGel.ToString();
     }
 }

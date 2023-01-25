@@ -22,14 +22,15 @@ public class PlayerCraft : MonoBehaviour
     public TextMeshProUGUI mediGelInventory;
     public TextMeshProUGUI armor;
     public TextMeshProUGUI health;
+
+    public GameObject craft;
     float arm;
     float hp;
 
+    [SerializeField] PlayerItems items;
     public GameObject PauzaMenu;
     public void OpenPanel()
     {
-       // arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
-       // hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
         if (Panel != null)
         {
             PauzaMenu.SetActive(false);
@@ -50,24 +51,23 @@ public class PlayerCraft : MonoBehaviour
 
 
 
-    // Update is called once per frame
     void Update()
     {
-        arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+        arm = (GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().armor)*100f;
         hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
 
         HandlePanels();
-        scrapAmount.SetText(PlayerItems.scrap.ToString());
-        gelAmount.SetText(PlayerItems.gel.ToString());
-        gunpowderAmount.SetText(PlayerItems.gunpowder.ToString());
-        grenadesAmount.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
-        mediGelAmount.SetText(PlayerItems.MediGel.ToString() + "/3");
+        scrapAmount.SetText(items.scrap.ToString());
+        gelAmount.SetText(items.gel.ToString());
+        gunpowderAmount.SetText(items.gunpowder.ToString());
+        grenadesAmount.SetText(items.Grenades.ToString() + "/3");
+        mediGelAmount.SetText(items.MediGel.ToString() + "/3");
 
-        scrapInventory.SetText(PlayerItems.scrap.ToString());
-        gelInventory.SetText(PlayerItems.gel.ToString());
-        gunpowderInventory.SetText(PlayerItems.gunpowder.ToString());
-        grenadesInventory.SetText(PlayerCombat.totalGrenades.ToString() + "/3");
-        mediGelInventory.SetText(PlayerItems.MediGel.ToString() + "/3");
+        scrapInventory.SetText(items.scrap.ToString());
+        gelInventory.SetText(items.gel.ToString());
+        gunpowderInventory.SetText(items.gunpowder.ToString());
+        grenadesInventory.SetText(items.Grenades.ToString() + "/3");
+        mediGelInventory.SetText(items.MediGel.ToString() + "/3");
         armor.SetText(arm.ToString());
         health.SetText(hp.ToString());
         if (Input.GetKeyDown("e"))
@@ -99,10 +99,12 @@ public class PlayerCraft : MonoBehaviour
         if (collision.CompareTag("HpBoost"))
         {
             Upgrade = 1;
+            craft.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         Upgrade = 0;
+        craft.SetActive(false);
     }
 }

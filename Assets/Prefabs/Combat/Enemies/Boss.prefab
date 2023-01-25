@@ -381,7 +381,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialHealth: 500
   damageReceivedMultiplier: 1
+  armor: 0
   invincible: 0
+  items: {fileID: 0}
 --- !u!82 &813671793969345901
 AudioSource:
   m_ObjectHideFlags: 0

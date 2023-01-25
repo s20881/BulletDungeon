@@ -9,10 +9,10 @@ public class LootDropper : StateMachineBehaviour
     [SerializeField] private GameObject gunpowderPrefab;
     [SerializeField] private GameObject grenadePrefab;
     [SerializeField] private float gelDropChance = 0.3f;
-    [SerializeField] private float scrapDropChance = 0.7f;
+    [SerializeField] private float scrapDropChance = 0.5f;
     [SerializeField] private float gunpowderDropChance = 0.1f;
-    [SerializeField] private float overallDropChance = 0.2f;
-    [SerializeField] private float grenadeDropChance = 0.025f;
+    [SerializeField] private float overallDropChance = 0.5f;
+    [SerializeField] private float grenadeDropChance = 0.1f;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
