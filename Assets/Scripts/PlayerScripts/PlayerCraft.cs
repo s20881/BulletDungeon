@@ -22,6 +22,8 @@ public class PlayerCraft : MonoBehaviour
     public TextMeshProUGUI mediGelInventory;
     public TextMeshProUGUI armor;
     public TextMeshProUGUI health;
+
+    public GameObject craft;
     float arm;
     float hp;
 
@@ -51,7 +53,7 @@ public class PlayerCraft : MonoBehaviour
 
     void Update()
     {
-        arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+        arm = 1f - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
         hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
 
         HandlePanels();
@@ -97,10 +99,12 @@ public class PlayerCraft : MonoBehaviour
         if (collision.CompareTag("HpBoost"))
         {
             Upgrade = 1;
+            craft.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         Upgrade = 0;
+        craft.SetActive(false);
     }
 }

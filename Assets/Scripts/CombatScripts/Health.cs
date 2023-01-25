@@ -62,8 +62,6 @@ public class Health : MonoBehaviour
         if(initialHealth <= 175f)
         {
             initialHealth += 5f;
-            items.scrap -= 25;
-            items.gel -= 75;
         }
     }
     public void upgradeArmor()
@@ -71,8 +69,7 @@ public class Health : MonoBehaviour
         if(damageReceivedMultiplier > 0.75f)
         {
             damageReceivedMultiplier -= 0.05f;
-            items.scrap -= 50;
-            items.gel -= 150;
+            Debug.Log(damageReceivedMultiplier);
         }
     }
     private void Death()

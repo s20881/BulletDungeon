@@ -35,8 +35,8 @@ public class HealthBoost : MonoBehaviour
     {
         if((items.gel >= 50) && (items.scrap >= 150))
         {
-            items.gel -= 25;
-            items.scrap -= 50;
+            items.gel -= 50;
+            items.scrap -= 150;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().upgradeArmor();
             save.saveData();
         }

@@ -12,19 +12,19 @@ public class ItemController : MonoBehaviour
         if(collision.CompareTag("Scrap"))
         {
             Destroy(collision.gameObject);
-            items.scrap++;
+            items.scrap+=50;
             save.saveData();
         }
         if (collision.CompareTag("Gel"))
         {
             Destroy(collision.gameObject);
-            items.gel++;
+            items.gel+=50;
             save.saveData();
         }
         if (collision.CompareTag("Gunpowder"))
         {
             Destroy(collision.gameObject);
-            items.gunpowder++;
+            items.gunpowder+=10;
             save.saveData();
         }
         if (collision.CompareTag("MediGel"))

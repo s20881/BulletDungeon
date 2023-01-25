@@ -10,4 +10,6 @@ public class SaveItems
     public int savedMediGel;
     public int savedGunpowder;
     public int savedGrenades;
+    public float savedArmor;
+    public float savedHealth;
 }
