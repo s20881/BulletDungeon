@@ -5,37 +5,44 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
+    [SerializeField] public PlayerItems items;
+    [SerializeField] private SaveScript save;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Scrap"))
         {
             Destroy(collision.gameObject);
-            PlayerItems.scrap++;
+            items.scrap++;
+            save.saveData();
         }
         if (collision.CompareTag("Gel"))
         {
             Destroy(collision.gameObject);
-            PlayerItems.gel++;
+            items.gel++;
+            save.saveData();
         }
         if (collision.CompareTag("Gunpowder"))
         {
             Destroy(collision.gameObject);
-            PlayerItems.gunpowder++;
+            items.gunpowder++;
+            save.saveData();
         }
         if (collision.CompareTag("MediGel"))
         {
-            if (PlayerItems.MediGel < 3)
+            if (items.MediGel < 3)
             {
                 Destroy(collision.gameObject);
-                PlayerItems.MediGel++;
+                items.MediGel++;
+                save.saveData();
             }
         }
         if (collision.CompareTag("Grenade"))
         {
-            if (PlayerCombat.totalGrenades < 3)
+            if (items.Grenades < 3)
             {
                 Destroy(collision.gameObject);
-                PlayerCombat.totalGrenades++;
+                items.Grenades++;
+                save.saveData();
             }
         }
     }

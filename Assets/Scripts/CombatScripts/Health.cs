@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public float damageReceivedMultiplier = 1f;
     [SerializeField] private bool invincible = false;
     private Animator animator;
+    [SerializeField] public PlayerItems items;
 
     private float _currentHealth;
     private float _maxHealth;
@@ -61,8 +62,8 @@ public class Health : MonoBehaviour
         if(initialHealth <= 175f)
         {
             initialHealth += 5f;
-            PlayerItems.scrap -= 25;
-            PlayerItems.gel -= 75;
+            items.scrap -= 25;
+            items.gel -= 75;
         }
     }
     public void upgradeArmor()
@@ -70,8 +71,8 @@ public class Health : MonoBehaviour
         if(damageReceivedMultiplier > 0.75f)
         {
             damageReceivedMultiplier -= 0.05f;
-            PlayerItems.scrap -= 50;
-            PlayerItems.gel -= 150;
+            items.scrap -= 50;
+            items.gel -= 150;
         }
     }
     private void Death()

@@ -4913,12 +4913,12 @@ GameObject:
   - component: {fileID: 1293750659043540815}
   - component: {fileID: 1293750659043540814}
   - component: {fileID: 1293750659043540801}
-  - component: {fileID: 1460899032816400985}
   - component: {fileID: 1293750659043540810}
   - component: {fileID: 1293750659043540813}
   - component: {fileID: 1293750659043540812}
   - component: {fileID: 5290618750229756448}
   - component: {fileID: 4285562612430540693}
+  - component: {fileID: 7086382737525250387}
   - component: {fileID: -7096589935110190941}
   - component: {fileID: -5119579671446199824}
   - component: {fileID: 2075651823319930523}
@@ -5013,21 +5013,6 @@ MonoBehaviour:
   movementSpeed: 8
   facing: {x: 0, y: 0}
   movementDirectionVector: {x: 0, y: 0}
---- !u!114 &1460899032816400985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293750659043540800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33bd52d6a90beb94faa7e3f85a45347f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Inventory: {fileID: 1374643180598457936, guid: 20a24817b386f3142a78ceaf0baf5355,
-    type: 3}
-  isOpen: 0
 --- !u!95 &1293750659043540810
 Animator:
   serializedVersion: 3
@@ -5108,6 +5093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   particles: {fileID: 0}
+  items: {fileID: 0}
   facing: {x: 0, y: 0}
 --- !u!114 &4285562612430540693
 MonoBehaviour:
@@ -5127,6 +5113,7 @@ MonoBehaviour:
   totalRocketAmmo: 5
   grenade: {fileID: 0}
   gameData: {fileID: 11400000, guid: c318d00005cfa1345a8020b49f46c30e, type: 2}
+  items: {fileID: 0}
   fireRateMultiplier: 1
   damageMultiplier: 5
   bulletSpeedMultiplier: 1
@@ -5136,6 +5123,18 @@ MonoBehaviour:
   sliderPrefab: {fileID: 3900657274261211677, guid: cd8ea34e758b1584ba5015bc875219fb,
     type: 3}
   reloadSound: {fileID: 8300000, guid: 93bd052220528c54fbe213bdcb264fbf, type: 3}
+--- !u!114 &7086382737525250387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293750659043540800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65402448197950b4687e7c78a15ab360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-7096589935110190941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5163,6 +5162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412847daaa5bda94f9084161310445ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: {fileID: 0}
+  save: {fileID: 0}
 --- !u!114 &2075651823319930523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5190,6 +5191,7 @@ MonoBehaviour:
   initialHealth: 100
   damageReceivedMultiplier: 1
   invincible: 0
+  items: {fileID: 0}
 --- !u!82 &3894808273477557641
 AudioSource:
   m_ObjectHideFlags: 0
