@@ -21,12 +21,12 @@ public class EnemyShooting : MonoBehaviour
     {
         if (player ?? false)
             if (!onCooldown)
-        {
-            Vector2 direction = (player.transform.position - transform.position).normalized;
-            equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, transform.position, direction);
-            StartCoroutine(Cooldown());
-            EventManager.Instance.RaiseOnDroneShoot();
-        }
+            {
+                Vector2 direction = (player.transform.position - transform.position).normalized;
+                equippedWeapon.Shoot(gameObject, damageMultiplier, bulletSpeedMultiplier, transform.position, direction);
+                StartCoroutine(Cooldown());
+                EventManager.Instance.RaiseOnDroneShoot();
+            }
     }
     public IEnumerator Cooldown()
     {
