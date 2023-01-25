@@ -2404,6 +2404,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8116236913302198591, guid: 21d56c89608a5ba4cab012fd0862a6be,
         type: 3}
+      propertyPath: armor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116236913302198591, guid: 21d56c89608a5ba4cab012fd0862a6be,
+        type: 3}
       propertyPath: items
       value: 
       objectReference: {fileID: 1823624097}

@@ -27,7 +27,7 @@ public class SaveScript : MonoBehaviour
             savedGunpowder = itemData.gunpowder,
             savedGrenades = itemData.Grenades,
 
-            savedArmor = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier,
+            savedArmor = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().armor,
             savedHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth
         };
         var binaryFormatter = new BinaryFormatter();
@@ -53,7 +53,7 @@ public class SaveScript : MonoBehaviour
             itemData.MediGel = save.savedMediGel;
             itemData.gunpowder = save.savedGunpowder;
             itemData.Grenades = save.savedGrenades;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier = save.savedArmor;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().armor = save.savedArmor;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth = save.savedHealth;
         }
     }
@@ -67,13 +67,14 @@ public class SaveScript : MonoBehaviour
             savedGunpowder = 5,
             savedGrenades = 1,
 
-            savedArmor = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier,
-            savedHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth
+            savedArmor = 0f,
+            savedHealth = 100f
         };
         var binaryFormatter = new BinaryFormatter();
         using (var fileStream = File.Create(savePath))
         {
             binaryFormatter.Serialize(fileStream, save);
         }
+        loadData();
     }
 }

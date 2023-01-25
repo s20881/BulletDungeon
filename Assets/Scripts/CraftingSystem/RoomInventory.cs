@@ -33,7 +33,7 @@ public class RoomInventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            arm = 1 - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+            arm = 1f - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().armor;
             hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().CurrentHealth;
             scrapInventory.SetText(items.scrap.ToString());
             gelInventory.SetText(items.gel.ToString());

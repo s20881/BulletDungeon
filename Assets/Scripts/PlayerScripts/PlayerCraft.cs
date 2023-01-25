@@ -53,7 +53,7 @@ public class PlayerCraft : MonoBehaviour
 
     void Update()
     {
-        arm = 1f - GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().damageReceivedMultiplier;
+        arm = (GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().armor)*100f;
         hp = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().initialHealth;
 
         HandlePanels();

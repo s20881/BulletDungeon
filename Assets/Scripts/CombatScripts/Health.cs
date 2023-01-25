@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] public float initialHealth = 100f;
     public float damageReceivedMultiplier = 1f;
+    public float armor = 0;
     [SerializeField] private bool invincible = false;
     private Animator animator;
     [SerializeField] public PlayerItems items;
@@ -44,7 +45,7 @@ public class Health : MonoBehaviour
         if (!invincible)
         {
             animator.SetTrigger("Hit");
-            _currentHealth -= damage * damageReceivedMultiplier;
+            _currentHealth -= damage * damageReceivedMultiplier * (1f-armor);
             if (_currentHealth <= 0)
             {
                 Death();
@@ -66,10 +67,9 @@ public class Health : MonoBehaviour
     }
     public void upgradeArmor()
     {
-        if(damageReceivedMultiplier > 0.75f)
+        if(armor < 0.25f)
         {
-            damageReceivedMultiplier -= 0.05f;
-            Debug.Log(damageReceivedMultiplier);
+            armor += 0.05f;
         }
     }
     private void Death()

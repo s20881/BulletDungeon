@@ -24,7 +24,7 @@ public class ItemController : MonoBehaviour
         if (collision.CompareTag("Gunpowder"))
         {
             Destroy(collision.gameObject);
-            items.gunpowder+=10;
+            items.gunpowder++;
             save.saveData();
         }
         if (collision.CompareTag("MediGel"))
