@@ -9,6 +9,8 @@ public class PlayerItemUse : MonoBehaviour
     public GameObject particles;
     private float getHP;
     private float getMaxHP;
+    [SerializeField] PlayerItems items;
+    [SerializeField] private SaveScript save;
 
     public Vector2 facing;
     private void Start()
@@ -19,24 +21,25 @@ public class PlayerItemUse : MonoBehaviour
     {
         if (Input.GetKeyDown("h"))
         {
-            if (PlayerItems.MediGel > 1)
+            if (items.MediGel > 1)
             { 
                 getHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().CurrentHealth;
                 getMaxHP = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().MaxHealth;
                 if (getHP < getMaxHP - 33f)
                 {
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(33f);
-                    PlayerItems.MediGel -= 1;
+                    items.MediGel -= 1;
                 }
                 else if (getMaxHP - getHP < 33f && getMaxHP - getHP > 0f)
                 {
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().Heal(getMaxHP);
-                    PlayerItems.MediGel -= 1;
+                    items.MediGel -= 1;
                 }
                 particles.SetActive(true);
                 Instantiate(particles, transform.position, Quaternion.identity);
                 StartCoroutine(HealingCoroutine(2));
                 particles.SetActive(false);
+                save.saveData();
             }
         }
     }

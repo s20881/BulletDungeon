@@ -25,18 +25,18 @@ public class DifficultyButton : MonoBehaviour
         {
             case Difficulty.Easy:
                 selectedDifficulty = Difficulty.Normal;
-                gameData.level = 1f;
-                gameData.levelenem = 1f;
+                gameData.level = 0.7f;
+                gameData.levelenem = 1.2f;
                 break;
             case Difficulty.Normal:
                 selectedDifficulty = Difficulty.Hard;
-                gameData.level = 1.2f;
-                gameData.levelenem = 0.8f;
+                gameData.level = 1f;
+                gameData.levelenem = 1f;
                 break;
             case Difficulty.Hard:
                 selectedDifficulty = Difficulty.Easy;
-                gameData.level = 0.7f;
-                gameData.levelenem = 1.2f;
+                gameData.level = 1.2f;
+                gameData.levelenem = 0.8f;
                 break;
         }
         button.text = selectedDifficulty.ToString();

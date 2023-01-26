@@ -5,45 +5,51 @@ using UnityEngine;
 public class HealthBoost : MonoBehaviour
 {
     public GameObject Panel;
+    public PlayerItems items;
+    [SerializeField] private SaveScript save;
 
     public void healthUpgradeButton()
     {
-        if (PlayerItems.scrap >= 20 && PlayerItems.gel >= 75)
+        if (items.scrap >= 20 && items.gel >= 75)
         {
-            PlayerItems.scrap -= 20;
-            PlayerItems.gel -= 75;
+            items.scrap -= 20;
+            items.gel -= 75;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().upgradeHealth();
+            save.saveData();
         }
     }
     public void PotionCraftButton()
     {
-        if (PlayerItems.MediGel < 3)
+        if (items.MediGel < 3)
         {
 
-            if (PlayerItems.gel >= 10)
+            if (items.gel >= 10)
             {
-                PlayerItems.gel -= 10;
-                PlayerItems.MediGel += 1;
+                items.gel -= 10;
+                items.MediGel += 1;
+                save.saveData();
             }
         }
     }
     public void armorUpgradeButton()
     {
-        if((PlayerItems.gel >= 50) && (PlayerItems.scrap >= 150))
+        if((items.gel >= 50) && (items.scrap >= 150))
         {
-            PlayerItems.gel -= 25;
-            PlayerItems.scrap -= 50;
+            items.gel -= 50;
+            items.scrap -= 150;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().upgradeArmor();
+            save.saveData();
         }
     }
 
     public void grenadeCraftButton()
     {
-        if ((PlayerItems.gunpowder >= 15) && (PlayerItems.scrap >= 15) && PlayerCombat.totalGrenades < 3)
+        if ((items.gunpowder >= 15) && (items.scrap >= 15) && items.Grenades < 3)
         {
-            PlayerItems.gunpowder -= 15;
-            PlayerItems.scrap -= 15;
-            PlayerCombat.totalGrenades += 1;
+            items.gunpowder -= 15;
+            items.scrap -= 15;
+            items.Grenades += 1;
+            save.saveData();
         }
     }
 

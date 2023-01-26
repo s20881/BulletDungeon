@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class scrapAmountUpdater : MonoBehaviour
 {
+    [SerializeField] PlayerItems items;
     private TextMeshProUGUI txt;
     private int scrap;
     void Start()
@@ -14,7 +15,7 @@ public class scrapAmountUpdater : MonoBehaviour
 
     void Update()
     {
-        scrap = PlayerItems.scrap;
+        scrap = items.scrap;
         txt.text = scrap.ToString();
     }
 }
